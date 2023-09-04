@@ -1,8 +1,14 @@
-/* Header y barra de navegacion */
+/*----------------- Header y barra de navegacion ----------------*/
 * {
     padding: 0px;
     margin: 0px;
 }
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
 
 header {
     padding-top: 20px;
@@ -36,7 +42,7 @@ header ul {
 
 li {
     padding: 15px;
-    background-color: #F26716;
+    background-color:#F28729;
     border-radius: 50px;
     font-weight: bold; 
 }
@@ -72,12 +78,12 @@ h1 {
     background-position: center center;
 }
 
-/* Main */
+/*------------------------ Main ----------------------*/
 
 /* De los restauranbtes */
 
 main {
-    background-color: #fafaf1;
+    background-color:  #F2C299;
 }
 
 #restaurantes {
@@ -157,9 +163,9 @@ img {
 }
 
 
-/* del footer  */
+/* --------------------------del footer------------------------  */
 
 footer {
-    background-color: bisque;
+    background-color: #A62139;
     padding: 30px;
 }
