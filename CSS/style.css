@@ -70,7 +70,7 @@ h1 {
     color: white;
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url("img/inicio.pjn");
+            rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
     background-repeat: no-repeat;
     /*no repite la imagen*/
     background-size: cover;
@@ -83,7 +83,7 @@ h1 {
 /* De los restauranbtes */
 
 .lista_restaurantes {
-    background-color:  #F2C299;
+    background-color:  #eee;
 }
 
 #restaurantes {
