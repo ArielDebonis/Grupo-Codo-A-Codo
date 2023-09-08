@@ -94,16 +94,21 @@ h1 {
 /* De los restauranbtes */
 
 .lista_restaurantes {
+    margin-top: 20px;
     background-color:  #eee;
     display: grid;
     /* hay que hacer un media a 1200px */
     grid-template-columns: 800px 400px;
+    grid-template-rows: auto auto;
     justify-content: center;
     gap: 20px;
+    grid-template-areas: 'restaurantes seleccion'
+                         'restaurantes .';
 }
 
 #restaurantes {
     display: inline-block;
+    grid-area: restaurantes ;
 }
 
 .restaurante {
@@ -150,8 +155,9 @@ h1 {
                          'mapa mapa mapa';
     align-content: start;
     position: sticky;
-    top: 80px;
+    top: 95px;
     z-index: 0;
+    grid-area: seleccion ;
 }
 
 .Fachada {
