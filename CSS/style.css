@@ -158,6 +158,7 @@ h1 {
     top: 95px;
     z-index: 0;
     grid-area: seleccion ;
+    margin-bottom: 20px;
 }
 
 .Fachada {
