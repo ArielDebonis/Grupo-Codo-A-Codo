@@ -24,6 +24,8 @@ animales y familias en busca de nuevos compañeros peludos.
 - Estilo visual: Amigable, cálido y lleno de colores que transmitan alegría.
 - Colores: Tonos de verde, azul y naranja que evocan naturaleza y
 vitalidad.
+(#3F93A6 -celeste oscuro- , #88DFF2 -celeste-, #F2E3B6 -beige-, #735236 -marrón-, #262626 -marrón oscuro-)
+
 - Tipografía: Fuente relajada para una lectura fácil y agradable.
 
 5. ## Contenido y Funcionalidades:
