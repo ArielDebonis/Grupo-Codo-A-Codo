@@ -118,14 +118,18 @@ h1 {
 }
 
 .nombre {
+    font-size: 1.5em;
     padding-left: 2%;
     padding-top: 2%;
     margin-bottom: 20px;
 }
 
 .info {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: 'direccion direccion direccion puntuacion costo'
+                         'horario horario horario horario horario';
+    row-gap: 10px;
 }
 
 .info * {
@@ -134,16 +138,21 @@ h1 {
 }
 
 .direccion {
-    width: 50%;
+    margin-left: 6px;
+    grid-area: direccion ;
 }
 
 .puntuacion {
-    width: 25%;
+    grid-area: puntuacion ;
+}
+
+.costo {
+    grid-area: costo;
 }
 
 .horario {
-    width: 100%;
     margin-bottom: 2%;
+    grid-area: horario ;
 }
 
 /* De la seleccion */
