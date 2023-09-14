@@ -26,7 +26,7 @@ header {
 }
 
 .icono {
-    width: 60px;  
+    width: 40px;  
 }
 
 
@@ -99,6 +99,8 @@ h1 {
     display: inline-block;
     grid-area: restaurantes ;
 }
+
+
 
 .restaurante {
     background-color: #88DFF2;
@@ -188,6 +190,7 @@ h1 {
 img {
 
     width: 133px;
+    height: auto;
 }
 
 .mapa {

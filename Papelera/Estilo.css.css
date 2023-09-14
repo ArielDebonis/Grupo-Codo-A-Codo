@@ -1,7 +1,7 @@
 /* Header y barra de navegacion */
 
 h1 {
-    font-family: Arial;
+    font-family: Arial,Helvetica,sans-serif
     color: rgb(238, 187, 129);
     background-color: rgb(221, 230, 94);
     padding: 20px;
