@@ -2,61 +2,62 @@
 * {
     padding: 0px;
     margin: 0px;
+    color: #262626;
 }
 
 body{
     font-family: 'Times New Roman', Times, serif;
+    color: #262626;
     margin: 0;
+    background-color: #eee;
 }
-
 
 header {
-    padding-top: 20px;
-    padding-bottom: 6px;
-    background-color: #F2C299;
-    height: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #735236;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
+.icono {
+    width: 40px;  
+}
+
+
 h2 {
-    box-sizing: border-box;
     font-family: Arial;
-    color: rgb(83, 73, 62);
-    background-color: rgb(221, 230, 94);
+    color: #262626;
+    background-color: #3F93A6;
     padding: 20px;
-    font-size: 0.7em;
 }
 
 header * {
     display: inline;
 }
 
-header h1 {
-    margin-left: 5%;
-}
-
-header ul {
-    margin-top: 8px;
-    float: right;
-    margin-right: 5%;
-}
-
 li {
     padding: 15px;
-    background-color:#F28729;
+    background-color: #F2E3B6;
     border-radius: 50px;
     font-weight: bold; 
 }
 
 a {
     text-decoration: none;
-    color: #A62139;
+    color: #262626;
 }
 
 /*--------------------SECTION------------------*/
 
 h1 {
     font-size: 3.5em;
-    color: #A62139;
+    color: #F2E3B6;
 }
 
 #media {
@@ -70,7 +71,7 @@ h1 {
     color: white;
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url("img/inicio.pjn");
+            rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
     background-repeat: no-repeat;
     /*no repite la imagen*/
     background-size: cover;
@@ -83,30 +84,45 @@ h1 {
 /* De los restauranbtes */
 
 .lista_restaurantes {
-    background-color:  #F2C299;
+    margin-top: 20px;
+    display: grid;
+    /* hay que hacer un media a 1200px */
+    grid-template-columns: 800px 400px;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 20px;
+    grid-template-areas: 'restaurantes seleccion'
+                         'restaurantes .';
 }
 
 #restaurantes {
     display: inline-block;
-    width: 50%;
-    margin: 1%;
+    grid-area: restaurantes ;
 }
 
+
+
 .restaurante {
-    background-color: rgb(247, 161, 161);
+    background-color: #88DFF2;
     border-radius: 15px;
     margin-bottom: 2%;
 }
 
 .nombre {
-    padding-left: 2%;
-    padding-top: 2%;
+    font-size: 1.5em;
     margin-bottom: 20px;
+    font-family: Arial;
+    color: #262626;
+    background-color: #3F93A6;
+    padding: 20px;
 }
 
 .info {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: 'direccion direccion direccion puntuacion costo'
+                         'horario horario horario horario horario';
+    row-gap: 10px;
 }
 
 .info * {
@@ -115,28 +131,40 @@ h1 {
 }
 
 .direccion {
-    width: 50%;
+    margin-left: 6px;
+    grid-area: direccion ;
 }
 
 .puntuacion {
-    width: 25%;
+    grid-area: puntuacion ;
+}
+
+.costo {
+    grid-area: costo;
 }
 
 .horario {
-    width: 100%;
     margin-bottom: 2%;
+    grid-area: horario ;
 }
 
 /* De la seleccion */
 
 #seleccion {
-    display: inline-block;
-    position: fixed;
-
+    display: grid;
+    grid-template-areas: 'fachada fachada fachada'  
+                         'img1 img2 img3'
+                         'mapa mapa mapa';
+    align-content: start;
+    position: sticky;
+    top: 100px;
+    z-index: 0;
+    grid-area: seleccion ;
+    margin-bottom: 20px;
 }
 
-.fachada {
-    display: inline-block;
+.Fachada {
+    grid-area: fachada ;
 }
 
 .imgfachada {
@@ -144,17 +172,31 @@ h1 {
     width: 100%;
 }
 
-.imagenes {
-    display: inline-block;
+.img1 {
+    grid-area: img1 ;
+
+}
+
+.img2 {
+    grid-area: img2 ;
+
+}
+
+.img3 {
+    grid-area: img3 ;
+
 }
 
 img {
-    display: inline;
-    width: 22vh;
+
+    width: 133px;
+    height: auto;
 }
 
 .mapa {
-    display: inline-block;
+    grid-area: mapa ;
+    width: 100%;
+    height: 38vh;
 }
 
 .imgmapa {
@@ -167,7 +209,7 @@ img {
 .contacto{
     width: 50vw;
     margin: auto;
-    background-color: rgb(247, 161, 161);
+    background-color: #88DFF2;
 }
 .field_contacto{
     border: 0px;  
@@ -185,7 +227,7 @@ img {
     padding-bottom: 1%;
     margin-top: 5%;
     border-bottom: solid 3px;
-    border-color: brown;
+    border-color: #3F93A6;
     display: inline-block;
 }
 .input_contacto input{
@@ -204,14 +246,15 @@ img {
     margin-bottom: 2%;
     font-size: 1.5em;
     padding: 20px 50px;
-    background-color: sandybrown;
+    background-color: #3F93A6;
     border: 0px;
     border-radius: 45px;
+    color: #eee;
 }
 
 /* --------------------------del footer------------------------  */
 
 footer {
-    background-color: #A62139;
+    background-color: #F2E3B6;
     padding: 30px;
 }
