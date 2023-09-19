@@ -4,26 +4,35 @@
     margin: 0px;
 }
 
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
+    background-color: rgb(255, 255, 255);
 }
 
+.menuSuperior{
+    display: flex;
+}
 
 header {
-    padding-top: 20px;
-    padding-bottom: 6px;
-    background-color: #F2C299;
-    height: 50px;
+    padding: 0.5rem 0.5rem;
+    background-color: #9B948C;
+    height: 3.2rem;
+}
+
+i {
+    color: #FBEDE8;
+    margin-left: 0.7rem;
+    font-size: 2rem;
 }
 
 h2 {
     box-sizing: border-box;
     font-family: Arial;
     color: rgb(83, 73, 62);
-    background-color: rgb(221, 230, 94);
-    padding: 20px;
-    font-size: 0.7em;
+    background-color: #c79d8d;
+    padding: 1.25rem;
+    font-size: 0.7rem;
 }
 
 header * {
@@ -31,32 +40,34 @@ header * {
 }
 
 header h1 {
-    margin-left: 5%;
+    margin-left: 0.5rem;
 }
 
 header ul {
-    margin-top: 8px;
     float: right;
-    margin-right: 5%;
+    margin-right: 0.5rem;
 }
 
 li {
-    padding: 15px;
-    background-color:#F28729;
-    border-radius: 50px;
-    font-weight: bold; 
+    padding: 0.9rem;
+    background-color: #85827f;
+    border-radius: 3.1rem;
+    font-weight: bold;
+    
 }
 
 a {
     text-decoration: none;
-    color: #A62139;
+    color: #FBEDE8;
+    font-size: 0.8rem;
 }
+
 
 /*--------------------SECTION------------------*/
 
 h1 {
     font-size: 3.5em;
-    color: #A62139;
+    color: #e9e8e8;
 }
 
 #media {
@@ -70,7 +81,7 @@ h1 {
     color: white;
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url("img/inicio.pjn");
+            rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
     background-repeat: no-repeat;
     /*no repite la imagen*/
     background-size: cover;
@@ -78,12 +89,19 @@ h1 {
     background-position: center center;
 }
 
-/*------------------------ Pagina de lista de restaurantes ----------------------*/
+/*------------------------ Main ----------------------*/
 
 /* De los restauranbtes */
+h2 {
+    box-sizing: border-box;
+    color: rgb(83, 73, 62);
+    background-color: #c79d8d;
+    padding: 20px;
+    font-size: 0.7em;
+}
 
-.lista_restaurantes {
-    background-color:  #F2C299;
+main {
+    background-color: #F8F5F0;
 }
 
 #restaurantes {
@@ -93,7 +111,7 @@ h1 {
 }
 
 .restaurante {
-    background-color: rgb(247, 161, 161);
+    background-color: #F1EAE5;
     border-radius: 15px;
     margin-bottom: 2%;
 }
@@ -127,7 +145,7 @@ h1 {
     margin-bottom: 2%;
 }
 
-/* De la seleccion */
+/* ---------------------------- De la seleccion -------------------------*/
 
 #seleccion {
     display: inline-block;
@@ -162,56 +180,68 @@ img {
     width: 100%;
 }
 
-/* --------------- Pagina de contacto ---------------------- */
+/* --------------------------MISIONES------------------------  */
 
-.contacto{
-    width: 50vw;
-    margin: auto;
-    background-color: rgb(247, 161, 161);
+
+.titulo {
+    color: #9B948C;
+    font-size: 2rem;
+    border: 0.3rem double #9B948C;
+    text-align: center;
+    margin: 1rem 0.1rem;
+    padding: 2rem;
 }
-.field_contacto{
-    border: 0px;  
+
+h4 {
+    color: #bd6e4f;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.4rem;
+    text-decoration: underline;
 }
-.leyenda_contacto{
-    padding-top: 3%;
-    margin: auto;
-    font-size: 2.5em;
+
+h5 {
+    color: #bd6e4f;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem;
 }
-.input_contacto{
-    margin: 1%;
+
+p {
+    display: flex;
+    font-size: 1rem;
+    color: #c79d8d;
+    flex-wrap: wrap;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: justify;
 }
-.input_contacto label{
-    font-size: 1.5em;
-    padding-bottom: 1%;
-    margin-top: 5%;
-    border-bottom: solid 3px;
-    border-color: brown;
-    display: inline-block;
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center
 }
-.input_contacto input{
-    width: 97%;
-    padding: 10px;
-    font-size: 1.25em;
+
+img {
+    padding: 0.5rem;
+    height: 20rem;
+    width: 20rem;
 }
-.input_contacto textarea{
-    width: 97%;
-    padding: 10px;
-    resize: none;
-    font-size: 1.25em;
-}
-.boton{
-    margin: 1%;
-    margin-bottom: 2%;
-    font-size: 1.5em;
-    padding: 20px 50px;
-    background-color: sandybrown;
-    border: 0px;
-    border-radius: 45px;
+
+.Map {
+    height: 20rem;
+    width: 100rem;
+    align-items: center;
+    margin: 0.5rem;
 }
 
 /* --------------------------del footer------------------------  */
 
 footer {
-    background-color: #A62139;
-    padding: 30px;
+    background-color: #9B948C;
+    height: auto;
 }
