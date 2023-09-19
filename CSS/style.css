@@ -9,7 +9,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     color: #262626;
     margin: 0;
-    background-color: #eee;
+    background-color: #FBEDE8;
 }
 
 .menuSuperior{
@@ -156,4 +156,7 @@ img {
 footer {
     padding: 30px;
     background-color: #9B948C;
+}
+footer p{
+    color: #FBEDE8;
 }
