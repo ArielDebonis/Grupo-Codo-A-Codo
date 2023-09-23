@@ -1,7 +1,8 @@
 /*----------------- Header y barra de navegacion ----------------*/
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,19 +11,19 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.menuSuperior{
+.menuSuperior {
     display: flex;
 }
 
 header {
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.5rem;
     background-color: #9B948C;
-    height: 3.2rem;
+    height: 5rem;
 }
 
 i {
     color: #FBEDE8;
-    margin-left: 0.7rem;
+    margin-left: 0.5rem;
     font-size: 2rem;
 }
 
@@ -45,21 +46,19 @@ header h1 {
 
 header ul {
     float: right;
-    margin-right: 0.5rem;
 }
 
 li {
-    padding: 0.9rem;
+    padding: 0.6rem;
     background-color: #85827f;
-    border-radius: 3.1rem;
+    border-radius: 4rem;
     font-weight: bold;
-    
 }
 
 a {
     text-decoration: none;
     color: #FBEDE8;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 
@@ -185,7 +184,7 @@ img {
 
 .titulo {
     color: #9B948C;
-    font-size: 2rem;
+    font-size: 1.2rem;
     border: 0.3rem double #9B948C;
     text-align: center;
     margin: 1rem 0.1rem;
@@ -194,7 +193,7 @@ img {
 
 h4 {
     color: #bd6e4f;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
     margin: 1.4rem;
     text-decoration: underline;
@@ -202,14 +201,14 @@ h4 {
 
 h5 {
     color: #bd6e4f;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
     margin: 1rem;
 }
 
 p {
     display: flex;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: #c79d8d;
     flex-wrap: wrap;
     margin: 0.5em;
@@ -228,8 +227,8 @@ p {
 
 img {
     padding: 0.5rem;
-    height: 20rem;
-    width: 20rem;
+    height: 15rem;
+    width: 15rem;
 }
 
 .Map {
@@ -244,4 +243,64 @@ img {
 footer {
     background-color: #9B948C;
     height: auto;
+}
+
+
+/*-------------------TABLETS---------------*/
+
+@media (min-width: 768px) {
+    a {
+        font-size: 0.8rem;
+    }
+
+    .titulo {
+        font-size: 1.7rem;
+        border: 0.3rem double #9B948C;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    img {
+        padding: 0.5rem;
+        height: 15rem;
+        width: 15rem;
+    }
+}
+
+
+/*-------------------ESCRITORIO---------------*/
+
+@media (min-width: 992px) {
+    .titulo {
+        font-size: 2.5rem;
+        border: 0.3rem double #9B948C;
+    }
+
+    h4 {
+        font-size: 2.2rem;
+    }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    img {
+        padding: 0.5rem;
+        height: 20rem;
+        width: 20rem;
+    }
 }
