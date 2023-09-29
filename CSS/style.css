@@ -428,3 +428,52 @@ div+a {
     font-size: 20px;
     padding: 15px;
 }
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 760px) {
+
+    /* HEADER */
+
+    /* SECTION */
+    .Region {
+        height: fit-content;
+    }
+
+
+
+
+}
+
+
+@media (min-width:1024px ) {
+
+    .contenedorgrid {
+        width: 100%;
+        max-width: 1100px;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-rows: 0.1fr 0.1fr 2fr 0.3fr; */
+        grid-template-areas:
+        "Header Header Header"
+        "titulo titulo titulo"
+        "contenido contenido sidebar "
+        "contenido contenido sidebar"
+        "footer footer footer";
+
+    }
+
+    /* HEADER */
+
+    /* SECTION */
+
+
+    /* Footer */
+
+    footer{
+
+        padding: 15px;
+    }
+
+
+
+}
