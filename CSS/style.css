@@ -2,70 +2,91 @@
 * {
     padding: 0px;
     margin: 0px;
-    color: #262626;
-}
-header{
-    padding-left: 5%;
-    padding-right: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    box-sizing: border-box;
+    /* color: #262626; */
+    
 }
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    color: #262626;
+    /* color: #262626; Lo coloque como comentario ya que no tenia ningún proposito en el momento*/
     margin: 0;
     background-color: #FBEDE8;
 }
+
+.contenedorgrid {
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    gap: 10px;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.3fr 4fr 0.4fr;
+    grid-template-areas:
+        "Header Header Header"
+        "titulo titulo titulo"
+        "contenido contenido contenido"
+        "footer footer footer";
+
+
+}
+
+header {
+    /* padding-left: 5%;  */
+    /* padding-right: 5; */
+    padding: 0.5rem 0.5rem;
+    background-color: #9B948C;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 80px; */
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    grid-area: Header;
+    
+}
+
 
 .menuSuperior{
     display: flex;
 }
 
-header {
-    padding: 0.5rem 0.5rem;
-    background-color: #9B948C;
-    height: 3.2rem;
-}
 
-i {
-    color: #FBEDE8;
-    margin-left: 0.7rem;
-    font-size: 2rem;
-}
+    i {
+        color: #FBEDE8;
+        margin-left: 0.7rem;
+        font-size: 2rem;
+    }
 
 
-header * {
-    display: inline;
-}
+    header * {
+        display: inline;
+    }
 
-header h1 {
-    margin-left: 0.5rem;
-}
+    header h1 {
+        margin-left: 0.5rem;
+    }
 
-header ul {
-    float: right;
-    margin-right: 0.5rem;
-}
+    /* header ul {
+        float: right;  ( Lo coloque como comentario, ya que no encontre el elemento que afectaba)
+        margin-right: 0.5rem;
+    } */
 
-li {
-    padding: 0.9rem;
-    background-color: #85827f;
-    border-radius: 3.1rem;
-    font-weight: bold;
-    
-}
+    li {
+        padding: 0.9rem;
+        background-color: #85827f;
+        border-radius: 3.1rem;
+        font-weight: bold;
+        
+    }
 
-a {
-    text-decoration: none;
-    color: #FBEDE8;
-    font-size: 0.8rem;
-}
+    a {
+        text-decoration: none;
+        color: #FBEDE8;
+        font-size: 0.8rem;
+    }
 
 
 /*--------------------SECTION------------------*/
@@ -154,6 +175,171 @@ img {
     margin: 0.5rem;
 }
 
+/* --------------------------Capital------------------------  */
+
+.Region {
+    color: #9B948C;
+    font-size: 2rem;
+    border: 0.3rem double #9B948C;
+    text-align: center;
+    margin: 1rem 0.1rem;
+    padding: 2rem;
+    text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
+    grid-area: titulo;
+    
+
+
+}
+
+.contenido {
+    background-color: #bd6e4f;
+    padding: 2rem;
+    margin: 1rem 0.1rem;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-area: contenido;
+
+
+
+}
+
+    img {
+        padding: 0.5rem;
+        height: 15rem;
+        
+    }
+
+    h2 {
+        text-align: center;
+        color: #FFFFE8;
+        text-decoration: underline;
+        padding-bottom: 0.3rem;
+        align-self: center;
+
+
+    }
+
+    .restdisplay {
+        display: flex;
+        width: 100%;
+        height: auto;
+        max-height: fit-content;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+
+
+    }
+
+
+
+        div img {
+            width: 100%;
+            border-color: #FFFFE8;
+            border-style: double;
+            border-width: 0.5rem;
+            flex: 0 1 auto;
+            align-self: center;
+
+        }
+
+        .ubicacion {
+            color: black;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: underline;
+            flex: 0 1 auto;
+            align-self: auto;
+        }
+
+    div p {
+        font-size: 1rem;
+        color: #FFFFE8;
+        /* border-style: solid; */
+        flex: 2 1 auto;
+        align-self: auto;
+
+
+
+
+    }
+
+
+
+
+.sidebar {
+    /* background-color: #9B948C; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+
+
+
+}
+
+    div div {
+
+
+        align-self: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+
+    }
+
+    .restopc {
+        max-width: 100%;
+        flex: 0 1 auto;
+        align-self: auto;
+        border-color: none;
+        border-style: none;
+        border-width: none;
+
+
+    }
+
+    .restopc:hover {
+        box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
+        transform: translateY(-10px);
+    }
+
+    .restname {
+        text-align: center;
+        color: #FFFFE8;
+        text-decoration: underline;
+        padding-bottom: 0.3rem;
+        font-size: medium;
+        align-self: center;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------- Pagina de contacto ---------------------- */
 
 .contacto{
@@ -205,9 +391,40 @@ img {
 /* --------------------------del footer------------------------  */
 
 footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     padding: 30px;
     background-color: #9B948C;
-}
-footer p{
     color: #FBEDE8;
+    align-items: center;
+    grid-area: footer;
+    
+
+
+
+}
+
+footer p{
+
+    color:#FBEDE8;
+
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+
+}
+
+div+a {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: #FBEDE8;
+    font-size: 20px;
+    padding: 15px;
 }
