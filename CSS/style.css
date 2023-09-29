@@ -286,6 +286,7 @@ img {
     align-items: center;
     align-content: center;
     align-self: center;
+    grid-area: sidebar;
 
 
 
@@ -321,7 +322,7 @@ img {
 
     .restname {
         text-align: center;
-        color: #FFFFE8;
+        color: black;
         text-decoration: underline;
         padding-bottom: 0.3rem;
         font-size: medium;
