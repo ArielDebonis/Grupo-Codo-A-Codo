@@ -4,7 +4,7 @@
     margin: 0px;
     box-sizing: border-box;
     /* color: #262626; */
-    
+
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     gap: 10px;
     margin: 10px auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.4fr ;
+    grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.4fr;
     grid-template-areas:
         "Header Header Header"
         "titulo titulo titulo"
@@ -32,62 +32,61 @@ body {
 
 }
 
-header {
-    /* padding-left: 5%;  */
-    /* padding-right: 5; */
+#idheader {
     padding: 0.5rem 0.5rem;
     background-color: #9B948C;
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* height: 80px; */
     position: sticky;
     top: 0%;
     z-index: 1;
     grid-area: Header;
-    
+    place-content: flex-start;
+
+
+
 }
 
 
-.menuSuperior{
+.menuSuperior {
     display: flex;
+    width: 70%;
+    place-content: space-between;
+
 }
 
 
-    i {
-        color: #FBEDE8;
-        margin-left: 0.7rem;
-        font-size: 2rem;
-    }
 
+i {
+    color: #FBEDE8;
+    margin-left: 0.7rem;
+    font-size: small;
+}
 
-    header * {
-        display: inline;
-    }
+header * {
+    display: inline;
+}
 
-    header h1 {
-        margin-left: 0.5rem;
-    }
+header ul {
+    float: right;
+    margin-right: 0.5rem;
+}
 
-    /* header ul {
-        float: right;  ( Lo coloque como comentario, ya que no encontre el elemento que afectaba)
-        margin-right: 0.5rem;
-    } */
+li {
+    padding: 0.4rem;
+    background-color: #85827f;
+    border-radius: 3.1rem;
+    font-weight: bold;
 
-    li {
-        padding: 0.9rem;
-        background-color: #85827f;
-        border-radius: 3.1rem;
-        font-weight: bold;
-        
-    }
+}
 
-    a {
-        text-decoration: none;
-        color: #FBEDE8;
-        font-size: 0.8rem;
-    }
+a {
+    text-decoration: none;
+    color: #FBEDE8;
+    font-size: 0.8rem
+}
 
 
 /*--------------------SECTION------------------*/
@@ -187,7 +186,7 @@ img {
     padding: 2rem;
     text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
     grid-area: titulo;
-    
+
 
 
 }
@@ -202,82 +201,87 @@ img {
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     grid-area: contenido;
 
 
 
 }
 
-    img {
-        padding: 0.5rem;
-        height: 15rem;
-        
-    }
+img {
+    padding: 0.5rem;
+    height: 15rem;
 
-    h2 {
-        text-align: center;
-        color: #FFFFE8;
-        text-decoration: underline;
-        padding-bottom: 0.3rem;
-        align-self: center;
+}
 
-
-    }
-
-    .restdisplay {
-        display: flex;
-        width: 100%;
-        height: auto;
-        max-height: fit-content;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
+h2 {
+    text-align: center;
+    color: #FFFFE8;
+    text-decoration: underline;
+    padding-bottom: 0.3rem;
+    align-self: center;
 
 
-    }
+}
+
+.restdisplay {
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
 
 
-
-        div img {
-            width: 100%;
-            border-color: #FFFFE8;
-            border-style: double;
-            border-width: 0.5rem;
-            flex: 0 1 auto;
-            align-self: center;
-
-        }
-
-        .ubicacion {
-            color: black;
-            font-size: medium;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: underline;
-            flex: 0 1 auto;
-            align-self: auto;
-        }
-
-    div p {
-        font-size: 1rem;
-        color: #FFFFE8;
-        /* border-style: solid; */
-        flex: 2 1 auto;
-        align-self: auto;
+}
 
 
 
+div img {
+    width: 100%;
+    border-color: #FFFFE8;
+    border-style: double;
+    border-width: 0.5rem;
+    flex: 0 1 auto;
+    align-self: center;
 
-    }
+}
+
+.ubicacion {
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+div p {
+    font-size: 1rem;
+    color: #FFFFE8;
+    /* border-style: solid; */
+    flex: 2 1 auto;
+    align-self: auto;
+
+
+
+
+}
+
+#map {
+    background-color: #9B948C;
+    height: 150px;
+}
 
 
 
 
 .sidebar {
-    /* background-color: #9B948C; */
+    margin: 0.5rem 0.1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -290,46 +294,46 @@ img {
 
 
 
+
 }
 
-    div div {
+div div {
 
 
-        align-self: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
 
 
-    }
+}
 
-    .restopc {
-        max-width: 100%;
-        flex: 0 1 auto;
-        align-self: auto;
-        border-color: none;
-        border-style: none;
-        border-width: none;
+.restopc {
+    max-width: 100%;
+    flex: 0 1 auto;
+    align-self: auto;
+    border-color: none;
+    border-style: none;
+    border-width: none;
 
 
-    }
+}
 
-    .restopc:hover {
-        box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
-        transform: translateY(-10px);
-    }
+.restopc:hover {
+    box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
+    transform: translateY(-10px);
+}
 
-    .restname {
-        text-align: center;
-        color: black;
-        text-decoration: underline;
-        padding-bottom: 0.3rem;
-        font-size: medium;
-        align-self: center;
+.restname {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    padding-bottom: 0.3rem;
+    font-size: medium;
+    align-self: center;
 
-    }
-
+}
 
 
 
@@ -344,23 +348,27 @@ img {
 
 /* --------------- Pagina de contacto ---------------------- */
 
-.contacto{
+.contacto {
     width: 50vw;
     margin: auto;
     background-color: #88DFF2;
 }
-.field_contacto{
-    border: 0px;  
+
+.field_contacto {
+    border: 0px;
 }
-.leyenda_contacto{
+
+.leyenda_contacto {
     padding-top: 3%;
     margin: auto;
     font-size: 2.5em;
 }
-.input_contacto{
+
+.input_contacto {
     margin: 1%;
 }
-.input_contacto label{
+
+.input_contacto label {
     font-size: 1.5em;
     padding-bottom: 1%;
     margin-top: 5%;
@@ -368,18 +376,21 @@ img {
     border-color: #3F93A6;
     display: inline-block;
 }
-.input_contacto input{
+
+.input_contacto input {
     width: 97%;
     padding: 10px;
     font-size: 1.25em;
 }
-.input_contacto textarea{
+
+.input_contacto textarea {
     width: 97%;
     padding: 10px;
     resize: none;
     font-size: 1.25em;
 }
-.boton{
+
+.boton {
     margin: 1%;
     margin-bottom: 2%;
     font-size: 1.5em;
@@ -392,24 +403,30 @@ img {
 
 /* --------------------------del footer------------------------  */
 
-footer {
+#idfooter {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    height: 100%;
+    padding: 10px;
+    bottom: 0%;
     background-color: #9B948C;
     color: #FBEDE8;
+    margin: 1rem 0.1rem;
     align-items: center;
+    align-content: center;
+    justify-content: center;
     grid-area: footer;
-    
+
+
 
 
 
 }
 
-footer p{
+footer p {
 
-    color:#FBEDE8;
+    color: #FBEDE8;
 
 }
 
@@ -448,31 +465,116 @@ div+a {
 }
 
 
-@media (min-width:1024px ) {
+@media (min-width:500px) {
 
     .contenedorgrid {
         width: 100%;
-        max-width: 1100px;
-        /* grid-template-columns: 1fr 1fr 1fr; */
-        /* grid-template-rows: 0.1fr 0.1fr 2fr 0.3fr; */
+        max-width: 1700px;
+        grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.1fr;
         grid-template-areas:
-        "Header Header Header"
-        "titulo titulo titulo"
-        "contenido contenido sidebar "
-        "contenido contenido sidebar"
-        "footer footer footer";
+            "Header Header Header"
+            "titulo titulo titulo"
+            "contenido contenido sidebar "
+            "contenido contenido sidebar"
+            "footer footer footer";
 
     }
 
     /* HEADER */
 
+    #idheader {
+        padding: 1rem 1rem;
+        background-color: #9B948C;
+        height: 5rem;
+    }
+
+    #menu, #menu-check, #menu-abrir, #menu-cerrar{
+        display: none;
+    }
+
+    .menuSuperior {
+
+        place-content: space-around;
+
+    }
+
+
+    h1{
+        font-size: regular;
+        text-align: center;
+
+    }
+
+    i{ font-size: 3rem
+
+    }
+
+    li {
+        padding: 1rem;
+        border-radius: 4.1rem;
+
+    }
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: #FBEDE8;
+        font-size: 1rem
+    }
+
     /* SECTION */
+
+    .Region {
+        color: #9B948C;
+        font-size: 2rem;
+        border: 0.3rem double #9B948C;
+        text-align: center;
+        margin: 1rem 0.1rem;
+        padding: 2rem;
+        text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
+        grid-area: titulo;
+    
+    
+    
+    }
+
+    div img {
+        width: 100%;
+        height: 50%;
+
+    }
+
+    #map {
+        background-color: #9B948C;
+        height: 150px;
+    }
 
 
     /* Footer */
 
-    footer{
+    footer {
+        display: flex;
+        width: 100%;
+        height: 5px;
+        padding: 10%;
+    }
+    
 
+    .socialmedia {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        padding: 15px;
+
+    }
+
+    div+a {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        color: #FBEDE8;
+        font-size: 20px;
         padding: 15px;
     }
 
