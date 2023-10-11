@@ -1,20 +1,19 @@
-# Grupo-Codo-A-Codo
-Documentación Preliminar del Proyecto - Sitio Web de
- "Sabores que conquistan” 
+# Grupo 5
+Documentación Preliminar del Proyecto "Proyecto Sabores: plataforma dedicada a la busqueda de restaurantes” - Sitio Web de busqueda de restaurantes
+
 
 ## 1.  Título y Descripción del Proyecto:
-- Título: "Sabores que Conquistan" - Plataforma de Degustación de Restaurante"
-- Descripción: Desarrollo de un sitio web que facilite la busqueda de restaurantes por provincias, costo o puntuación, mostrando fotos representativas del mismo.
+- Título: "Proyecto Sabores - Plataforma de busqueda de restaurantes"
+- Descripción: Desarrollo de un sitio web que facilite la busqueda de restaurantes por provincias y puntuación, mostrando fotos representativas del mismo.
 
 
 ## 2.  Público Objetivo:
-- Público: Personas interesadas en conocer nuevos lugares a donde poder ir a degustar diversos platos. Buscar restaurantes asequibles para su bolsillo.
+- Público: Personas con pasión por la gastronomía, que buscan nuevas experiencias culinarias en restaurantes de todo tipo.
 
 ## 3. Estructura del Sitio:
-- Pagina de Inicio, con una descripcion breve sobre el objetivo de la pagina y descripcion de las diferentes profincias donde trabaja la pagina.
-- Pagina de busqueda de restaurantes, con un menu principal de busqueda que busque por provincia, costo y puntuación. Luego una lista encolumnadacon los resultados y a un costado informacion adicional de la seleccion de restaurante.
-- Pagina de Equipo donde mueste las personas involucradas
-- Pagina de contacto.
+- Página de Inicio con una breve introducción de la pagina.
+- Páginas web de las provincias de Capital Federal, Santa Fe y Misiones, que ofrezcan información detallada sobre los restaurantes disponibles en cada zona, con su calificación y ubicación.
+- Página de contacto, con un formulario para dudas y comentarios.
 
 ## 4. Diseño y Estilo:
 - Estilo visual: Amigable, cálido y lleno de colores que transmitan alegría.
