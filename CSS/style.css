@@ -219,4 +219,6 @@ footer p{
     line-height: 1.5; /* Espaciado entre líneas */
     margin: 20px; /* Margen alrededor del párrafo para dispositivos más pequeños */
     font-style: italic; /* estilo en cursiva */
+    background-size: cover;/*que ocupe todo el espacio*/
+    background-position: center center
 }
