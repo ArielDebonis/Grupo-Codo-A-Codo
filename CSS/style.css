@@ -211,3 +211,12 @@ footer {
 footer p{
     color: #FBEDE8;
 }
+
+/*--------------------------------- index--------------------------*/
+.parrafo-principal {
+    text-align: center; /* Para centrar el texto en el contenedor */
+    font-size: 18px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 20px; /* Margen alrededor del párrafo para dispositivos más pequeños */
+    font-style: italic; /* estilo en cursiva */
+}
