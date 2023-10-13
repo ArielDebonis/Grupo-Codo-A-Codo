@@ -2,41 +2,82 @@
 * {
     padding: 0px;
     margin: 0px;
-    color: #262626;
+    box-sizing: border-box;
+    /* color: #262626; */
+
+
 }
-header{
-    padding-left: 5%;
-    padding-right: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
+
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    color: #262626;
+    /* color: #262626; Lo coloque como comentario ya que no tenia ningún proposito en el momento*/
     margin: 0;
-    background-color: #FBEDE8;
+    background-color: #f8f4f3;
 }
 
-.menuSuperior{
-    display: flex;
+
+.contenedorgrid {
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    gap: 10px;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.3fr;
+    grid-template-areas:
+        "Header Header Header"
+        "titulo titulo titulo"
+        "contenido contenido contenido "
+        "sidebar sidebar sidebar"
+        "footer footer footer";
+       
+
+
+
 }
 
-header {
+
+#idheader {
     padding: 0.5rem 0.5rem;
     background-color: #9B948C;
-    height: 3.2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    grid-area: Header;
+    place-content: flex-start;
+
+
+
+
+
+
 }
+
+
+
+
+.menuSuperior {
+    display: flex;
+    width: 70%;
+    place-content: space-between;
+
+
+}
+
+
+
+
+
 
 i {
     color: #FBEDE8;
     margin-left: 0.7rem;
-    font-size: 2rem;
+    font-size: small;
 }
 
 
@@ -44,36 +85,40 @@ header * {
     display: inline;
 }
 
-header h1 {
-    margin-left: 0.5rem;
-}
 
 header ul {
     float: right;
     margin-right: 0.5rem;
 }
 
+
 li {
-    padding: 0.9rem;
+    padding: 0.4rem;
     background-color: #85827f;
     border-radius: 3.1rem;
     font-weight: bold;
-    
+
+
 }
+
 
 a {
     text-decoration: none;
     color: #FBEDE8;
-    font-size: 0.8rem;
+    font-size: 0.8rem
 }
 
 
+
+
 /*--------------------SECTION------------------*/
+
 
 h1 {
     font-size: 3.5em;
     color: #FBEDE8;
 }
+
 
 #media {
     display: flex;
@@ -95,7 +140,11 @@ h1 {
 }
 
 
+
+
 /* --------------------------MISIONES------------------------  */
+
+
 
 
 .titulo {
@@ -107,6 +156,7 @@ h1 {
     padding: 2rem;
 }
 
+
 h4 {
     color: #bd6e4f;
     font-size: 1.5rem;
@@ -115,12 +165,14 @@ h4 {
     text-decoration: underline;
 }
 
+
 h5 {
     color: #bd6e4f;
     font-size: 1.3rem;
     text-align: center;
     margin: 1rem;
 }
+
 
 p {
     display: flex;
@@ -132,6 +184,7 @@ p {
     text-align: justify;
 }
 
+
 .todo {
     display: flex;
     flex-direction: row;
@@ -141,11 +194,13 @@ p {
     align-items: center
 }
 
+
 img {
     padding: 0.5rem;
     height: 20rem;
     width: 20rem;
 }
+
 
 .Map {
     height: 20rem;
@@ -154,25 +209,263 @@ img {
     margin: 0.5rem;
 }
 
+
+/* --------------------------Capital------------------------  */
+
+
+.Region {
+    color: #9B948C;
+    font-size: 2rem;
+    border: 0.3rem double #9B948C;
+    text-align: center;
+    margin: 1rem 0.1rem;
+    padding: 2rem;
+    text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
+    grid-area: titulo;
+
+
+
+
+
+
+}
+
+
+.contenido {
+    background-color: #bd6e4f;
+    padding: 2rem;
+    margin: 1rem 0.1rem;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-area: contenido;
+
+
+
+
+
+
+}
+
+
+img {
+    padding: 0.5rem;
+    height: 15rem;
+
+
+}
+
+
+h2 {
+    text-align: center;
+    color: #FFFFE8;
+    text-decoration: underline;
+    padding-bottom: 0.3rem;
+    align-self: center;
+
+
+
+
+}
+
+
+.restdisplay {
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+
+
+
+}
+
+
+
+
+
+
+div img {
+    width: 100%;
+    border-color: #FFFFE8;
+    border-style: double;
+    border-width: 0.5rem;
+    flex: 0 1 auto;
+    align-self: center;
+
+
+}
+
+
+.ubicacion {
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+
+div p {
+    font-size: 1rem;
+    color: #FFFFE8;
+    /* border-style: solid; */
+    flex: 2 1 auto;
+    align-self: auto;
+
+
+
+
+
+
+
+
+}
+
+
+#map {
+    background-color: #9B948C;
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+.sidebar {
+    margin: 0.5rem 0.1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    grid-area: sidebar;
+
+
+
+
+
+
+
+
+}
+
+
+div div {
+
+
+
+
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+
+
+}
+
+
+.restopc {
+    max-width: 100%;
+    flex: 0 1 auto;
+    align-self: auto;
+    border-color: none;
+    border-style: none;
+    border-width: none;
+
+
+
+
+}
+
+
+.restopc:hover {
+    box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
+    transform: translateY(-10px);
+}
+
+
+.restname {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    padding-bottom: 0.3rem;
+    font-size: medium;
+    align-self: center;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------- Pagina de contacto ---------------------- */
 
-.contacto{
+
+.contacto {
     width: 50vw;
     margin: auto;
     background-color: #88DFF2;
 }
-.field_contacto{
-    border: 0px;  
+
+
+.field_contacto {
+    border: 0px;
 }
-.leyenda_contacto{
+
+
+.leyenda_contacto {
     padding-top: 3%;
     margin: auto;
     font-size: 2.5em;
 }
-.input_contacto{
+
+
+.input_contacto {
     margin: 1%;
 }
-.input_contacto label{
+
+
+.input_contacto label {
     font-size: 1.5em;
     padding-bottom: 1%;
     margin-top: 5%;
@@ -180,18 +473,24 @@ img {
     border-color: #3F93A6;
     display: inline-block;
 }
-.input_contacto input{
+
+
+.input_contacto input {
     width: 97%;
     padding: 10px;
     font-size: 1.25em;
 }
-.input_contacto textarea{
+
+
+.input_contacto textarea {
     width: 97%;
     padding: 10px;
     resize: none;
     font-size: 1.25em;
 }
-.boton{
+
+
+.boton {
     margin: 1%;
     margin-bottom: 2%;
     font-size: 1.5em;
@@ -202,18 +501,252 @@ img {
     color: #eee;
 }
 
+
 /* --------------------------del footer------------------------  */
 
-footer {
-    padding: 30px;
+
+#idfooter {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    bottom: 0%;
     background-color: #9B948C;
-}
-footer p{
     color: #FBEDE8;
+    margin: 1rem 0.1rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-area: footer;
+
+
+
+
+
+
+
+
+
+
 }
 
+
+footer p {
+
+
+    color: #FBEDE8;
+
+
+}
+
+
+.socialmedia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+
+
+}
+
+
+div+a {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: #FBEDE8;
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 760px) {
+
+
+    /* HEADER */
+
+
+    /* SECTION */
+    .Region {
+        height: fit-content;
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width:500px) {
+
+
+    .contenedorgrid {
+        width: 100%;
+        max-width: 1700px;
+        grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.1fr;
+        grid-template-areas:
+            "Header Header Header"
+            "titulo titulo titulo"
+            "contenido contenido sidebar "
+            "contenido contenido sidebar"
+            "footer footer footer";
+
+
+    }
+
+
+    /* HEADER */
+
+
+    #idheader {
+        padding: 1rem 1rem;
+        background-color: #9B948C;
+        height: 5rem;
+    }
+
+
+    #menu, #menu-check, #menu-abrir, #menu-cerrar{
+        display: none;
+    }
+
+
+    .menuSuperior {
+
+
+        place-content: space-around;
+
+
+    }
+
+
+
+
+    h1{
+        font-size: regular;
+        text-align: center;
+
+
+    }
+
+
+    i{ font-size: 3rem
+
+
+    }
+
+
+    li {
+        padding: 1rem;
+        border-radius: 4.1rem;
+
+
+    }
+
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: #FBEDE8;
+        font-size: 1rem
+    }
+
+
+    /* SECTION */
+
+
+    .Region {
+        color: #9B948C;
+        font-size: 2rem;
+        border: 0.3rem double #9B948C;
+        text-align: center;
+        margin: 1rem 0.1rem;
+        padding: 2rem;
+        text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
+        grid-area: titulo;
+   
+   
+   
+    }
+
+
+    div img {
+        width: 100%;
+        height: 50%;
+
+
+    }
+
+
+    #map {
+        background-color: #9B948C;
+        height: 150px;
+    }
+
+
+
+
+    /* Footer */
+
+
+    footer {
+        display: flex;
+        width: 100%;
+        height: 5px;
+        padding: 10%;
+    }
+   
+
+
+    .socialmedia {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        padding: 15px;
+
+
+    }
+
+
+    div+a {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        color: #FBEDE8;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+
+
+
+
+
+}
+
+
 /*--------------------------------- index--------------------------*/
+
+/* Estilos generales para pantallas grandes */
+.header {
+    text-align: right;
+    /* Otros estilos para el encabezado */
+}
+
+
 .parrafo-principal {
+    /* Estilos para el párrafo principal */
     text-align: center; /* Para centrar el texto en el contenedor */
     font-size: 18px; /* Tamaño de fuente */
     line-height: 1.5; /* Espaciado entre líneas */
@@ -222,3 +755,74 @@ footer p{
     background-size: cover;/*que ocupe todo el espacio*/
     background-position: center center
 }
+
+
+/* Media Query para pantallas de tamaño mediano (por ejemplo, teléfonos móviles) */
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center; /* Centra el contenido del encabezado */
+        /* Otros estilos específicos para pantallas pequeñas */
+    }
+
+
+    .parrafo-principal {
+        font-size: 10vw; /* Cambia el tamaño de fuente para pantallas pequeñas */
+        /* Otros estilos específicos para pantallas pequeñas */
+    }
+}
+
+
+/* Media Query para pantallas muy pequeñas (por ejemplo, teléfonos móviles en modo vertical) */
+@media screen and (max-width: 480px) {
+    .header {
+        /* Estilos adicionales para pantallas muy pequeñas */
+    }
+
+
+    .parrafo-principal {
+        font-size: 14px; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+        /* Estilos adicionales para pantallas muy pequeñas */
+    }
+}
+
+
+.body-index{
+    background-color: #ca9785
+}
+
+
+
+.menuSuperior{
+      display: flex;
+        width: 100%;
+        padding: auto;
+        
+}
+
+/* Estilos para el botón de búsqueda */
+.boton-buscar {
+   
+    color: #9B948C; /* Color del texto */
+    padding: 10px 20px; /*  Relleno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Estilos al pasar el mouse por encima del botón */
+.boton-buscar:hover {
+    /* Cambia el color de fondo al pasar el mouse */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+}
+
+/* Estilos para los headers*/
+.header-index1{
+    
+}
+
+header-index2{
+    
+}
+
+
