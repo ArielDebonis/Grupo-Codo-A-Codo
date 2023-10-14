@@ -8,20 +8,17 @@
     <link rel="STYLESHEET" href="CSS/style.css">
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
-    
+    <script src="opinionescontantes.js"></script>
 </head>
 
 <body class="body-index">
-    <header class="header-index1" >
+    <header >
         <div>
             <form class="boton-buscar" action="https://www.google.com/search" method="get" style="display: inline-block;">
                 <input type="text" name="q" placeholder="Buscar en Google">
-                <button type="submit">Buscar</button>
+                <button type="submit" class="button4">Buscar</button>
             </form>
-            <nav style="display: inline-block;">
-                <ul >
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
+            <nav  style="display: inline-block;">
             </nav>
         </div>
     </header>
@@ -30,36 +27,65 @@
         <h1>Sabores que Conquistan</h1>
     </section>
    
-    <header class="header-index2">
-        <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
-        <nav>
+    <header>
+        <a class="icono-index" href="index.html"><i class="fa-solid fa-utensils"></i></a>
+        <nav class="nav-custom close-js">
             <ul>
                 <li><a href="capital.html">Capital</a></li>
                 <li><a href="santafe.html">Santa Fe</a></li>
                 <li><a href="misiones.html">Misiones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <div class="parrafo-principal">
-        <p>Descubre una experiencia gastronómica excepcional conociendo nuestra pagina web, Distintas opciones de Restaurantes de calidad, con diferentes porpuestas de platos y en distintas localidades. </p>
         <br>
-        <p>
-            Estan invitades a explorar nuestra página web para obtener más información
-        </p>
+        <h5>Descubre una experiencia gastronómica excepcional conociendo nuestra pagina web, Distintas opciones de Restaurantes de calidad, con diferentes porpuestas de platos y en distintas localidades. </h5>
+        <br>
+        <p> DESCUBRIENDO SABORES UNICOS:</p>
+            
     </div>
     <div style="text-align: center;">
         <iframe width="640" height="360" src="https://www.youtube.com/embed/nu_ne0eCPSU" title="Descubrimos la gastronomía argentina | Me voy a comer el mundo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+
+    <div id="opiniones-container"><script>
+
+ 
+
+        const contenedorOpiniones = document.getElementById("opiniones-container");
+            opinionesRestaurantes.forEach(opinion => {
+                const opinionElement = document.createElement("div");
+                opinionElement.classList.add("opinion"); 
+
+                const restauranteElement = document.createElement("h5");
+                restauranteElement.textContent = opinion.restaurante;
+
+                const calificacionElement = document.createElement("p");
+                calificacionElement.textContent = `Calificación: ${opinion.calificacion}`;
+
+                const comentarioElement = document.createElement("p");
+                comentarioElement.textContent = opinion.comentario;
+
+                opinionElement.appendChild(restauranteElement);
+                opinionElement.appendChild(calificacionElement);
+                opinionElement.appendChild(comentarioElement);
+
+                contenedorOpiniones.appendChild(opinionElement);
+})
+</script>
+    </div>
     
-    <footer>
-        <p>Política de confidencialidad</p>
-        <div class="socialmedia">
-            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        </div>
-        <a href="http://">Contacto</a>
-    </footer>
+    
 </body>
+<footer>
+    <p>Política de confidencialidad</p>
+    <div class="socialmedia">
+        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    </div>
+    <a href="http://">Contacto</a>
+</footer>
 
 </html>

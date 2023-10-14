@@ -40,7 +40,7 @@ body {
 
 #idheader {
     padding: 0.5rem 0.5rem;
-    background-color: #9B948C;
+    background-color: #90887f;
     height: 4rem;
     display: flex;
     align-items: center;
@@ -50,10 +50,6 @@ body {
     z-index: 1;
     grid-area: Header;
     place-content: flex-start;
-
-
-
-
 
 
 }
@@ -68,6 +64,7 @@ body {
 
 
 }
+
 
 
 
@@ -97,6 +94,7 @@ li {
     background-color: #85827f;
     border-radius: 3.1rem;
     font-weight: bold;
+    margin-bottom: 3rem;
 
 
 }
@@ -127,16 +125,33 @@ h1 {
     text-align: center;
     flex-direction: column;
     height: 50vh;
-    /*altura*/
     color: white;
-    background-image: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
     background-repeat: no-repeat;
-    /*no repite la imagen*/
     background-size: cover;
-    /*que ocupe todo el espacio*/
     background-position: center center;
+}
+/*codigo resposive*/
+
+/* Media Query para pantallas de celular (hasta 767px) */
+@media screen and (max-width: 767px) {
+    #media {
+        height: 80vh; /* Ajustar la altura para dispositivos móviles */
+    }
+}
+
+/* Media Query para pantallas de tablet (768px a 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #media {
+        height: 60vh; /* Ajustar la altura para tablet */
+    }
+}
+
+/* Media Query para pantallas de monitor (a partir de 992px) */
+@media screen and (min-width: 992px) {
+    #media {
+        height: 50vh; /* Altura original para monitores */
+    }
 }
 
 
@@ -536,6 +551,7 @@ footer p {
 
 
     color: #FBEDE8;
+    justify-content: center;
 
 
 }
@@ -575,13 +591,6 @@ div+a {
     .Region {
         height: fit-content;
     }
-
-
-
-
-
-
-
 
 }
 
@@ -704,6 +713,7 @@ div+a {
         width: 100%;
         height: 5px;
         padding: 10%;
+        
     }
    
 
@@ -793,9 +803,10 @@ div+a {
 
 
 .menuSuperior{
-      display: flex;
+        display: flex;
         width: 100%;
         padding: auto;
+    
         
 }
 
@@ -807,22 +818,86 @@ div+a {
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    
 }
 
 /* Estilos al pasar el mouse por encima del botón */
 .boton-buscar:hover {
     /* Cambia el color de fondo al pasar el mouse */
-    background-color: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
+    
+    
 }
 
 /* Estilos para los headers*/
 .header-index1{
     
 }
+.nav-custom ul li a:hover {
+    /* Estilos para el enlace cuando se coloca el mouse sobre él */
+   color: whitesmoke;
+   background-color:  #9B948C;
+   border-radius: 60%
+}
+
+.icono-index{
+    position: sticky;
+    display: flex;
+    font-size: 2rem; /* Aumenta el tamaño del ícono */
+    margin-top: 1rem; /* Agrega margen superior para separación */
+}
 
 header-index2{
     
 }
+
+.li-contacto{
+    display: inline-block; /* Muestra el elemento en línea */
+    margin-right: 10px; /* Espacio entre elementos
+    padding: 1rem;
+    border-radius: 4.1rem;
+    background-color: #85827f;
+    font-weight: bold;
+    min-width: 500px;  
+    margin-top: 2rem;
+    */
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .menuSuperior {
+        text-align: right; /* Alinea todos los elementos a la derecha */
+        padding: 0.5rem 0.5rem;
+        background-color: #9B948C;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+        grid-area: Header;
+        place-content: flex-start;
+    }
+    
+    .li-contacto {
+        display: block; /* Cambia el elemento a bloque para que esté en una línea separada en dispositivos móviles */
+        margin: 5px 0; /* Espacio vertical entre elementos */
+    }
+
+    .header-index2{
+        text-align: right 
+    }
+    .button4 {
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+      }
+      
+    .button4:hover {background-color: #e7e7e7;}
+}
+
+
+
+
 
 
