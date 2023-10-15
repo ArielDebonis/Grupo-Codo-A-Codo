@@ -86,19 +86,23 @@ header * {
 header ul {
     float: right;
     margin-right: 0.5rem;
+    
 }
 
 
 li {
-    padding: 0.4rem;
-    background-color: #85827f;
-    border-radius: 3.1rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
-
-
+    padding: 10px 20px 15px 5px;
+    background-color:#3F93A6;
+    color: rgb(239, 232, 232);
+    
+    
 }
 
+li:hover {
+    background-color: #9B948C; /* Cambia el color cuando se coloca el mouse sobre el elemento */
+    color: #FFFFFF; /* Cambia el color del texto cuando se coloca el mouse sobre el elemento */
+   
+}
 
 a {
     text-decoration: none;
@@ -183,6 +187,13 @@ h4 {
 
 h5 {
     color: #bd6e4f;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+h6{
+    color: #eee;
     font-size: 1.3rem;
     text-align: center;
     margin: 1rem;
@@ -563,6 +574,7 @@ footer p {
     align-items: center;
     width: 100%;
     padding: 15px;
+    background-color:#3F93A6;
 
 
 }
@@ -654,12 +666,11 @@ div+a {
 
     }
 
-
+ /*LISTADO QUE AFECTA TMB AL INDEX*/
     li {
         padding: 1rem;
-        border-radius: 4.1rem;
-
-
+        border-radius: 2px;
+             
     }
 
 
@@ -763,7 +774,8 @@ div+a {
     margin: 20px; /* Margen alrededor del párrafo para dispositivos más pequeños */
     font-style: italic; /* estilo en cursiva */
     background-size: cover;/*que ocupe todo el espacio*/
-    background-position: center center
+    background-position: center center;
+    color: #eee
 }
 
 
@@ -776,7 +788,15 @@ div+a {
         width: 800px;
         height: 450px;
     }
-
+    
+    .li-principal {
+        padding: 10px 20px 15px 5px;
+        block-size: auto;
+        color: rgb(239, 232, 232);
+        font-size: 16px;
+    }
+    
+    
     
 }
 
@@ -794,6 +814,17 @@ div+a {
         font-size: 0.25rem; /* Aumenta el tamaño del ícono */
         margin-top: 1rem; /* Agrega margen superior para separación */
     }
+
+    .li-principal{
+        padding: 10px 20px 15px 5px;
+       
+        block-size: auto;
+        color: rgb(239, 232, 232);
+        font-size: 16px;
+        
+    }
+    
+   
 }
 
 /* Estilos para dispositivos móviles */
@@ -814,6 +845,54 @@ div+a {
     .parrafo-principal {
         font-size: 10vw; /* Cambia el tamaño de fuente para pantallas pequeñas */
         /* Otros estilos específicos para pantallas pequeñas */
+    }
+    .menuSuperior {
+        text-align: right; /* Alinea todos los elementos a la derecha */
+        padding: 0.5rem 0.5rem;
+        background-color: #9B948C;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+        grid-area: Header;
+        place-content: flex-start;
+    }
+    
+    .li-contacto {
+        display: block; /* Cambia el elemento a bloque para que esté en una línea separada en dispositivos móviles */
+        margin: 5px 0; /* Espacio vertical entre elementos */
+    }
+
+    .header-index2{
+        text-align: right 
+    }
+    .button4 {
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+      }
+      
+    .button4:hover {background-color: #e7e7e7;}
+
+ /* menu pirncipal*/
+
+    .li-principal {
+        padding:10px 20px 0px 10px;
+        color: rgb(239, 232, 232);
+        font-size: 16px;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    
+    .nav-custom{
+        position: sticky;
+        top: 52px;
+        justify-content: center;
+        padding-bottom: 1rem;
     }
 
 }
@@ -859,53 +938,6 @@ div+a {
 }
 .header-index2{
     
-}
-
-
-.li-contacto{
-    display: inline-block; /* Muestra el elemento en línea */
-    margin-right: 1rem; /* Espacio entre elementos
-    padding: 1rem;
-    border-radius: 4.1rem;
-    background-color: #85827f;
-    font-weight: bold;
-    min-width: 500px;  
-    margin-top: 2rem;
-    */
-}
-
-/* Media Query para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .menuSuperior {
-        text-align: right; /* Alinea todos los elementos a la derecha */
-        padding: 0.5rem 0.5rem;
-        background-color: #9B948C;
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: sticky;
-        top: 0%;
-        z-index: 1;
-        grid-area: Header;
-        place-content: flex-start;
-    }
-    
-    .li-contacto {
-        display: block; /* Cambia el elemento a bloque para que esté en una línea separada en dispositivos móviles */
-        margin: 5px 0; /* Espacio vertical entre elementos */
-    }
-
-    .header-index2{
-        text-align: right 
-    }
-    .button4 {
-        background-color: white;
-        color: black;
-        border: 2px solid #e7e7e7;
-      }
-      
-    .button4:hover {background-color: #e7e7e7;}
 }
 
 
