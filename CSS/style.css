@@ -748,7 +748,7 @@ div+a {
 
 /*--------------------------------- index--------------------------*/
 
-/* Estilos generales para pantallas grandes */
+/* Estilos generales*/
 .header {
     text-align: right;
     /* Otros estilos para el encabezado */
@@ -767,8 +767,44 @@ div+a {
 }
 
 
-/* Media Query para pantallas de tamaño mediano (por ejemplo, teléfonos móviles) */
-@media screen and (max-width: 768px) {
+/*codigo resposive*/
+
+/* Estilos para monitor o pantallas maS grandes */
+@media screen and (min-width: 992px) {
+    /*VIDEO DE YOUTUBE EN EL INDEX*/
+    .video-container iframe {
+        width: 800px;
+        height: 450px;
+    }
+
+    
+}
+
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+     /*VIDEO DE YOUTUBE EN EL INDEX*/
+    .video-container iframe {
+        width: 500px;
+        height: 281px;
+    }
+
+    .icono-index{
+        position: sticky;
+        
+        font-size: 0.25rem; /* Aumenta el tamaño del ícono */
+        margin-top: 1rem; /* Agrega margen superior para separación */
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    /*VIDEO DE YOUTUBE EN EL INDEX*/
+    .video-container iframe {
+        width: 320px;
+        height: 180px;
+    }
+
+
     .header {
         text-align: center; /* Centra el contenido del encabezado */
         /* Otros estilos específicos para pantallas pequeñas */
@@ -779,23 +815,12 @@ div+a {
         font-size: 10vw; /* Cambia el tamaño de fuente para pantallas pequeñas */
         /* Otros estilos específicos para pantallas pequeñas */
     }
+
 }
 
+/* MAAASSS Estilos generales*/
 
-/* Media Query para pantallas muy pequeñas (por ejemplo, teléfonos móviles en modo vertical) */
-@media screen and (max-width: 480px) {
-    .header {
-        /* Estilos adicionales para pantallas muy pequeñas */
-    }
-
-
-    .parrafo-principal {
-        font-size: 14px; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
-        /* Estilos adicionales para pantallas muy pequeñas */
-    }
-}
-
-
+/*fondo de pantalla le digo yo*/
 .body-index{
     background-color: #ca9785
 }
@@ -810,13 +835,14 @@ div+a {
         
 }
 
+/* HEADEAR SUPERIOR: BOTON  DE BUSQUEDA E ICONO DE INDEX */
 /* Estilos para el botón de búsqueda */
 .boton-buscar {
    
     color: #9B948C; /* Color del texto */
     padding: 10px 20px; /*  Relleno del botón */
     border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 0.5rem; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
     
 }
@@ -825,34 +851,20 @@ div+a {
 .boton-buscar:hover {
     /* Cambia el color de fondo al pasar el mouse */
     
-    
 }
 
 /* Estilos para los headers*/
 .header-index1{
     
 }
-.nav-custom ul li a:hover {
-    /* Estilos para el enlace cuando se coloca el mouse sobre él */
-   color: whitesmoke;
-   background-color:  #9B948C;
-   border-radius: 60%
-}
-
-.icono-index{
-    position: sticky;
-    display: flex;
-    font-size: 2rem; /* Aumenta el tamaño del ícono */
-    margin-top: 1rem; /* Agrega margen superior para separación */
-}
-
-header-index2{
+.header-index2{
     
 }
 
+
 .li-contacto{
     display: inline-block; /* Muestra el elemento en línea */
-    margin-right: 10px; /* Espacio entre elementos
+    margin-right: 1rem; /* Espacio entre elementos
     padding: 1rem;
     border-radius: 4.1rem;
     background-color: #85827f;
