@@ -13,7 +13,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     /* color: #262626; Lo coloque como comentario ya que no tenia ningún proposito en el momento*/
     margin: 0;
-    background-color: #f8f4f3;
+    background-color: #f9f0ee;
 }
 
 
@@ -66,13 +66,8 @@ body {
 }
 
 
-
-
-
-
-
 i {
-    color: #FBEDE8;
+    color: #90887f;
     margin-left: 0.7rem;
     font-size: small;
 }
@@ -94,14 +89,26 @@ li {
     padding: 10px 20px 15px 5px;
     background-color:#3F93A6;
     color: rgb(239, 232, 232);
-    
+    padding: 10px 20px; /* Espacio alrededor del texto en cada elemento */
+    color: rgb(239, 232, 232); /* Color del texto */
+    border-right: 1px solid white; /* Separación entre elementos */
     
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #3F93A6; /* Fondo de color para toda la barra de menú */
+    
+}
+
 
 li:hover {
     background-color: #9B948C; /* Cambia el color cuando se coloca el mouse sobre el elemento */
     color: #FFFFFF; /* Cambia el color del texto cuando se coloca el mouse sobre el elemento */
-   
+    border-right: none;
 }
 
 a {
@@ -193,7 +200,7 @@ h5 {
 }
 
 h6{
-    color: #eee;
+    color: black;
     font-size: 1.3rem;
     text-align: center;
     margin: 1rem;
@@ -203,7 +210,7 @@ h6{
 p {
     display: flex;
     font-size: 1rem;
-    color: #c79d8d;
+    color: #9B948C;
     flex-wrap: wrap;
     margin: 0.5em;
     padding: 0.5em;
@@ -258,7 +265,7 @@ img {
 
 
 .contenido {
-    background-color: #bd6e4f;
+    background-color: #e2b8a8;
     padding: 2rem;
     margin: 1rem 0.1rem;
     max-height: fit-content;
@@ -342,10 +349,10 @@ div img {
     align-self: auto;
 }
 
-
+/*lo comnetario toman esta fuente*/
 div p {
     font-size: 1rem;
-    color: #FFFFE8;
+    color:#9B948C
     /* border-style: solid; */
     flex: 2 1 auto;
     align-self: auto;
@@ -775,7 +782,7 @@ div+a {
     font-style: italic; /* estilo en cursiva */
     background-size: cover;/*que ocupe todo el espacio*/
     background-position: center center;
-    color: #eee
+    color: black
 }
 
 
@@ -901,7 +908,8 @@ div+a {
 
 /*fondo de pantalla le digo yo*/
 .body-index{
-    background-color: #ca9785
+    
+    color: rgba(255, 255, 255, 0.7); /* Blanco con una opacidad del 70% */
 }
 
 
