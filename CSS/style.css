@@ -179,12 +179,12 @@ img {
     width: 20rem;
 }
 
-.Map {
+/* .Map {
     height: 20rem;
     width: 100rem;
     align-items: center;
     margin: 0.5rem;
-}
+} */
 
 /* --------------------------Capital------------------------  */
 
@@ -262,6 +262,12 @@ img {
             text-decoration: underline;
             flex: 0 1 auto;
             align-self: auto;
+        }
+
+        #map {
+            background-color: #9B948C;
+            height: 150px;
+            width: 100%;
         }
 
     div p {
