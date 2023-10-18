@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif;;
     /* color: #262626; Lo coloque como comentario ya que no tenia ningún proposito en el momento*/
     margin: 0;
     background-color: #FBEDE8;
@@ -51,23 +51,91 @@ body {
 
 
 .menuSuperior {
-    display: flex;
-    width: 70%;
+    display: inline;
+    width: 100%;
     place-content: space-between;
 
 }
+    /* menu de hamburguesa */
+  
 
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+
+
+    #menu{
+        display: block;
+        color: #FBEDE8;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid;
+        border-radius: 0.3em;
+        z-index: 9999;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em
+        
+
+    }
+
+
+    #menu-check{
+        display: none;
+    }
+
+    #menu:hover {
+        color: #bd6e4f;
+
+    }
+
+    #menu-cerrar{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar{
+        display: block;
+    }
+
+    header nav{
+        position:absolute; 
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: #9B948C;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.9;
+        color: #FBEDE8;
+    
+    
+    }
+/* Termina el menu hamburguesa */
 
 
 i {
     color: #FBEDE8;
-    margin-left: 0.7rem;
-    font-size: small;
+    margin-left: 0.0rem;
+    font-size: 2.5em;
 }
 
-header * {
+header, ul, li  {
     display: inline;
+    display: block;
+    text-align: right;
 }
+
+/* header * {
+    display: inline;
+} */
 
 header ul {
     float: right;
@@ -76,16 +144,16 @@ header ul {
 
 li {
     padding: 0.4rem;
-    background-color: #85827f;
-    border-radius: 3.1rem;
+    /* background-color: #85827f;
+    border-radius: 3.1rem; */
     font-weight: bold;
 
 }
 
 a {
     text-decoration: none;
-    color: #FBEDE8;
-    font-size: 0.8rem
+    color:#bd6e4f;
+    font-size: 1.2rem
 }
 
 
@@ -406,8 +474,9 @@ div div {
 #idfooter {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 60%;
     padding: 10px;
     bottom: 0%;
     background-color: #9B948C;
@@ -415,7 +484,7 @@ div div {
     margin: 1rem 0.1rem;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     grid-area: footer;
 
 
@@ -432,19 +501,32 @@ footer p {
 
 .socialmedia {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 20%;
     padding: 15px;
 
 }
+
+.socialmedia a{
+    margin: 10px;
+    font-size: 0.5rem;
+
+}
+
+#copyright{
+    text-align: left;
+    font-size: 0.9rem;
+ 
+ }
 
 div+a {
     display: flex;
     text-align: center;
     flex-direction: column;
     color: #FBEDE8;
-    font-size: 20px;
+    font-size: 0.9rem;
     padding: 15px;
 }
 
