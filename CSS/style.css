@@ -345,6 +345,7 @@ img {
 /* --------------- Pagina de contacto ---------------------- */
 
 .contenedorContacto {
+    font-family: 'Montserrat', sans-serif;
     max-width: 1024px;
     margin: auto;
     padding: 0px;
@@ -353,7 +354,7 @@ img {
 .contacto{
     
     margin: 1rem 0rem;
-    background-color: #bd6e4f;
+    background-color: #dfae98;
 }
 form {
     display: flex;
@@ -382,6 +383,7 @@ form {
                     url(../img/inicio.jpg);
 }
 .leyenda_contacto{
+    text-align: center;
     font-size: 2.5em;
     color: white;   
 }
@@ -413,6 +415,7 @@ form {
     font-size: 1.25em;
 }
 .boton{
+    font-family: 'Montserrat', sans-serif;
     align-self: end;
     margin: 25px 10px;
     font-size: 1.5em;
@@ -474,6 +477,8 @@ div+a {
     .Region {
         height: fit-content;
     }
+
+    /* Contacto */
     .contenedorContacto {
         width: 425px;
     }
