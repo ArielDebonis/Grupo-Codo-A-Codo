@@ -149,19 +149,7 @@ body {
         display: block;
     }
 
-    header nav{
-        position:absolute; 
-        top: 0;
-        right: 0;
-        height: 100%;
-        background-color: #9B948C;
-        padding-top: 0.5em;
-        padding-right: 1.5em;
-        opacity: 0.9;
-        color: #FBEDE8;
-    
-    
-    }
+ 
 /* Termina el menu hamburguesa */
 
 
@@ -269,7 +257,7 @@ h1 {
 }
 
 .contenido {
-    background-color: #bd6e4f;
+    background-color: #dfae98;
     padding: 2rem;
     margin: 1rem 0.1rem;
     max-height: fit-content;
