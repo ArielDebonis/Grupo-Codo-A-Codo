@@ -8,8 +8,7 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    /* color: #262626; Lo coloque como comentario ya que no tenia ningún proposito en el momento*/
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: #FBEDE8;
 }
@@ -21,7 +20,7 @@ body {
     gap: 10px;
     margin: 10px auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.3fr;
+    grid-template-rows: 0.1fr 0.2fr 0.9fr 1.7fr 0.1fr;
     grid-template-areas:
         "Header Header Header"
         "titulo titulo titulo"
@@ -50,43 +49,116 @@ body {
 }
 
 
-.menuSuperior {
-    display: flex;
-    width: 70%;
-    place-content: space-between;
+    .menuSuperior {
+        display: inline;
+        width: 100%;
+        place-content: space-between;
 
-}
+    }
+
+    /* menu de hamburguesa */
+
+            
+        #menu-check:not(:checked)~nav {
+            display: none;
+        }
+
+        #menu-check:checked~nav {
+            display: block;
+        }
+
+
+        #menu {
+            display: block;
+            color: #FBEDE8;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 3px solid;
+            border-radius: 0.3em;
+            z-index: 9999;
+            position: absolute;
+            right: 0.5em;
+            top: 0.5em
+        }
+
+
+        #menu-check {
+            display: none;
+        }
+
+        #menu:hover {
+            color: brown;
+
+        }
+
+        #menu-cerrar {
+            display: none;
+        }
+
+        #menu-check:checked~label #menu-abrir {
+            display: none;
+        }
+
+        #menu-check:checked~label #menu-cerrar {
+            display: block;
+        }
 
 
 
-i {
-    color: #FBEDE8;
-    margin-left: 0.7rem;
-    font-size: small;
-}
-
-header * {
-    display: inline;
-}
-
-header ul {
-    float: right;
-    margin-right: 0.5rem;
-}
-
-li {
-    padding: 0.4rem;
-    background-color: #85827f;
-    border-radius: 3.1rem;
-    font-weight: bold;
-
-}
-
-a {
-    text-decoration: none;
-    color: #FBEDE8;
-    font-size: 0.8rem
-}
+    header nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: #9B948C;
+        padding-top: 1.5em;
+        padding-right: 1.5em;
+        opacity: 0.9;
+        color: #FBEDE8;
+    
+    
+    }
+    
+    
+    
+    
+    
+    i {
+        color: #FBEDE8;
+        margin-left: 0.0rem;
+        font-size: 2.5em;
+    }
+    
+    header,
+    ul,
+    li {
+        display: inline;
+        display: block;
+        text-align: right;
+    
+    }
+    
+    header ul {
+        float: right;
+        margin-right: 0.5rem;
+    
+    }
+    
+    li {
+        padding: 0.4rem;
+        /* background-color: #85827f;
+        border-radius: 3.1rem; */
+        font-weight: bold;
+    
+    
+    }
+    
+    a {
+        text-decoration: none;
+        color: brown;
+        font-size: 1.2rem
+    }
+    
 
 
 /*--------------------SECTION------------------*/
@@ -119,62 +191,7 @@ h1 {
 /* --------------------------MISIONES------------------------  */
 
 
-.titulo {
-    color: #9B948C;
-    font-size: 2rem;
-    border: 0.3rem double #9B948C;
-    text-align: center;
-    margin: 1rem 0.1rem;
-    padding: 2rem;
-}
-
-h4 {
-    color: #bd6e4f;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 1.4rem;
-    text-decoration: underline;
-}
-
-h5 {
-    color: #bd6e4f;
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 1rem;
-}
-
-p {
-    display: flex;
-    font-size: 1rem;
-    color: #c79d8d;
-    flex-wrap: wrap;
-    margin: 0.5em;
-    padding: 0.5em;
-    text-align: justify;
-}
-
-.todo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center
-}
-
-img {
-    padding: 0.5rem;
-    height: 20rem;
-    width: 20rem;
-}
-
-.Map {
-    height: 20rem;
-    width: 100rem;
-    align-items: center;
-    margin: 0.5rem;
-}
-
+/* 
 /* --------------------------Capital------------------------  */
 
 .Region {
@@ -208,17 +225,13 @@ img {
 
 }
 
-img {
-    padding: 0.5rem;
-    height: 15rem;
-
-}
 
 h2 {
     text-align: center;
     color: #FFFFE8;
     text-decoration: underline;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
+    margin: 0.1rem;
     align-self: center;
 
 
@@ -228,10 +241,11 @@ h2 {
     display: flex;
     width: 100%;
     height: auto;
+    margin: 0.1rem;
     max-height: fit-content;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: center;
 
@@ -252,7 +266,7 @@ div img {
 
 .ubicacion {
     color: black;
-    font-size: medium;
+    font-size: 0.9rem;
     font-weight: bold;
     text-align: center;
     text-decoration: underline;
@@ -260,10 +274,15 @@ div img {
     align-self: auto;
 }
 
+.cali {
+    font-size: 1rem;
+    text-align: center;
+
+}
+
 div p {
     font-size: 1rem;
     color: #FFFFE8;
-    /* border-style: solid; */
     flex: 2 1 auto;
     align-self: auto;
 
@@ -281,7 +300,7 @@ div p {
 
 
 .sidebar {
-    margin: 0.5rem 0.1rem;
+    margin: 0.5rem 0.0rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -406,16 +425,18 @@ div div {
 #idfooter {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 10px;
-    bottom: 0%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 90%;
+    padding: 0;
     background-color: #9B948C;
     color: #FBEDE8;
-    margin: 1rem 0.1rem;
+    margin: 0.1rem 0.1rem;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
+    bottom: 0;
+    position: relative;
     grid-area: footer;
 
 
@@ -432,10 +453,22 @@ footer p {
 
 .socialmedia {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 20%;
     padding: 15px;
+
+}
+
+.socialmedia a {
+    margin: 10px;
+    font-size: 0.5rem;
+
+}
+
+#copyright {
+    font-size: 0.9rem;
 
 }
 
@@ -444,33 +477,111 @@ div+a {
     text-align: center;
     flex-direction: column;
     color: #FBEDE8;
-    font-size: 20px;
+    font-size: 0.9rem;
     padding: 15px;
 }
 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
-@media (max-width: 760px) {
 
-    /* HEADER */
+@media (min-width: 750px) {
 
-    /* SECTION */
-    .Region {
-        height: fit-content;
+
+    .contenedorgrid {
+        grid-template-rows: 0.0fr 0.1fr 0.8fr 1.8fr 0.1fr;
+
+
     }
 
 
+    #idheader {
+        padding: 1rem 1rem;
+        height: 5rem;
+
+    }
+
+    i {
+
+        font-size: 3.5em;
+    }
+
+    #menu {
+        font-size: 2em;
+    }
+
+
+    .Region {
+        font-size: 3rem;
+
+    }
+
+    h2 {
+        font-size: 2.5rem;
+
+    }
+
+    .cali {
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+
+
+    .restdisplay {
+
+        justify-content: space-evenly;
+
+
+    }
+
+    header nav {
+        padding-top: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .ubicacion {
+        font-size: 1.5rem;
+    }
+
+    div p {
+        font-size: 1.5rem;
+
+
+    }
+
+    #map {
+        background-color: #9B948C;
+        height: 190px;
+    }
+
+    .restname {
+        font-size: 1.5rem;
+
+
+    }
+
+    #copyright {
+        font-size: 1.2rem;
+
+    }
+
+    div+a {
+        font-size: 1.2rem;
+
+    }
 
 
 }
 
 
-@media (min-width:500px) {
+
+
+@media (min-width:1440px) {
 
     .contenedorgrid {
         width: 100%;
-        max-width: 1700px;
-        grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.1fr;
+        max-width: 1500px;
+        grid-template-rows: 0.1fr 0.2fr 1fr 2fr 0.1fr;
         grid-template-areas:
             "Header Header Header"
             "titulo titulo titulo"
@@ -482,100 +593,133 @@ div+a {
 
     /* HEADER */
 
+
+
     #idheader {
         padding: 1rem 1rem;
         background-color: #9B948C;
         height: 5rem;
     }
 
-    #menu, #menu-check, #menu-abrir, #menu-cerrar{
+
+    #menu,
+    #menu-check,
+    #menu-abrir,
+    #menu-cerrar {
         display: none;
     }
 
+
+    #menu-check:not(:checked)~nav {
+        display: block;
+    }
+    
+    #menu-check:checked~nav {
+        display: block;
+    }
+    
+
     .menuSuperior {
 
+        display: flex;
         place-content: space-around;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+
+    }
+
+    header nav {
+        padding-top: 0.7em;
+        padding-right: 1em;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+
 
     }
 
 
-    h1{
-        font-size: regular;
+
+
+    i {
+        margin-left: 0.0rem;
+        font-size: 2.5em;
+    }
+
+    header,
+    ul,
+    li {
+        display: inline;
         text-align: center;
 
+
     }
 
-    i{ font-size: 3rem
+    header ul {
+        float: right;
+        margin-right: 0.5rem;
 
     }
 
     li {
         padding: 1rem;
-        border-radius: 4.1rem;
+        margin: 3rem, 3rem;
+        background-color: #FBEDE8;
+        border-radius: 3.1rem;
+        font-weight: bold;
+
 
     }
 
     a {
-        text-align: center;
         text-decoration: none;
-        color: #FBEDE8;
-        font-size: 1rem
+        color: #9B948C;
+        font-size: 1.2rem
     }
 
     /* SECTION */
 
     .Region {
-        color: #9B948C;
-        font-size: 2rem;
-        border: 0.3rem double #9B948C;
+
+        font-size: 3rem;
+
+    }
+
+    .ubicacion {
         text-align: center;
-        margin: 1rem 0.1rem;
-        padding: 2rem;
-        text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
-        grid-area: titulo;
-    
-    
-    
+        font-size: 1.5rem;
     }
 
-    div img {
-        width: 100%;
-        height: 50%;
-
+    .sidebar {
+        margin: 0.0rem 0.0rem;
     }
-
-    #map {
-        background-color: #9B948C;
-        height: 150px;
-    }
-
+    
 
     /* Footer */
 
-    footer {
-        display: flex;
-        width: 100%;
-        height: 5px;
-        padding: 10%;
-    }
-    
 
     .socialmedia {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 50%;
-        padding: 15px;
+        flex-direction: row;
+
+    }
+
+    .socialmedia a {
+        font-size: 1.5rem;
+
+    }
+
+    #copyright {
+        margin-left: 1rem;
+        font-size: 1.5rem;
 
     }
 
     div+a {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        color: #FBEDE8;
-        font-size: 20px;
-        padding: 15px;
+
+        font-size: 2rem;
+
     }
 
 
