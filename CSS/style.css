@@ -20,7 +20,7 @@ body {
     gap: 10px;
     margin: 10px auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.2fr 0.9fr 1.7fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 1.5fr 1.7fr 0.1fr;
     grid-template-areas:
         "Header Header Header"
         "titulo titulo titulo"
@@ -739,7 +739,13 @@ div+a {
         font-size: 1.5rem;
     }
 
-    .sidebar {
+    .cali {
+        font-size: 1.5rem;
+    
+    }
+
+    .sidebar {     
+        height: fit-content;
         margin: 0.0rem 0.0rem;
     }
     
