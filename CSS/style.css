@@ -15,11 +15,11 @@ body {
 
 .contenedorgrid {
     width: 90%;
-    max-width: 1100px;
+    max-width: 68.75rem;
     display: grid;
-    gap: 10px;
-    margin: 10px auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.625rem;
+    margin: 0.625rem auto;
+    /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-rows: 0.1fr 0.2fr 1.5fr 1.7fr 0.1fr;
     grid-template-areas:
         "Header Header Header"
@@ -27,7 +27,6 @@ body {
         "contenido contenido contenido "
         "sidebar sidebar sidebar"
         "footer footer footer";
-
 
 }
 
@@ -45,9 +44,7 @@ body {
     place-content: flex-start;
 
 
-
 }
-
 
     .menuSuperior {
         display: inline;
@@ -67,20 +64,18 @@ body {
             display: block;
         }
 
-
         #menu {
             display: block;
             color: #FBEDE8;
             font-size: 1.5em;
             font-weight: bold;
-            border: 3px solid;
+            border: 0.1875rem solid;
             border-radius: 0.3em;
             z-index: 9999;
             position: absolute;
             right: 0.5em;
             top: 0.5em
         }
-
 
         #menu-check {
             display: none;
@@ -111,47 +106,7 @@ body {
         display: block;
     }
 
-
-    #menu{
-        display: block;
-        color: #FBEDE8;
-        font-size: 1.2em;
-        font-weight: bold;
-        border: 3px solid;
-        border-radius: 0.3em;
-        z-index: 9999;
-        position: absolute;
-        right: 0.5em;
-        top: 0.5em
-        
-
-    }
-
-
-    #menu-check{
-        display: none;
-    }
-
-    #menu:hover {
-        color: #bd6e4f;
-
-    }
-
-    #menu-cerrar{
-        display: none;
-    }
-
-    #menu-check:checked ~ label #menu-abrir{
-        display: none;
-    }
-
-    #menu-check:checked ~ label #menu-cerrar{
-        display: block;
-    }
-
- 
 /* Termina el menu hamburguesa */
-
 
     header nav {
         position: absolute;
@@ -177,14 +132,13 @@ body {
         font-size: 2.5em;
     }
     
-    header,
+    /* header,
     ul,
-    li {
-        display: inline;
-        display: block;
+    li {  
+        display: block;    
         text-align: right;
     
-    }
+    } */
     
     header ul {
         float: right;
@@ -192,22 +146,20 @@ body {
     
     }
     
-    li {
+    .itemsmenu {
+        display: block; 
         padding: 0.4rem;
-        /* background-color: #85827f;
-        border-radius: 3.1rem; */
         font-weight: bold;
-    
+        text-align: right;
     
     }
     
-    a {
+    li a {
         text-decoration: none;
         color: brown;
         font-size: 1.2rem
     }
     
-
 
 /*--------------------SECTION------------------*/
 
@@ -235,9 +187,10 @@ h1 {
     background-position: center center;
 }
 
-
 /* --------------------------MISIONES------------------------  */
 
+/* 
+/* --------------------------Capital------------------------  */
 
 /* 
 /* --------------------------Capital------------------------  */
@@ -249,9 +202,8 @@ h1 {
     text-align: center;
     margin: 1rem 0.1rem;
     padding: 2rem;
-    text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
+    text-shadow: 0.3125rem 0.625rem 0.3125rem rgba(0, 0, 255, 0.25);
     grid-area: titulo;
-
 
 
 }
@@ -270,9 +222,7 @@ h1 {
     grid-area: contenido;
 
 
-
 }
-
 
 h2 {
     text-align: center;
@@ -281,7 +231,6 @@ h2 {
     padding-bottom: 0.2rem;
     margin: 0.1rem;
     align-self: center;
-
 
 }
 
@@ -297,9 +246,7 @@ h2 {
     align-items: center;
     align-content: center;
 
-
 }
-
 
 
 div img {
@@ -336,14 +283,12 @@ div p {
 
 
 
-
 }
 
 #map {
     background-color: #9B948C;
-    height: 150px;
+    height: 9.375rem;
 }
-
 
 
 
@@ -352,7 +297,7 @@ div p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -361,17 +306,14 @@ div p {
 
 
 
-
 }
 
 div div {
-
 
     align-self: center;
     width: 100%;
     display: flex;
     flex-direction: column;
-
 
 
 }
@@ -384,12 +326,11 @@ div div {
     border-style: none;
     border-width: none;
 
-
 }
 
 .restopc:hover {
-    box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
-    transform: translateY(-10px);
+    box-shadow: 0rem 0.625rem 0.9375rem 0.3125rem(182, 182, 182, 1.5);
+    transform: translateY(-0.625rem);
 }
 
 .restname {
@@ -401,7 +342,6 @@ div div {
     align-self: center;
 
 }
-
 
 
 
@@ -439,20 +379,20 @@ div div {
     font-size: 1.5em;
     padding-bottom: 1%;
     margin-top: 5%;
-    border-bottom: solid 3px;
+    border-bottom: solid 0.1875rem;
     border-color: #3F93A6;
     display: inline-block;
 }
 
 .input_contacto input {
     width: 97%;
-    padding: 10px;
+    padding: 0.625rem; 
     font-size: 1.25em;
 }
 
 .input_contacto textarea {
     width: 97%;
-    padding: 10px;
+    padding: 0.625rem;
     resize: none;
     font-size: 1.25em;
 }
@@ -461,10 +401,10 @@ div div {
     margin: 1%;
     margin-bottom: 2%;
     font-size: 1.5em;
-    padding: 20px 50px;
+    padding: 1.25rem 3.125rem; 
     background-color: #3F93A6;
     border: 0px;
-    border-radius: 45px;
+    border-radius: 2.8125rem;  
     color: #eee;
 }
 
@@ -490,7 +430,6 @@ div div {
 
 
 
-
 }
 
 footer p {
@@ -505,12 +444,12 @@ footer p {
     justify-content: space-evenly;
     align-items: center;
     width: 20%;
-    padding: 15px;
+    padding: 0.9375rem; 
 
 }
 
 .socialmedia a {
-    margin: 10px;
+    margin: 0.625rem; 
     font-size: 0.5rem;
 
 }
@@ -526,21 +465,17 @@ div+a {
     flex-direction: column;
     color: #FBEDE8;
     font-size: 0.9rem;
-    padding: 15px;
+    padding: 0.9375rem; 
 }
-
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media (min-width: 750px) {
 
-
     .contenedorgrid {
         grid-template-rows: 0.0fr 0.1fr 0.8fr 1.8fr 0.1fr;
 
-
     }
-
 
     #idheader {
         padding: 1rem 1rem;
@@ -556,7 +491,6 @@ div+a {
     #menu {
         font-size: 2em;
     }
-
 
     .Region {
         font-size: 3rem;
@@ -574,11 +508,9 @@ div+a {
 
     }
 
-
     .restdisplay {
 
         justify-content: space-evenly;
-
 
     }
 
@@ -594,17 +526,15 @@ div+a {
     div p {
         font-size: 1.5rem;
 
-
     }
 
     #map {
         background-color: #9B948C;
-        height: 190px;
+        height: 11.875rem; 
     }
 
     .restname {
         font-size: 1.5rem;
-
 
     }
 
@@ -618,9 +548,12 @@ div+a {
 
     }
 
+    
+    li a{
+        font-size: 1.5rem
+    }
 
 }
-
 
 
 
@@ -642,13 +575,11 @@ div+a {
     /* HEADER */
 
 
-
     #idheader {
         padding: 1rem 1rem;
         background-color: #9B948C;
         height: 5rem;
     }
-
 
     #menu,
     #menu-check,
@@ -656,7 +587,6 @@ div+a {
     #menu-cerrar {
         display: none;
     }
-
 
     #menu-check:not(:checked)~nav {
         display: block;
@@ -684,9 +614,7 @@ div+a {
         align-content: center;
         justify-content: space-around;
 
-
     }
-
 
 
 
@@ -700,7 +628,6 @@ div+a {
     li {
         display: inline;
         text-align: center;
-
 
     }
 
@@ -716,7 +643,6 @@ div+a {
         background-color: #FBEDE8;
         border-radius: 3.1rem;
         font-weight: bold;
-
 
     }
 
@@ -745,13 +671,12 @@ div+a {
     }
 
     .sidebar {     
-        height: fit-content;
+        height: 97.67%;
         margin: 0.0rem 0.0rem;
     }
     
 
     /* Footer */
-
 
     .socialmedia {
         display: flex;
@@ -777,5 +702,9 @@ div+a {
     }
 
 
-
 }
+
+
+
+
+
