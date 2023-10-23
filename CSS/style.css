@@ -355,57 +355,86 @@ div div {
 
 /* --------------- Pagina de contacto ---------------------- */
 
-.contacto {
-    width: 50vw;
+.contenedorContacto {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1024px;
     margin: auto;
-    background-color: #88DFF2;
+    padding: 0px;
 }
 
-.field_contacto {
+.contacto{
+    
+    margin: 1rem 0rem;
+    background-color: #dfae98;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.field_contacto{
     border: 0px;
 }
-
-.leyenda_contacto {
-    padding-top: 3%;
-    margin: auto;
-    font-size: 2.5em;
+.leyenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 1rem 0rem;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                    url(../img/inicio.jpg);
 }
-
-.input_contacto {
-    margin: 1%;
+.leyenda_contacto{
+    text-align: center;
+    font-size: 2.5em;
+    color: white;   
+}
+.divisorContacto {
+    display: Flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.input_contacto{
+    margin: 15px;
 }
 
 .input_contacto label {
     font-size: 1.5em;
     padding-bottom: 1%;
-    margin-top: 5%;
-    border-bottom: solid 0.1875rem;
-    border-color: #3F93A6;
-    display: inline-block;
-}
+    margin-top: 40px;
 
-.input_contacto input {
-    width: 97%;
-    padding: 0.625rem; 
+}
+.input_contacto input{
+    padding: 10px;
     font-size: 1.25em;
 }
-
-.input_contacto textarea {
+.input_contacto textarea{
+    padding: 10px;
     width: 97%;
-    padding: 0.625rem;
+    height: 280px;
     resize: none;
     font-size: 1.25em;
 }
-
-.boton {
-    margin: 1%;
-    margin-bottom: 2%;
+.boton{
+    font-family: 'Montserrat', sans-serif;
+    align-self: end;
+    margin: 25px 10px;
     font-size: 1.5em;
-    padding: 1.25rem 3.125rem; 
-    background-color: #3F93A6;
+    padding: 20px 50px;
+    background-color: #FFFFE8;
     border: 0px;
-    border-radius: 2.8125rem;  
-    color: #eee;
+    border-radius: 34px;
 }
 
 /* --------------------------del footer------------------------  */
@@ -552,12 +581,33 @@ div+a {
     li a{
         font-size: 1.5rem
     }
+    
 
+}
+@media (max-width: 764px) {
+
+
+    /* Contacto */
+    .contenedorContacto {
+        width: 425px;
+    }
+    .divisorContacto {
+        flex-direction: column;
+    }
+    .input_contacto {
+        margin: 7px;
+    }
+    input {
+        margin: 7px;
+    }
+    label {
+        margin: 7px;
+    }
 }
 
 
 
-@media (min-width:1440px) {
+@media (min-width:1024px ) {
 
     .contenedorgrid {
         width: 100%;
@@ -704,7 +754,11 @@ div+a {
 
 }
 
-
+@media (max-width: 1024px) {
+    .contenedorContacto {
+        max-width: 764px;
+    }
+}    
 
 
 
