@@ -13,8 +13,8 @@
 
 <body class="body-index">
     <header >
-        <div style="display: flex; align-items: center;">
-            <a style="color: brown;" href="index.html"><i class="fa-solid fa-utensils"></i></a>
+        <div >
+            <a  href="index.html"><i class="fa-solid fa-utensils"></i></a>
         </div>
         
         <div style="display: flex; justify-content: flex-end;">
@@ -45,39 +45,30 @@
         <br>
         <h6>Descubre una experiencia gastronómica excepcional visitando nuestra página web. Hay diversos platos y lugares que están esperando tu opinión </h5>
         <br>
-   
+        <section class="tienda__contenedor">
+            <a href="./img/HOLY-ELDORADO-4-1160x652-1-1089x652.jpeg" data-lightbox="clases" data-title="Clases">
+                <img src="img/holy_4.jpg" alt="Imagen 1" class="img__chica">
+            </a>
+    
+    
+            <a href="./img/kirikiki02.jpg" data-lightbox="clases" data-title="Clases">
+                <img src="img/aqua_5.jpg"Imagen 2" class="img__chica">
+            </a>
+    
+    
+            <a href="./img/noodles-adobe-t.jpg.jpg" data-lightbox="clases" data-title="Clases">
+                <img src="img/poytava_2.jpg" alt="Imagen 3" class="img__chica">
+            </a>
+        </section>
+    
             
     </div>
+    
     <div class="video-container" style="text-align: center;">
         <iframe width="640" height="360" src="https://www.youtube.com/embed/nu_ne0eCPSU" title="Descubrimos la gastronomía argentina | Me voy a comer el mundo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+    
 
-    <div id="opiniones-container"><script>
-
- 
-
-        const contenedorOpiniones = document.getElementById("opiniones-container");
-            opinionesRestaurantes.forEach(opinion => {
-                const opinionElement = document.createElement("div");
-                opinionElement.classList.add("opinion"); 
-
-                const restauranteElement = document.createElement("h4");
-                restauranteElement.textContent = opinion.restaurante;
-
-                const calificacionElement = document.createElement("p");
-                calificacionElement.textContent = `Calificación: ${opinion.calificacion}`;
-
-                const comentarioElement = document.createElement("p");
-                comentarioElement.textContent = opinion.comentario;
-
-                opinionElement.appendChild(restauranteElement);
-                opinionElement.appendChild(calificacionElement);
-                opinionElement.appendChild(comentarioElement);
-
-                contenedorOpiniones.appendChild(opinionElement);
-})
-</script>
-    </div>
     
     
 </body>

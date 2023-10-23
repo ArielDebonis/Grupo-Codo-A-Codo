@@ -10,10 +10,9 @@
 
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    /* color: #262626; Lo coloque como comentario ya que no tenia ningún proposito en el momento*/
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: #f9f0ee;
+    background-color: #FBEDE8;
 }
 
 
@@ -24,14 +23,14 @@ body {
     gap: 10px;
     margin: 10px auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.3fr;
+    grid-template-rows: 0.1fr 0.2fr 1.5fr 1.7fr 0.1fr;
     grid-template-areas:
         "Header Header Header"
         "titulo titulo titulo"
         "contenido contenido contenido "
         "sidebar sidebar sidebar"
         "footer footer footer";
-       
+
 
 
 
@@ -40,7 +39,7 @@ body {
 
 #idheader {
     padding: 0.5rem 0.5rem;
-    background-color: #90887f;
+    background-color: #9B948C;
     height: 4rem;
     display: flex;
     align-items: center;
@@ -57,65 +56,143 @@ body {
 
 
 
-.menuSuperior {
-    display: flex;
-    width: 70%;
-    place-content: space-between;
+    .menuSuperior {
+        display: inline;
+        width: 100%;
+        place-content: space-between;
 
 
-}
+    }
 
 
-i {
-    color: #90887f;
-    margin-left: 0.7rem;
-    font-size: small;
-}
+    /* menu de hamburguesa */
 
 
-header * {
-    display: inline;
-}
+           
+        #menu-check:not(:checked)~nav {
+            display: none;
+        }
 
 
-header ul {
-    float: right;
-    margin-right: 0.5rem;
-    
-}
+        #menu-check:checked~nav {
+            display: block;
+        }
 
 
-li {
-    padding: 10px 20px 15px 5px;
-    background-color:#3F93A6;
-    color: rgb(239, 232, 232);
-    padding: 10px 20px; /* Espacio alrededor del texto en cada elemento */
-    color: rgb(239, 232, 232); /* Color del texto */
-    border-right: 1px solid white; /* Separación entre elementos */
-    
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    background-color: #3F93A6; /* Fondo de color para toda la barra de menú */
-    
-}
 
 
-li:hover {
-    background-color: #9B948C; /* Cambia el color cuando se coloca el mouse sobre el elemento */
-    color: #FFFFFF; /* Cambia el color del texto cuando se coloca el mouse sobre el elemento */
-    border-right: none;
-}
+        #menu {
+            display: block;
+            color: #FBEDE8;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 3px solid;
+            border-radius: 0.3em;
+            z-index: 9999;
+            position: absolute;
+            right: 0.5em;
+            top: 0.5em
+        }
 
-a {
-    text-decoration: none;
-    color: #FBEDE8;
-    font-size: 0.8rem
-}
+
+
+
+        #menu-check {
+            display: none;
+        }
+
+
+        #menu:hover {
+            color: brown;
+
+
+        }
+
+
+        #menu-cerrar {
+            display: none;
+        }
+
+
+        #menu-check:checked~label #menu-abrir {
+            display: none;
+        }
+
+
+        #menu-check:checked~label #menu-cerrar {
+            display: block;
+        }
+
+
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+
+
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+
+
+
+
+/* Termina el menu hamburguesa */
+
+
+
+
+    header nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: #9B948C;
+        padding-top: 1.5em;
+        padding-right: 1.5em;
+        opacity: 0.9;
+        color: #FBEDE8;
+   
+   
+    }
+   
+   
+   
+   
+   
+    i {
+        color:#9B948C;
+        margin-left: 0.0rem;
+        font-size: 2.5em;
+    }
+   
+    /* header,
+    ul,
+    li {  
+        display: block;    
+        text-align: right;
+   
+    } */
+   
+    header ul {
+        float: right;
+        margin-right: 0.5rem;
+   
+    }
+   
+    .itemsmenu {
+        display: block;
+        padding: 0.4rem;
+        font-weight: bold;
+        text-align: right;
+   
+    }
+   
+    li a {
+        text-decoration: none;
+        color: brown;
+        font-size: 1.2rem
+    }
+   
 
 
 
@@ -136,33 +213,16 @@ h1 {
     text-align: center;
     flex-direction: column;
     height: 50vh;
+    /*altura*/
     color: white;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
     background-repeat: no-repeat;
+    /*no repite la imagen*/
     background-size: cover;
+    /*que ocupe todo el espacio*/
     background-position: center center;
-}
-/*codigo resposive*/
-
-/* Media Query para pantallas de celular (hasta 767px) */
-@media screen and (max-width: 767px) {
-    #media {
-        height: 80vh; /* Ajustar la altura para dispositivos móviles */
-    }
-}
-
-/* Media Query para pantallas de tablet (768px a 991px) */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    #media {
-        height: 60vh; /* Ajustar la altura para tablet */
-    }
-}
-
-/* Media Query para pantallas de monitor (a partir de 992px) */
-@media screen and (min-width: 992px) {
-    #media {
-        height: 50vh; /* Altura original para monitores */
-    }
 }
 
 
@@ -173,76 +233,7 @@ h1 {
 
 
 
-.titulo {
-    color: #9B948C;
-    font-size: 2rem;
-    border: 0.3rem double #9B948C;
-    text-align: center;
-    margin: 1rem 0.1rem;
-    padding: 2rem;
-}
-
-
-h4 {
-    color: #bd6e4f;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 1.4rem;
-    text-decoration: underline;
-}
-
-
-h5 {
-    color: #bd6e4f;
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 1rem;
-}
-
-h6{
-    color: black;
-    font-size: 1.3rem;
-    text-align: center;
-    margin: 1rem;
-}
-
-
-p {
-    display: flex;
-    font-size: 1rem;
-    color: #9B948C;
-    flex-wrap: wrap;
-    margin: 0.5em;
-    padding: 0.5em;
-    text-align: justify;
-}
-
-
-.todo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center
-}
-
-
-img {
-    padding: 0.5rem;
-    height: 20rem;
-    width: 20rem;
-}
-
-
-.Map {
-    height: 20rem;
-    width: 100rem;
-    align-items: center;
-    margin: 0.5rem;
-}
-
-
+/*
 /* --------------------------Capital------------------------  */
 
 
@@ -265,7 +256,7 @@ img {
 
 
 .contenido {
-    background-color: #e2b8a8;
+    background-color: #dfae98;
     padding: 2rem;
     margin: 1rem 0.1rem;
     max-height: fit-content;
@@ -285,19 +276,14 @@ img {
 }
 
 
-img {
-    padding: 0.5rem;
-    height: 15rem;
-
-
-}
 
 
 h2 {
     text-align: center;
     color: #FFFFE8;
     text-decoration: underline;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
+    margin: 0.1rem;
     align-self: center;
 
 
@@ -310,10 +296,11 @@ h2 {
     display: flex;
     width: 100%;
     height: auto;
+    margin: 0.1rem;
     max-height: fit-content;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: center;
 
@@ -341,7 +328,7 @@ div img {
 
 .ubicacion {
     color: black;
-    font-size: medium;
+    font-size: 0.9rem;
     font-weight: bold;
     text-align: center;
     text-decoration: underline;
@@ -349,11 +336,18 @@ div img {
     align-self: auto;
 }
 
-/*lo comnetario toman esta fuente*/
+
+.cali {
+    font-size: 1rem;
+    text-align: center;
+
+
+}
+
+
 div p {
     font-size: 1rem;
-    color:#9B948C
-    /* border-style: solid; */
+    color: #FFFFE8;
     flex: 2 1 auto;
     align-self: auto;
 
@@ -380,7 +374,7 @@ div p {
 
 
 .sidebar {
-    margin: 0.5rem 0.1rem;
+    margin: 0.5rem 0.0rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -449,6 +443,8 @@ div div {
 
 
 }
+
+
 
 
 
@@ -541,24 +537,19 @@ div div {
 #idfooter {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 10px;
-    bottom: 0%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 90%;
+    padding: 0;
     background-color: #9B948C;
     color: #FBEDE8;
-    margin: 1rem 0.1rem;
+    margin: 0.1rem 0.1rem;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
+    bottom: 0;
+    position: relative;
     grid-area: footer;
-
-
-
-
-
-
-
 
 
 
@@ -569,7 +560,6 @@ footer p {
 
 
     color: #FBEDE8;
-    justify-content: center;
 
 
 }
@@ -577,11 +567,26 @@ footer p {
 
 .socialmedia {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 20%;
     padding: 15px;
-    background-color:#3F93A6;
+
+
+}
+
+
+.socialmedia a {
+    margin: 10px;
+    font-size: 0.5rem;
+
+
+}
+
+
+#copyright {
+    font-size: 0.9rem;
 
 
 }
@@ -592,7 +597,7 @@ div+a {
     text-align: center;
     flex-direction: column;
     color: #FBEDE8;
-    font-size: 20px;
+    font-size: 0.9rem;
     padding: 15px;
 }
 
@@ -600,29 +605,155 @@ div+a {
 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
-@media (max-width: 760px) {
 
 
-    /* HEADER */
+@media (min-width: 750px) {
 
 
-    /* SECTION */
-    .Region {
-        height: fit-content;
+
+
+    .contenedorgrid {
+        grid-template-rows: 0.0fr 0.1fr 0.8fr 1.8fr 0.1fr;
+
+
+
+
     }
+
+
+
+
+    #idheader {
+        padding: 1rem 1rem;
+        height: 5rem;
+
+
+    }
+
+
+    i {
+
+
+        font-size: 3.5em;
+    }
+
+
+    #menu {
+        font-size: 2em;
+    }
+
+
+
+
+    .Region {
+        font-size: 3rem;
+
+
+    }
+
+
+    h2 {
+        font-size: 2.5rem;
+
+
+    }
+
+
+    .cali {
+        font-size: 1.5rem;
+        text-align: center;
+
+
+    }
+
+
+
+
+    .restdisplay {
+
+
+        justify-content: space-evenly;
+
+
+
+
+    }
+
+
+    header nav {
+        padding-top: 2.5em;
+        padding-right: 2.5em;
+    }
+
+
+    .ubicacion {
+        font-size: 1.5rem;
+    }
+
+
+    div p {
+        font-size: 1.5rem;
+
+
+
+
+    }
+
+
+    #map {
+        background-color: #9B948C;
+        height: 190px;
+    }
+
+
+    .restname {
+        font-size: 1.5rem;
+
+
+
+
+    }
+
+
+    #copyright {
+        font-size: 1.2rem;
+
+
+    }
+
+
+    div+a {
+        font-size: 1.2rem;
+
+
+    }
+
+
+   
+    li a{
+        font-size: 1.5rem
+    }
+
+
+
 
 }
 
 
 
 
-@media (min-width:500px) {
+
+
+
+
+
+@media (min-width:1440px) {
 
 
     .contenedorgrid {
         width: 100%;
-        max-width: 1700px;
-        grid-template-rows: 0.1fr 0.2fr 1fr 0.4fr 0.1fr;
+        max-width: 1500px;
+        grid-template-rows: 0.1fr 0.2fr 1fr 2fr 0.1fr;
         grid-template-areas:
             "Header Header Header"
             "titulo titulo titulo"
@@ -637,6 +768,10 @@ div+a {
     /* HEADER */
 
 
+
+
+
+
     #idheader {
         padding: 1rem 1rem;
         background-color: #9B948C;
@@ -644,15 +779,49 @@ div+a {
     }
 
 
-    #menu, #menu-check, #menu-abrir, #menu-cerrar{
+
+
+    #menu,
+    #menu-check,
+    #menu-abrir,
+    #menu-cerrar {
         display: none;
     }
+
+
+
+
+    #menu-check:not(:checked)~nav {
+        display: block;
+    }
+   
+    #menu-check:checked~nav {
+        display: block;
+    }
+   
 
 
     .menuSuperior {
 
 
+        display: flex;
         place-content: space-around;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+
+
+    }
+
+
+    header nav {
+        padding-top: 0.7em;
+        padding-right: 1em;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+
+
 
 
     }
@@ -660,32 +829,53 @@ div+a {
 
 
 
-    h1{
-        font-size: regular;
+
+
+
+
+    i {
+        margin-left: 0.0rem;
+        font-size: 2.5em;
+    }
+
+
+    header,
+    ul,
+    li {
+        display: inline;
         text-align: center;
 
 
-    }
-
-
-    i{ font-size: 3rem
 
 
     }
 
- /*LISTADO QUE AFECTA TMB AL INDEX*/
+
+    header ul {
+        float: right;
+        margin-right: 0.5rem;
+
+
+    }
+
+
     li {
         padding: 1rem;
-        border-radius: 2px;
-             
+        margin: 3rem, 3rem;
+        background-color: #FBEDE8;
+        border-radius: 3.1rem;
+        font-weight: bold;
+
+
+
+
     }
 
 
     a {
-        text-align: center;
         text-decoration: none;
-        color: #FBEDE8;
-        font-size: 1rem
+        color: #9B948C;
+        font-size: 1.2rem
     }
 
 
@@ -693,74 +883,68 @@ div+a {
 
 
     .Region {
-        color: #9B948C;
-        font-size: 2rem;
-        border: 0.3rem double #9B948C;
+
+
+        font-size: 3rem;
+
+
+    }
+
+
+    .ubicacion {
         text-align: center;
-        margin: 1rem 0.1rem;
-        padding: 2rem;
-        text-shadow: 5px 10px 5px rgba(0, 0, 255, 0.25);
-        grid-area: titulo;
-   
-   
+        font-size: 1.5rem;
+    }
+
+
+    .cali {
+        font-size: 1.5rem;
    
     }
 
 
-    div img {
-        width: 100%;
-        height: 50%;
-
-
+    .sidebar {    
+        height: fit-content;
+        margin: 0.0rem 0.0rem;
     }
-
-
-    #map {
-        background-color: #9B948C;
-        height: 150px;
-    }
-
-
+   
 
 
     /* Footer */
 
 
-    footer {
-        display: flex;
-        width: 100%;
-        height: 5px;
-        padding: 10%;
-        
-    }
-   
 
 
     .socialmedia {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 50%;
-        padding: 15px;
+        flex-direction: row;
+
+
+    }
+
+
+    .socialmedia a {
+        font-size: 1.5rem;
+
+
+    }
+
+
+    #copyright {
+        margin-left: 1rem;
+        font-size: 1.5rem;
 
 
     }
 
 
     div+a {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        color: #FBEDE8;
-        font-size: 20px;
-        padding: 15px;
+
+
+        font-size: 2rem;
+
+
     }
-
-
-
-
-
-
 }
 
 
@@ -789,27 +973,45 @@ div+a {
 /*codigo resposive*/
 
 /* Estilos para monitor o pantallas maS grandes */
-@media screen and (min-width: 992px) {
+@media screen and (min-width:1440px) {
+    
+    .body-index{
+        width: 100%;
+        max-width: 1500px;
+        grid-template-rows: 0.1fr 0.2fr 1fr 2fr 0.1fr;
+        grid-template-areas:
+            "Header Header Header"
+            "titulo titulo titulo"
+            "contenido contenido sidebar "
+            "contenido contenido sidebar"
+            "footer footer footer";
+
+    }
+    
     /*VIDEO DE YOUTUBE EN EL INDEX*/
     .video-container iframe {
         width: 800px;
         height: 450px;
     }
     
-    .li-principal {
-        padding: 10px 20px 15px 5px;
-        block-size: auto;
-        color: rgb(239, 232, 232);
-        font-size: 16px;
+    a {
+        text-decoration: none;
+        color: #9B948C;
+        font-size: 1.2rem
     }
     
     
+    i {
+        margin-left: 0.0rem;
+        font-size: 2.5em;
+        
+    }
     
 }
 
-/* Estilos para tablets */
+/* Estilos para tablets 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-     /*VIDEO DE YOUTUBE EN EL INDEX*/
+     /*VIDEO DE YOUTUBE EN EL INDEX
     .video-container iframe {
         width: 500px;
         height: 281px;
@@ -818,24 +1020,24 @@ div+a {
     .icono-index{
         position: sticky;
         
-        font-size: 0.25rem; /* Aumenta el tamaño del ícono */
-        margin-top: 1rem; /* Agrega margen superior para separación */
+        font-size: 0.25rem; /* Aumenta el tamaño del ícono 
+        margin-top: 1rem; /* Agrega margen superior para separación 
     }
 
-    .li-principal{
-        padding: 10px 20px 15px 5px;
-       
-        block-size: auto;
-        color: rgb(239, 232, 232);
-        font-size: 16px;
-        
-    }
     
    
-}
+}*/
+
+
+
 
 /* Estilos para dispositivos móviles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
+    .body-index{
+
+    }
+    
+    
     /*VIDEO DE YOUTUBE EN EL INDEX*/
     .video-container iframe {
         width: 320px;
@@ -884,32 +1086,17 @@ div+a {
       
     .button4:hover {background-color: #e7e7e7;}
 
- /* menu pirncipal*/
 
-    .li-principal {
-        padding:10px 20px 0px 10px;
-        color: rgb(239, 232, 232);
-        font-size: 16px;
-        flex-direction: column;
-        text-align: center;
-        
-    }
-    
-    .nav-custom{
-        position: sticky;
-        top: 52px;
-        justify-content: center;
-        padding-bottom: 1rem;
-    }
 
-}
 
-/* MAAASSS Estilos generales*/
+    /* MAAASSS Estilos generales*/
 
-/*fondo de pantalla le digo yo*/
+
 .body-index{
     
+    grid-template-rows: 0.0fr 0.1fr 0.8fr 1.8fr 0.1fr;
     color: rgba(255, 255, 255, 0.7); /* Blanco con una opacidad del 70% */
+/*fondo de pantalla le digo yo*/
 }
 
 
@@ -933,21 +1120,6 @@ div+a {
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
     
 }
-
-/* Estilos al pasar el mouse por encima del botón */
-.boton-buscar:hover {
-    /* Cambia el color de fondo al pasar el mouse */
-    
-}
-
-/* Estilos para los headers*/
-.header-index1{
-    
-}
-.header-index2{
-    
-}
-
 
 
 
