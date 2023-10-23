@@ -1,28 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores que conquistan</title>
-    <link rel="STYLESHEET" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="header">
-        <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
-        <nav>
-            <ul class="menuSuperior">
-                <li><a href="capital.html">Capital</a></li>
-                <li><a href="santafe.html">Santa Fe</a></li>
-                <li><a href="misiones.html">Misiones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <footer>
-        <p>Grupo 5</p>
-    </footer>
+    <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "AIzaSyDQMnszMe0WCphbHHD7HN3osj3OM7kXB6I",
+        });
+    </script>
+</head>
+
+<body>
+    <section class="contenedorgrid">
+        <header id="idheader">
+        </header>
+
+        <div class="Region">
+            <h3>Capital Autónoma de Buenos Aires</h3>
+        </div>
+
+        <section class="contenido">
+            <h2> Restaurante Mian</h2>
+            <div class="restdisplay">
+                <img src="img/maxresdefault.jpg" alt="fachada mian"><br>
+                <a class="ubicacion" href="https://maps.app.goo.gl/FPpe96b5ceoQTsbu9" target="_blank"> Ubicación:
+                    Arribeños 2302, C1429 CABA </a>
+                <br>
+                <br>
+                <div id="map"></div>
+
+                <div>
+                    <h3 class="cali">Calificación: ★★★★★ </h3> <br>
+                    <p>El restaurante ofrece una amplia variedad de platos tradicionales chinos, preparados con
+                        ingredientes frescos y de alta calidad.
+
+                        El ambiente del restaurante es cálido y acogedor, con una decoración inspirada en la cultura
+                        china. El servicio es atento y amable, y el personal está dispuesto a ayudar a los clientes a
+                        elegir los platos que mejor se adapten a sus gustos.
+
+                        La comida de Mian es simplemente deliciosa. Los platos están bien elaborados y tienen un sabor
+                        auténtico. Probé el chow mein, el pollo kung pao y el pato a la pekinesa, y todos estaban
+                        deliciosos.</p>
+                </div>
+            </div>
+        </section>
+        <div class="sidebar">
+
+            <div>
+                <a href=""><img class="restopc" src="img/la-plazoleta-parrilla.jpg" alt="fachada plazoleta"></a>
+                <h3 class="restname">La Plazoleta</h3>
+                <h3 class="restname">Calificación: ★★★★ </h3>
+
+            </div><br>
+
+            <div>
+                <a href=""><img class="restopc" src="img/slide01.jpg" alt="fachada plazoleta"></a>
+                <h3 class="restname">Il Gran Caruso</h3>
+                <h3 class="restname">Calificación: ★★★★ </h3>
+            </div><br>
+
+            <div>
+                <a href=""><img class="restopc" src="img/kirikiki02.jpg" alt="fachada plazoleta"></a>
+                <h3 class="restname">Kikiriki</h3>
+                <h3 class="restname">Calificación: ★★★★★ </h3>
+            </div>
+        </div>
+
+
+        <footer id="idfooter">
+        </footer>
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
