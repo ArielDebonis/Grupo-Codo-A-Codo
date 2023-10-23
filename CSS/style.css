@@ -968,7 +968,38 @@ div+a {
     background-position: center center;
     color: black
 }
+/* Agrega estilos generales al contenedor de comentarios */
+/* Estilo para el contenedor de comentarios */
+.contenedorcoment {
+    background-color: #3F93A6;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
 
+/* Estilo para cada comentario */
+.comentarios {
+    text-decoration-color: #3F93A6;
+    margin: 10px 0;
+    padding: 10px;
+    
+}
+
+/* Estilo para el texto del comentario */
+.comentarios p {
+    margin: 0;
+}
+
+/* Estilo para el autor del comentario */
+.comentarios strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para la fecha (si tienes la información de fecha en tus comentarios) */
+.comentarios .fecha {
+    font-style: italic;
+    color: #777;
+}
 
 /*codigo resposive*/
 
@@ -1049,7 +1080,7 @@ div+a {
         text-align: center; /* Centra el contenido del encabezado */
         /* Otros estilos específicos para pantallas pequeñas */
     }
-
+  
 
     .parrafo-principal {
         font-size: 10vw; /* Cambia el tamaño de fuente para pantallas pequeñas */
