@@ -87,7 +87,7 @@ body {
         }
 
         #menu:hover {
-            color: brown;
+            color:rgb(93, 52, 52);
 
         }
 
@@ -163,7 +163,7 @@ body {
     
     li a {
         text-decoration: none;
-        color: brown;
+        color: rgb(93, 52, 52);
         font-size: 1.2rem
     }
     
@@ -689,6 +689,10 @@ div+a {
         text-decoration: none;
         color: #9B948C;
         font-size: 1.2rem
+    }
+
+    li a{
+        color:#9B948C;
     }
 
     /* SECTION */
