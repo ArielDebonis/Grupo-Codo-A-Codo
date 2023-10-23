@@ -1,18 +1,17 @@
 let header = `
 <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
-<h1> Sabores que conquistan</h1>
 
 <input type="checkbox" id="menu-check"> 
-<label id="menu" for="menu-check"></label>  
-<span id="menu-abrir">&#9776;</span>
-<span id="menu-cerrar">X</span>
-
+<label id="menu" for="menu-check">
+  <span id="menu-abrir">&#9776;</span>
+  <span id="menu-cerrar">X</span>
+</label>  
 <nav>
     <ul class="menuSuperior">
-        <li><a href="capital.html">Capital</a></li>
-        <li><a href="santafe.html">Santa Fe</a></li>
-        <li><a href="misiones.html">Misiones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li class="itemsmenu"><a href="index.html">Inicio</a></li>
+        <li class="itemsmenu"><a href="santafe.html">Santa Fe</a></li>
+        <li class="itemsmenu"><a href="misiones.html">Misiones</a></li>
+        <li class="itemsmenu"><a href="contacto.html">Contacto</a></li>
     </ul>
 </nav>
 `;
@@ -50,7 +49,7 @@ async function initMap() {
 initMap();
 
 let footer = `
-<p>© Copyright 2023 Sabores que Conquistan. Todos los derechos reservados.</p>
+<p id="copyright">© Copyright 2023 Sabores que Conquistan. Todos los derechos reservados.</p>
 <div class="socialmedia">
     <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
