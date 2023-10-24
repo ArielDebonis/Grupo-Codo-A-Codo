@@ -1081,7 +1081,9 @@ div+a {
         text-align: center;
         width: 100%;
         max-width: 800px;
-        
+        grid-template-rows: 0.0fr 0.1fr 0.8fr 1.8fr 0.1fr;
+    color: rgba(255, 255, 255, 0.7); /* Blanco con una opacidad del 70% */
+        /*fondo de pantalla le digo yo*/
     }
     
     
@@ -1093,13 +1095,19 @@ div+a {
         align-items: center; 
     }
 
-
+    i {
+        margin-left: 0.0rem;
+        font-size: 2.5em;
+        
+    }
   
 
     .parrafo-principal {
         font-size: 10vw; /* Cambia el tamaño de fuente para pantallas pequeñas */
         /* Otros estilos específicos para pantallas pequeñas */
     }
+
+ 
     .menuSuperior {
         text-align: right; /* Alinea todos los elementos a la derecha */
         padding: 0.5rem 0.5rem;
@@ -1115,34 +1123,23 @@ div+a {
         place-content: flex-start;
     }
     
-    .li-contacto {
-        display: block; /* Cambia el elemento a bloque para que esté en una línea separada en dispositivos móviles */
-        margin: 5px 0; /* Espacio vertical entre elementos */
+    form .boton-buscar{
+        align-items:flex-start;
     }
 
-    .header-index2{
-        text-align: right 
-    }
+  
     .button4 {
         background-color: white;
         color: black;
-        border: 2px solid #e7e7e7;
+        border: 2px solid #d17c7c;
       }
       
-    .button4:hover {background-color: #e7e7e7;}
+    .button4:hover {background-color: #d17c7c;}
 
-
-
+}
 
     /* MAAASSS Estilos generales*/
 
-
-.body-index{
-    
-    grid-template-rows: 0.0fr 0.1fr 0.8fr 1.8fr 0.1fr;
-    color: rgba(255, 255, 255, 0.7); /* Blanco con una opacidad del 70% */
-/*fondo de pantalla le digo yo*/
-}
 
 
 
