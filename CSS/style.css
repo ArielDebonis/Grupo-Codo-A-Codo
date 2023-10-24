@@ -145,7 +145,10 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+<<<<<<< Updated upstream
         height: 35%;
+=======
+>>>>>>> Stashed changes
         background-color: #9B948C;
         padding-top: 1.5em;
         padding-right: 1.5em;
@@ -812,7 +815,7 @@ div+a {
 
 
     }
-
+/* modifica el menu haburguesa*/
 
     header nav {
         padding-top: 0.7em;
@@ -1003,6 +1006,15 @@ div+a {
     font-style: italic;
     color: #777;
 }
+
+/*CODIGO DEL MENU*/
+#menu ul{
+    display: none;
+  }
+  
+  input:checked  ~ #menu ul{
+    display:block;
+  }
 
 /*codigo resposive*/
 
