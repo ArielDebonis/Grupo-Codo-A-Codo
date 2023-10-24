@@ -15,16 +15,10 @@
 
 <body class="body-index">
     <header >
-<<<<<<< Updated upstream
-        <div >
-            <a  href="index.html"><i class="fa-solid fa-utensils"></i></a>
-        </div>
-=======
         <div style="display: block; column-count: initial; align-items: center;justify-content: flex-end;">
             
             <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
         
->>>>>>> Stashed changes
         
             <form class="boton-buscar" action="https://www.google.com/search" method="get">
                 <input type="text" name="q" placeholder="Buscar en Google">
@@ -77,19 +71,47 @@
     </div>
     
 
-<<<<<<< Updated upstream
-    
-    
-=======
     <h4>Comentarios</h4>
    
     <div class="contenedorcoment">
         <ul id="comentarios-list"></ul>
+        <div id="opiniones-container"><script>
+
+
+ 
+
+
+            const contenedorOpiniones = document.getElementById("opiniones-container");
+                opinionesRestaurantes.forEach(opinion => {
+                    const opinionElement = document.createElement("div");
+                    opinionElement.classList.add("opinion");
+    
+    
+                    const restauranteElement = document.createElement("h4");
+                    restauranteElement.textContent = opinion.restaurante;
+    
+    
+                    const calificacionElement = document.createElement("p");
+                    calificacionElement.textContent = `Calificación: ${opinion.calificacion}`;
+    
+    
+                    const comentarioElement = document.createElement("p");
+                    comentarioElement.textContent = opinion.comentario;
+    
+    
+                    opinionElement.appendChild(restauranteElement);
+                    opinionElement.appendChild(calificacionElement);
+                    opinionElement.appendChild(comentarioElement);
+    
+    
+                    contenedorOpiniones.appendChild(opinionElement);
+    })
+    </script>
+        </div>
     
 
     </div>
      
->>>>>>> Stashed changes
 </body>
 <footer class="footer">
     <p>Política de confidencialidad</p>

@@ -966,18 +966,21 @@ div+a {
     font-style: italic; /* estilo en cursiva */
     background-size: cover;/*que ocupe todo el espacio*/
     background-position: center center;
-    color: black
+    background-color: #9B948C;
+    color: brown
 }
 /* Agrega estilos generales al contenedor de comentarios */
 /* Estilo para el contenedor de comentarios */
 .contenedorcoment {
-    background-color: #3F93A6;
+    
+    background-color: #9B948C;
     padding: 20px;
     border: 1px solid #ccc;
 }
 
 /* Estilo para cada comentario */
 .comentarios {
+    
     text-decoration-color: #3F93A6;
     margin: 10px 0;
     padding: 10px;
