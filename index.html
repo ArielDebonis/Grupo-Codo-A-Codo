@@ -85,6 +85,39 @@
    
     <div class="contenedorcoment">
         <ul id="comentarios-list"></ul>
+        <div id="opiniones-container"><script>
+
+
+ 
+
+
+            const contenedorOpiniones = document.getElementById("opiniones-container");
+                opinionesRestaurantes.forEach(opinion => {
+                    const opinionElement = document.createElement("div");
+                    opinionElement.classList.add("opinion");
+    
+    
+                    const restauranteElement = document.createElement("h4");
+                    restauranteElement.textContent = opinion.restaurante;
+    
+    
+                    const calificacionElement = document.createElement("p");
+                    calificacionElement.textContent = `Calificación: ${opinion.calificacion}`;
+    
+    
+                    const comentarioElement = document.createElement("p");
+                    comentarioElement.textContent = opinion.comentario;
+    
+    
+                    opinionElement.appendChild(restauranteElement);
+                    opinionElement.appendChild(calificacionElement);
+                    opinionElement.appendChild(comentarioElement);
+    
+    
+                    contenedorOpiniones.appendChild(opinionElement);
+    })
+    </script>
+        </div>
     
 
     </div>

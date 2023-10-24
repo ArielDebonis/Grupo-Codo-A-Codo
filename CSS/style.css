@@ -83,7 +83,7 @@ body {
 
         #menu {
             display: block;
-            color: #FBEDE8;
+            color: brown;
             font-size: 1.5em;
             font-weight: bold;
             border: 3px solid;
@@ -103,7 +103,7 @@ body {
 
 
         #menu:hover {
-            color: brown;
+            color: #9B948C;
 
 
         }
@@ -145,10 +145,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-<<<<<<< Updated upstream
-        height: 35%;
-=======
->>>>>>> Stashed changes
+        height: 30%;
         background-color: #9B948C;
         padding-top: 1.5em;
         padding-right: 1.5em;
@@ -815,7 +812,7 @@ div+a {
 
 
     }
-/* modifica el menu haburguesa*/
+
 
     header nav {
         padding-top: 0.7em;
@@ -1007,15 +1004,6 @@ div+a {
     color: #777;
 }
 
-/*CODIGO DEL MENU*/
-#menu ul{
-    display: none;
-  }
-  
-  input:checked  ~ #menu ul{
-    display:block;
-  }
-
 /*codigo resposive*/
 
 /* Estilos para monitor o pantallas maS grandes */
@@ -1029,7 +1017,7 @@ div+a {
             "Header Header Header"
             "titulo titulo titulo"
             "contenido contenido sidebar "
-            "contenido contenido sidebar"
+            
             "footer footer footer";
 
     }
@@ -1157,16 +1145,6 @@ div+a {
 
 /* HEADEAR SUPERIOR: BOTON  DE BUSQUEDA E ICONO DE INDEX */
 /* Estilos para el botón de búsqueda */
-.boton-buscar {
-   
-    color: #9B948C; /* Color del texto */
-    padding: 10px 20px; /*  Relleno del botón */
-    border: none; /* Sin borde */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    
-}
-
 
 
 
