@@ -19,7 +19,7 @@ body {
     display: grid;
     gap: 0.625rem;
     margin: 0.625rem auto;
-    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.1fr 0.2fr 1.5fr 1.7fr 0.1fr;
     grid-template-areas:
         "Header Header Header"
