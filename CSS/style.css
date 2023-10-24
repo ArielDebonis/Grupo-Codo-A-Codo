@@ -347,9 +347,16 @@ div img {
 
 div p {
     font-size: 1rem;
+<<<<<<< HEAD
     color: #FFFFE8;
     flex: 2 1 auto;
     align-self: auto;
+=======
+    color:#9B948C
+    /* border-style: solid; */
+    /* flex: 2 1 auto;
+    align-self: auto; */
+>>>>>>> d8cb7f747a7a50644488fa2512ac37324958f248
 
 
 
