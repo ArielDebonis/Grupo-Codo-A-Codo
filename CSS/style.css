@@ -633,7 +633,7 @@ div+a {
 
     i {
 
-
+        
         font-size: 3.5em;
     }
 
@@ -951,10 +951,12 @@ div+a {
 /*--------------------------------- index--------------------------*/
 
 /* Estilos generales*/
+
 .header {
-    text-align: right;
+    text-align: right; 
     /* Otros estilos para el encabezado */
 }
+
 
 
 .parrafo-principal {
@@ -963,11 +965,12 @@ div+a {
     font-size: 18px; /* Tamaño de fuente */
     line-height: 1.5; /* Espaciado entre líneas */
     margin: 20px; /* Margen alrededor del párrafo para dispositivos más pequeños */
-    font-style: italic; /* estilo en cursiva */
+    font-style: italic; 
     background-size: cover;/*que ocupe todo el espacio*/
     background-position: center center;
     background-color: #9B948C;
-    color: brown
+    color: brown;
+    display:grid;
 }
 /* Agrega estilos generales al contenedor de comentarios */
 /* Estilo para el contenedor de comentarios */
@@ -1004,12 +1007,16 @@ div+a {
     color: #777;
 }
 
+.video-container{
+    text-align: center;
+}
 /*codigo resposive*/
 
 /* Estilos para monitor o pantallas maS grandes */
 @media screen and (min-width:1440px) {
     
     .body-index{
+        text-align: center;
         width: 100%;
         max-width: 1500px;
         grid-template-rows: 0.1fr 0.2fr 1fr 2fr 0.1fr;
@@ -1024,8 +1031,11 @@ div+a {
     
     /*VIDEO DE YOUTUBE EN EL INDEX*/
     .video-container iframe {
-        width: 800px;
-        height: 450px;
+       
+        width: 100%;
+        height: auto;
+        padding-: 0,5rem;
+        
     }
     
     a {
@@ -1068,21 +1078,22 @@ div+a {
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 750px) {
     .body-index{
-
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+        
     }
     
     
     /*VIDEO DE YOUTUBE EN EL INDEX*/
     .video-container iframe {
+        
         width: 320px;
         height: 180px;
+        align-items: center; 
     }
 
 
-    .header {
-        text-align: center; /* Centra el contenido del encabezado */
-        /* Otros estilos específicos para pantallas pequeñas */
-    }
   
 
     .parrafo-principal {
@@ -1143,8 +1154,6 @@ div+a {
         
 }
 
-/* HEADEAR SUPERIOR: BOTON  DE BUSQUEDA E ICONO DE INDEX */
-/* Estilos para el botón de búsqueda */
 
 
 
