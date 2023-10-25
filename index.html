@@ -3,134 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" ,>
     <title>Sabores que conquistan</title>
     <link rel="STYLESHEET" href="CSS/style.css">
+    <link rel="STYLESHEET" href="lightbox.min.css">
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
-    <script src="scrip.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body class="body-index">
-    <header >
+<body class="contenedorgridindex">
+    
+    <header id="idheaderindex">
+        <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
 
-        <div style="display: block; column-count: initial; align-items: center;justify-content: flex-end;">
-            
-            <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
-        
-
-        
+        <div class="buscador">
             <form class="boton-buscar" action="https://www.google.com/search" method="get">
                 <input type="text" name="q" placeholder="Buscar en Google">
                 <button type="submit" class="button4">Buscar</button>
             </form>
         </div>
-         <div>
-            <input type="checkbox" id="menu-check">
-            <label id="menu" for="menu-check">
-                <span id="menu-abrir">&#9776;</span>
-                <span id="menu-cerrar">X</span>
-            </label>
-            <nav>
-              <ul style=" list-style: none" >
-                <li><a href="capital.html">Capital</a></li>
-                <li><a href="santafe.html">Santa Fe</a></li>
-                <li><a href="misiones.html">Misiones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-              </ul>
-            </nav>  
-         </div>
     </header>
-  
+
     <section id="media">
         <h1>Sabores que Conquistan</h1>
     </section>
-   
-    <!--<header class="li-principal">
+
+    <section class="contenidoindex">
         
+        <nav id="idnav">
+        </nav>
         
-    </header> -->
-    
-    <div class="parrafo-principal">
-        <br>
-        <h5>Descubre una experiencia gastronómica excepcional visitando nuestra página web. Hay diversos platos y lugares que están esperando tu opinión </h5>
-        <br>
-        <section class="tienda__contenedor">
-            <a href="./img/HOLY-ELDORADO-4-1160x652-1-1089x652.jpeg" data-lightbox="clases" data-title="Clases">
-                <img src="img/holy_4.jpg" alt="Imagen 1" class="img__chica">
-            </a>
-    
-    
-            <a href="./img/kirikiki02.jpg" data-lightbox="clases" data-title="Clases">
-                <img src="img/aqua_5.jpg"Imagen 2" class="img__chica">
-            </a>
-    
-    
-            <a href="./img/noodles-adobe-t.jpg.jpg" data-lightbox="clases" data-title="Clases">
-                <img src="img/poytava_2.jpg" alt="Imagen 3" class="img__chica">
-            </a>
-        </section>
-    
-            
-    </div>
-    
-    <div class="video-container" >
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/nu_ne0eCPSU" title="Descubrimos la gastronomía argentina | Me voy a comer el mundo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    
 
-    <h4>Comentarios</h4>
-   
-    <div class="contenedorcoment">
-        <ul id="comentarios-list"></ul>
-        <div id="opiniones-container"><script>
+        <div class="parrafo-principal">
+            <br>
+            <h6>Descubre una experiencia gastronómica excepcional visitando nuestra página web. Hay diversos platos y
+                lugares que están esperando tu opinión </h5>
+                <br>
 
 
- 
-
-
-            const contenedorOpiniones = document.getElementById("opiniones-container");
-                opinionesRestaurantes.forEach(opinion => {
-                    const opinionElement = document.createElement("div");
-                    opinionElement.classList.add("opinion");
-    
-    
-                    const restauranteElement = document.createElement("h4");
-                    restauranteElement.textContent = opinion.restaurante;
-    
-    
-                    const calificacionElement = document.createElement("p");
-                    calificacionElement.textContent = `Calificación: ${opinion.calificacion}`;
-    
-    
-                    const comentarioElement = document.createElement("p");
-                    comentarioElement.textContent = opinion.comentario;
-    
-    
-                    opinionElement.appendChild(restauranteElement);
-                    opinionElement.appendChild(calificacionElement);
-                    opinionElement.appendChild(comentarioElement);
-    
-    
-                    contenedorOpiniones.appendChild(opinionElement);
-    })
-    </script>
         </div>
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/nu_ne0eCPSU"
+                title="Descubrimos la gastronomía argentina | Me voy a comer el mundo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <div class="opiniones">
+        <h4>Comentarios</h4>
+        <ul id="comentarios-list"></ul>
+    </div>
     
+    <div class="tienda__contenedor">
+        <a class="imagenes-index" href="./img/aqua_5.jpg" data-lightbox="clases" data-title="Clases">
+            <img src="./img/aqua_5.jpg" alt="Imagen 1" class="img__chica">
+        </a>
+
+        <a class="imagenes-index"href="./img/dumplings.jpg" data-lightbox="clases" data-title="Clases">
+            <img src="img/img para el index/dumplings.jpg" alt="Imagen 2" class="img__chica">
+        </a>
+
+        <a class="imagenes-index" href="./img/noodles-adobe-t.jpg.jpg" data-lightbox="clases" data-title="Clases">
+            <img src="img/img para el index/noodles-adobe-t.jpg.jpg" alt="Imagen 3" class="img__chica">
+        </a>
 
     </div>
-     
+    
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+
+
+    <footer id="idfooter">
+    </footer>
+    
+    <script src="js/scriptindex.js"></script>
+ 
 </body>
-<footer class="footer">
-    <p>Política de confidencialidad</p>
-    <div class="socialmedia">
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-    </div>
-    <a style="" href="http://">Contacto</a>
-</footer>
 
 </html>

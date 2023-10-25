@@ -1,31 +1,31 @@
-const opinionesRestaurantes = [
-    {
-        restaurante: "AQVA RESTAURANTE",
-        calificacion: 4.5,
-        comentario: "Excelente comida y servicio."
-    },
-    {
-        restaurante: "HOLY BREWERY PUERTO IGUAZÚ",
-        calificacion: 3.8,
-        comentario: "Buen lugar, pero la comida podría mejorar."
-    },
-    // Agrega más opiniones aquí
-];
+let nav = `
 
-let.header= `
-        <nav class="nav-custom" >
-            <ul>
-                <li><a href="capital.html">Capital</a></li>
-                <li><a href="santafe.html">Santa Fe</a></li>
-                <li><a href="misiones.html">Misiones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>`
-  
+<nav id="idnav">
+    <ul class="nav-principal">
+        <li><a href="capital.html">Capital</a></li>
+        <li><a href="santafe.html">Santa Fe</a></li>
+        <li><a href="misiones.html">Misiones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+`;
+
+document.getElementById("idnav").innerHTML = nav;
 
 
+let footer = `
+<p id="copyright">© Copyright 2023 Sabores que Conquistan. Todos los derechos reservados.</p>
+<div class="socialmedia">
+    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+</div>
+<a href="http://">Contacto</a>
+`;
 
-document.getElementsById("idheader").innerHTML= header
+document.getElementById("idfooter").innerHTML = footer;
+
+// COMENTARIOS////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
     const comentariosList = document.getElementById("comentarios-list");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         const listItem = document.createElement("li");
 
                         // Agregar una clase CSS al elemento <li>
-                        listItem.classList.add("comentarios"); // Reemplaza "mi-clase-css" con el nombre de tu clase CSS
+                        listItem.classList.add("opiniones"); // Reemplaza "mi-clase-css" con el nombre de tu clase CSS
 
                         listItem.innerHTML = `<strong>${usuario.name}</strong>: ${comentario.body}`;
                         comentariosList.appendChild(listItem);
