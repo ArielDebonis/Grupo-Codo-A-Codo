@@ -19,7 +19,7 @@ body {
   gap: 10px;
   margin: 10px auto;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.4fr 0.1fr 0.7fr 1fr 0.1fr;
+  
   grid-template-areas:
     "Headerindex "
     "media"
@@ -50,7 +50,7 @@ body {
 
 }
 
-i {
+#idheaderindex a i {
   color: #FBEDE8;
   margin-left: 0.0rem;
   font-size: 2.5em;
@@ -123,6 +123,10 @@ h1 {
   list-style-type: disc;
 
 }
+.nav-principal li a {
+  text-decoration: none;
+  color: #FBEDE8;
+}
 
 /*  */
 
@@ -137,13 +141,13 @@ li:hover {
   border-right: none;
 }
 
-a {
+ .tienda__contenedor a {
   text-decoration: none;
-  text-decoration: arial;
   color: #FBEDE8;
   font-size: 0.8rem;
   width: 100%;
 }
+
 
 #media {
   width: 100%;
@@ -192,13 +196,14 @@ a {
 
 .video-container iframe {
 
-  width: 100%;
-  height: auto;
+  width: 480px;
+  height: 320px;
 }
 
 
 
 .opiniones {
+  display: flex;
   align-self: center;
   justify-self: center;
   height: fit-content;
@@ -213,7 +218,6 @@ a {
 }
 
 .opiniones li {
-  display: flex;
   flex-direction: column;
   justify-self: center;
   justify-content: space-between;
@@ -230,7 +234,7 @@ a {
 
 .tienda__contenedor {
   width: 100%;
-  margin: 5%;
+  margin: 1rem;
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
@@ -298,28 +302,32 @@ div+a {
   padding: 15px;
 }
 
-@media screen and (max-width: 750px) {
-  .contenedorgridindex {
-    grid-template-rows: 0.0fr 0.1fr 0.2fr 0.5fr 0.5fr 0.1fr;
+@media screen and (min-width: 768px) {
 
-  }
   .parrafo-principal {
-    text-align: justify;
-
-
-   font-size: 1rem;
+    text-align: center;
+    font-size: 2rem;
   }
+    
+  .nav-principal li a {
+    font-size: 1.5rem;
+  }
+
+  
 
   .video-container iframe {
-    padding: 3rem 2rem 2rem 3rem;
-    width: auto;
+    width: 640px;
+    height: 480px;
     align-items: center;
   }
 
-  .opiniones li {
-    flex-direction: row wrap;
-    /*una columna uno abajo del otro*/
+  .opiniones {
+    width: 80%;
+  }
 
+  #comentarios-list {
+    display: flex;
+    font-size: 1rem;
   }
 
   .tienda__contenedor {
@@ -332,7 +340,7 @@ div+a {
 
 }
 
-@media screen and (min-width: 751px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) {
   .contenedorgridindex {
     width: 100%;
     display: grid;
@@ -372,29 +380,56 @@ div+a {
     flex-flow: column nowrap;
    
   }
-     #idnav li {
-      /* flex-flow: row wrap;*/ 
-      flex: 2;
-      text-align: left;
-      align-items: self-end;
-    }
-    /*
-      .nav-principal ul{
-        flex: 5 1  auto;
-        flex: row;
-        height: 100%;
-      }*/
+  .nav-principal li a {
+    font-size: 2rem;
+  }
+  .nav-principal li {
+    margin-left: 2rem;
+  }
+  
 
       .parrafo-principal {
-        flex: 3;
-        font-size: 4rem;
+        margin-top: 5rem;
+        text-align: center;
+        font-size: 2rem;
       }
       
       /*VIDEO DE YOUTUBE EN EL INDEX*/
         .video-container iframe {
-          flex: 5;
+          width: 1280px;
+          height: 720px;
     
         }
+        .opiniones h4 {
+          font-size: 3rem;
+        }
+        #comentarios-list {
+          display: flex;
+          font-size: 1.5rem;
+        }
+  
+        .tienda__contenedor{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 1024;
+          justify-content: center;
+          margin: 0%;
+        }
+        
+        }
+        .tienda__contenedor img {
+          width: 650px;
+        
+        }
+        .tienda__contenedor a {
+          width: 650px;
+          margin: 1rem;
+        
+        }
+      
+        
+
     #idfooter{
       height: min-content;
     }
