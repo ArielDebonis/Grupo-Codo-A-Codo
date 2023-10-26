@@ -9,9 +9,9 @@ let header = `
 </label>  
 <nav>
     <ul class="menuSuperior">
-        <li><a href="capital.html">Capital</li>
-        <li><a href="misiones.html">Misiones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li class="itemsmenu"><a href="capital.html">Capital</a></li>
+        <li class="itemsmenu"><a href="misiones.html">Misiones</a></li>
+        <li class="itemsmenu"><a href="contacto.html">Contacto</a></li>
     </ul>
 </nav>
 `;
