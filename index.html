@@ -3,44 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" ,>
     <title>Sabores que conquistan</title>
     <link rel="STYLESHEET" href="CSS/style.css">
+    <link rel="STYLESHEET" href="lightbox.min.css">
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/lightbox.min.css">
     <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="contenedorgridindex">
+    
+    <header id="idheaderindex">
+        <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
+
+        <div class="buscador">
+            <form class="boton-buscar" action="https://www.google.com/search" method="get">
+                <input type="text" name="q" placeholder="Buscar en Google">
+                <button type="submit" class="button4">Buscar</button>
+            </form>
+        </div>
+    </header>
+
     <section id="media">
         <h1>Sabores que Conquistan</h1>
     </section>
-    <header class="header">
-        <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
-        <nav>
-            <ul class="menuSuperior">
-                <li><a href="capital.html">Capital</a></li>
-                <li><a href="santafe.html">Santa Fe</a></li>
-                <li><a href="misiones.html">Misiones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+
+    <section class="contenidoindex">
+        
+        <nav id="idnav">
         </nav>
-    </header>
-    <footer>
-        <p>Política de confidencialidad</p>
-        <div class="socialmedia">
-            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        
+
+        <div class="parrafo-principal">
+      
+            <h6 class="h6-index">Descubre una experiencia gastronómica excepcional visitando nuestra página web. </h6> 
+            <h6 class="h6-index">   Hay diversos platos y
+                lugares que están esperando tu opinión </h6>
+            <br>
 
         </div>
-        <a href="http://">Contacto</a>
+        
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/nu_ne0eCPSU"
+                title="Descubrimos la gastronomía argentina | Me voy a comer el mundo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <div class="opiniones">
+        <h4>Comentarios</h4>
+        <ul id="comentarios-list"></ul>
+    </div>
+    
+    <div class="tienda__contenedor">
+        <a class="imagenes-index" href="./img/aqua_5.jpg" data-lightbox="clases" data-title="Clases">
+            <img src="./img/aqua_5.jpg" alt="Imagen 1" class="img__chica">
+        </a>
+
+        <a class="imagenes-index"href="./img/dumplings.jpg" data-lightbox="clases" data-title="Clases">
+            <img src="img/img para el index/dumplings.jpg" alt="Imagen 2" class="img__chica">
+        </a>
+
+        <a class="imagenes-index" href="./img/noodles-adobe-t.jpg.jpg" data-lightbox="clases" data-title="Clases">
+            <img src="img/img para el index/noodles-adobe-t.jpg.jpg" alt="Imagen 3" class="img__chica">
+        </a>
+
+    </div>
+    
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+
+
+    <footer id="idfooter">
     </footer>
     
-    </section>
-    <script src="./js/script.js"></script>
-    <script src="./js/script2.js"></script>
-    <script src="./js/lightbox-plus-jquery.js"></script>
+    <script src="js/scriptindex.js"></script>
+ 
 </body>
 
 </html>
