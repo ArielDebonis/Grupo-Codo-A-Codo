@@ -338,21 +338,19 @@ div+a {
     display: grid;
     gap: 10px;
     margin: 10px auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.2fr 0.1fr 0fr 0.1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.1fr 0.2fr 0fr 0fr 0.1fr;
     grid-template-areas:
       "Headerindex Headerindex"
       "media media"
       "contenidoindex contenidoindex "
-      "comentindex galeindex "
-     
+      "comentindex comentindex "
+      "galeindex  galeindex "
       "footer footer"
   }
 
   #idheaderindex{
-    position:static;
-    margin-left: 0.1rem;
-    margin-right: 0.1rem;
+ 
   }
 
   #media{
@@ -369,40 +367,37 @@ div+a {
  /*es padre de parrafo, idbnav, video-container*/
   .contenidoindex{
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    align-items: center; 
+    flex-flow: column nowrap;
    
   }
-
- 
-    .parrafo-principal {
-      flex: 1 auto;
-     
-
-     font-size: 4rem;
-    }
-
-
      #idnav li {
-      display: flex;
-      flex-flow: row wrap;
-      flex: 1 1  auto;
+      /* flex-flow: row wrap;*/ 
+      flex: 2;
+      text-align: left;
+      align-items: self-end;
     }
+    /*
       .nav-principal ul{
         flex: 5 1  auto;
         flex: row;
         height: 100%;
+      }*/
+
+      .parrafo-principal {
+        flex: 3;
+        font-size: 4rem;
       }
-
-
       
       /*VIDEO DE YOUTUBE EN EL INDEX*/
         .video-container iframe {
-          flex: 5  1  auto;
-          
-         
-
+          flex: 5;
     
         }
+    #idfooter{
+      height: min-content;
+    }
 }
 
 
