@@ -8,9 +8,8 @@ let header = `
 </label>  
 <nav>
     <ul class="menuSuperior">
-        <li class="itemsmenu"><a href="index.html">Inicio</a></li>
-        <li class="itemsmenu"><a href="santafe.html">Santa Fe</a></li>
         <li class="itemsmenu"><a href="capital.html">Capital</a></li>
+        <li class="itemsmenu"><a href="misiones.html">Misiones</a></li>
         <li class="itemsmenu"><a href="contacto.html">Contacto</a></li>
     </ul>
 </nav>

@@ -3,7 +3,6 @@ let nav = `
 <nav id="idnav">
     <ul class="nav-principal">
         <li><a href="capital.html">Capital</a></li>
-        <li><a href="santafe.html">Santa Fe</a></li>
         <li><a href="misiones.html">Misiones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
     </ul>
