@@ -1,0 +1,168 @@
+/*--------------------------BARRA DE NAVEGACION---------------------------------*/
+
+.navbar {
+    background-color: #FBEDE8;
+}
+
+/*--------------------------SECCION PRINCIPAL---------------------------------*/
+
+h1 {
+    font-size: 3.5em;
+    color: #FBEDE8;
+}
+
+
+#media {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    grid-area: media;
+}
+
+/*--------------------------PROVINCIAS---------------------------------*/
+.provincias {
+    padding: 2.5rem;
+}
+
+.provincias .columna {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+
+.provincias .columna:hover {
+    color: white;
+    background-color: #9D8585;
+}
+
+.provincias i {
+    font-size: 2rem;
+    color: #0a0a23;
+    background-color: #FBEDE8;
+    padding: 0.5rem 1.18rem;
+    border-radius: 60%;
+}
+
+.provincias-titulo {
+    font-size: 1.56rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badges-contenedor {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.625rem 0;
+}
+
+/*--------------------------PARRAFO PRINCIPAL---------------------------------*/
+
+.contenidoindex {
+    display: flex;
+    background-color: #FBEDE8;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parrafo-principal {
+    /* Estilos para el párrafo principal */
+    text-align: center;
+    /* Para centrar el texto en el contenedor */
+    font-size: 1rem;
+    /* Tamaño de fuente */
+    line-height: 1.5;
+    /* Espaciado entre líneas */
+    margin: 1.25rem;
+    /* Margen alrededor del párrafo para dispositivos más pequeños */
+    font-style: italic;
+    /* estilo en cursiva */
+    background-size: cover;
+    /*que ocupe todo el espacio*/
+    background-position: center center;
+    color: rgb(198, 59, 59)
+}
+
+
+/*--------------------------VIDEO YOUTUBE---------------------------------*/
+.video-container iframe {
+    width: 480px;
+    height: 320px;
+}
+
+
+/*--------------------------OPINIONES---------------------------------*/
+
+.opiniones {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 300px;
+    grid-area: comentindex;
+
+}
+
+.opiniones li {
+    flex-direction: column;
+    justify-self: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 10px 20px 15px 5px;
+    background-color: #dfae98;
+    color: rgb(239, 232, 232);
+    padding: 10px 20px;
+    color: rgb(239, 232, 232);
+    border: 1px solid white;
+    border-radius: 0.3em;
+}
+
+
+/*--------------------------RESPONSIVE---------------------------------*/
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+
+
+    .parrafo-principal {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .video-container iframe {
+        width: 640px;
+        height: 480px;
+        align-items: center;
+    }
+
+    .opiniones {
+        width: 80%;
+    }
+
+    #comentarios-list {
+        display: flex;
+        font-size: 1rem;
+    }
+
+
+
+}

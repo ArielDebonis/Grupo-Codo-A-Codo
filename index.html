@@ -3,47 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" ,>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sabores que conquistan</title>
-    <link rel="STYLESHEET" href="CSS/style.css">
-    <link rel="STYLESHEET" href="lightbox.min.css">
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/lightbox.min.css">
+    <!-- <CSS> -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- <BOOTSTRAP> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="contenedorgridindex">
-    
-    <header id="idheaderindex">
-        <a href="index.html"><i class="fa-solid fa-utensils"></i></a>
-
-        <div class="buscador">
-            <form class="boton-buscar" action="https://www.google.com/search" method="get">
-                <input type="text" name="q" placeholder="Buscar en Google">
-                <button type="submit" class="button4">Buscar</button>
-            </form>
-        </div>
+    <header id="idheader">
     </header>
 
+    <!-- SECCION PRINCIPAL -->
     <section id="media">
         <h1>Sabores que Conquistan</h1>
     </section>
 
-    <section class="contenidoindex">
-        
-        <nav id="idnav">
-        </nav>
-        
+    <!-- PROVINCIAS -->
+    <section class="provincias">
+        <div class="container text-center">
+            <div class="row">
+                <!-- MISIONES-->
+                <div class="columna col 12 col-md-4">
+                    <i class="bi bi-geo-alt"></i>
+                    <p class="provincias-titulo">MISIONES</p>
+                    <p>Como consecuencia de las múltiples influencias culturales que conforman su identidad, la
+                        gastronomía misionera es muy variada. La cocina guaraní, la española, la brasilera y las recetas
+                        traídas por las distintas comunidades de inmigrantes europeos y asiáticos conforman una oferta
+                        gastronómica rica en sabores y procedencias.</p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-secondary">+ INFO</span>
+                    </div>
+                </div>
+                <!-- CIUDAD AUTONOMA-->
+                <div class="columna col 12 col-md-4">
+                    <i class="bi bi-geo-alt"></i>
+                    <p class="provincias-titulo">CABA</p>
+                    <p>Como consecuencia de las múltiples influencias culturales que conforman su identidad, la
+                        gastronomía misionera es muy variada. La cocina guaraní, la española, la brasilera y las recetas
+                        traídas por las distintas comunidades de inmigrantes europeos y asiáticos conforman una oferta
+                        gastronómica rica en sabores y procedencias.</p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-secondary">+ INFO</span>
+                    </div>
+                </div>
+                <!-- SANTA FE-->
+                <div class="columna col 12 col-md-4">
+                    <i class="bi bi-geo-alt"></i>
+                    <p class="provincias-titulo">SANTA FE</p>
+                    <p>Como consecuencia de las múltiples influencias culturales que conforman su identidad, la
+                        gastronomía misionera es muy variada. La cocina guaraní, la española, la brasilera y las recetas
+                        traídas por las distintas comunidades de inmigrantes europeos y asiáticos conforman una oferta
+                        gastronómica rica en sabores y procedencias.</p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-secondary">+ INFO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </section>
+
+
+
+
+    <section class="contenidoindex">
         <div class="parrafo-principal">
-      
-            <h6 class="h6-index">Descubre una experiencia gastronómica excepcional visitando nuestra página web. </h6> 
-            <h6 class="h6-index">   Hay diversos platos y
+            <h6 class="h6-index">Descubre una experiencia gastronómica excepcional visitando nuestra página web. </h6>
+            <br>
+            <h6 class="h6-index"> Hay diversos platos y
                 lugares que están esperando tu opinión </h6>
             <br>
-
         </div>
-        
+
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/nu_ne0eCPSU"
                 title="Descubrimos la gastronomía argentina | Me voy a comer el mundo" frameborder="0"
@@ -52,35 +89,62 @@
         </div>
     </section>
 
+    <section>
+
+    </section>
+
     <div class="opiniones">
         <h4>Comentarios</h4>
         <ul id="comentarios-list"></ul>
     </div>
-    
-    <div class="tienda__contenedor">
-        <a class="imagenes-index" href="./img/aqua_5.jpg" data-lightbox="clases" data-title="Clases">
-            <img src="./img/aqua_5.jpg" alt="Imagen 1" class="img__chica">
-        </a>
 
-        <a class="imagenes-index"href="./img/dumplings.jpg" data-lightbox="clases" data-title="Clases">
-            <img src="img/img para el index/dumplings.jpg" alt="Imagen 2" class="img__chica">
-        </a>
-
-        <a class="imagenes-index" href="./img/noodles-adobe-t.jpg.jpg" data-lightbox="clases" data-title="Clases">
-            <img src="img/img para el index/noodles-adobe-t.jpg.jpg" alt="Imagen 3" class="img__chica">
-        </a>
-
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="img/dumplings.jpg" class="d-block w-40" alt="...">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="img/aqua_5.jpg" class="d-block w-40" alt="...">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="img/noodles-adobe-t.jpg.jpg" class="d-block w-40" alt="...">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    
-    <script src="js/lightbox.min.js"></script>
-    <script src="js/lightbox-plus-jquery.js"></script>
 
 
     <footer id="idfooter">
     </footer>
-    
-    <script src="js/scriptindex.js"></script>
- 
+
+
+    <script src="JavaScript/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
