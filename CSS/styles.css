@@ -104,7 +104,18 @@ h1 {
 }
 
 
-/*--------------------------OPINIONES---------------------------------*/
+/*--------------------------COMENTARIOS---------------------------------*/
+.comentarios {
+    padding: 2.5rem 5rem 2.5rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.comentarios .carousel {
+    max-width: 30rem;
+}
 
 .opiniones {
     display: flex;
@@ -133,6 +144,70 @@ h1 {
     color: rgb(239, 232, 232);
     border: 1px solid white;
     border-radius: 0.3em;
+}
+
+
+/*--------------------------GALERIA---------------------------------*/
+
+.galeria {
+    padding: 2.5rem 5rem 2.5rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.galeria .carousel {
+    max-width: 30rem;
+}
+
+/*--------------------------FOOTER---------------------------------*/
+.footer {
+    min-height: 31.25rem;
+}
+
+.seccion-oscura{
+    background-color:  #FBEDE8;
+}
+.footer-logo {
+    height: 3.2rem;
+    width: 3.2rem;
+    margin: 0.625rem;
+}
+
+.footer-texto {
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.iconos-redes-sociales a {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid rgb(187, 186, 186);
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    background-color: rgb(151, 151, 151);
+}
+
+.iconos-redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+    
+}
+
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+    color: #0a0a23;
 }
 
 
