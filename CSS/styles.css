@@ -1,3 +1,22 @@
+/*--------------------------ESTILOS GENERALES---------------------------------*/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Lora';
+}
+
+h4{
+    font-family: 'Crimson Text';
+}
+
+h5{
+    font-family: 'Libre Baskerville';
+}
 /*--------------------------BARRA DE NAVEGACION---------------------------------*/
 
 .navbar {
@@ -12,14 +31,10 @@ h1 {
 }
 
 
-#media {
+.media {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
     height: 50vh;
+    text-align: center;
     color: white;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/inicio.jpg");
     background-repeat: no-repeat;
@@ -70,12 +85,9 @@ h1 {
 /*--------------------------PARRAFO PRINCIPAL---------------------------------*/
 
 .contenidoindex {
-    display: flex;
     background-color: #FBEDE8;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    flex-direction: column;
-    align-items: center;
 }
 
 .parrafo-principal {
@@ -88,8 +100,6 @@ h1 {
     /* Espaciado entre líneas */
     margin: 1.25rem;
     /* Margen alrededor del párrafo para dispositivos más pequeños */
-    font-style: italic;
-    /* estilo en cursiva */
     background-size: cover;
     /*que ocupe todo el espacio*/
     background-position: center center;
@@ -110,26 +120,23 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-.comentarios .carousel {
-    max-width: 30rem;
+    text-align: center;
 }
 
 .opiniones {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    height: fit-content;
-    display: inline-block;
-    width: 100%;
-    margin: 10px;
-    text-align: center;
-    border-radius: 10px;
-    width: 300px;
-    grid-area: comentindex;
+    width: 100%; /* Asegura que la sección de comentarios ocupe todo el ancho disponible */
+    max-width: 600px; /* Ajusta este valor según tus preferencias */
+    margin: auto; /* Centra la sección horizontalmente */
+}
 
+h4 {
+    font-family: 'Crimson Text';
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-bottom: 20px; /* Añade espacio inferior para separar el título de la lista de comentarios */
+}
+
+.opiniones ul {
+    list-style-type: none; /* Quita las viñetas de la lista */
 }
 
 .opiniones li {
@@ -154,6 +161,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
@@ -166,9 +174,10 @@ h1 {
     min-height: 31.25rem;
 }
 
-.seccion-oscura{
-    background-color:  #FBEDE8;
+.seccion-oscura {
+    background-color: #FBEDE8;
 }
+
 .footer-logo {
     height: 3.2rem;
     width: 3.2rem;
@@ -198,7 +207,7 @@ h1 {
     color: white;
     font-size: 1.5rem;
     transition: all 0.2s ease-in;
-    
+
 }
 
 .iconos-redes-sociales a:hover {
@@ -212,7 +221,7 @@ h1 {
 
 
 /*--------------------------RESPONSIVE---------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .navbar-brand {
         display: none;
     }
@@ -237,7 +246,41 @@ h1 {
         display: flex;
         font-size: 1rem;
     }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4.5em;
+    }
 
 
+    .provincias-titulo {
+        font-size: 2rem;
+    }
 
+    .parrafo-principal {
+        font-size: 1.5rem;
+    }
+
+
+    .video-container iframe {
+        width: 800px;
+        height: 600px;
+    }
+
+
+    .opiniones li {
+        font-size: 1.2rem;
+    }
+
+
+    .footer-texto {
+        font-size: 1.2rem;
+    }
+
+
+    .iconos-redes-sociales a {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
 }

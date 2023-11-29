@@ -73,13 +73,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let footer = `
-<p id="copyright">© Copyright 2023 Sabores que Conquistan. Todos los derechos reservados.</p>
-<div class="socialmedia">
-    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-</div>
-<a href="http://">Contacto</a>
+<footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-logo" src="img/icons8-restaurante-48.png" alt="Logo">
+        <p class="footer-texto text-center"> También podes seguirnos en nuestras redes sociales <br></p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+        </div>
+    </footer>
 `;
 
 document.getElementById("idfooter").innerHTML = footer;
