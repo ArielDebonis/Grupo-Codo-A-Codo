@@ -1,7 +1,7 @@
 import mysql.connector
-import flask
-import flask_cors
-import werkzeug
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from werkzeug.utils import secure_filename
 import os
 import time
 
@@ -14,20 +14,19 @@ class Comentarios():
         self.conn = mysql.connector.connect(
             host=host,
             user=user,  
-            password=password,
-            database=database
+            password=password
             )
         self.cursor = self.conn.cursor()
         try:
             self.cursor.execute(f'USE {database}')
-        except:
-            if mysql.connector.Error.errno == mysql.connector.errorcode.ER_BAD_DB_ERROR:
+        except mysql.connector.Error as err:
+            if err.errno == mysql.connector.errorcode.ER_BAD_DB_ERROR:
                 self.cursor.execute(f'CREATE DATABASE {database}')
                 self.conn.database = database
             else:
-                raise mysql.connector.Error
+                raise err
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS comentarios (
-            id INT AUTO_INCREMENT,
+            id INT PRIMARY KEY AUTO_INCREMENT,
             provincia VARCHAR(255) NOT NULL,
             nombre VARCHAR(255) NOT NULL,
             comentario VARCHAR(1024) NOT NULL
@@ -39,11 +38,12 @@ class Comentarios():
     
     def agregar_comentario (self,provincia,nombre,comentario):
     
-        sql = f"INSERT INTO comentarios \
+        sql = "INSERT INTO comentarios \
             (provincia,nombre,comentario) \
             VALUES \
-            ('{provincia}','{nombre}','{comentario}')"
-        self.cursor.execute(sql)
+            ( %s , %s , %s )"
+        valores = (provincia,nombre,comentario)
+        self.cursor.execute(sql,valores)
         self.conn.commit()
         return True
     
@@ -52,7 +52,9 @@ class Comentarios():
     
     def listar_por_provincia(self,provincia):
         # Mostramos en pantalla un listado de todos los productos en la tabla
-        self.cursor.execute(f"SELECT * FROM comentarios WHERE provincia = {provincia}")
+        sql = "SELECT * FROM comentarios WHERE provincia = %s "
+        valores = provincia
+        self.cursor.execute(sql,valores)
         comentarios = self.cursor.fetchall()
         return comentarios
 
@@ -61,12 +63,13 @@ class Comentarios():
 
     def modificar_comentario(self, id, nueva_provincia,nuevo_nombre, nuevo_comentario):
     # Modificamos los datos de un producto a partir de su código
-        sql = f"UPDATE productos SET \
-            provincia = '{nueva_provincia}', \
-            nombre = {nuevo_nombre}, \
-            comentario = {nuevo_comentario}, \
-            WHERE id = {id}"
-        self.cursor.execute(sql)
+        sql = "UPDATE productos SET \
+            provincia = %s , \
+            nombre = %s , \
+            comentario = %s , \
+            WHERE id = %s "
+        valores = (nueva_provincia,nuevo_nombre,nuevo_comentario,id)
+        self.cursor.execute(sql,valores)
         self.conn.commit()
         return self.cursor.rowcount > 0
     
@@ -74,6 +77,22 @@ class Comentarios():
 
     def eliminar_producto(self,id):
         # Eliminamos un producto de la tabla a partir de su código
-        self.cursor.execute(f"DELETE FROM comentarios WHERE id = {id}")
+        sql = "DELETE FROM comentarios WHERE id = %s "
+        valor = id
+        self.cursor.execute(sql,valor)
         self.conn.commit()
         return self.cursor.rowcount > 0
+
+#----------------------------------------------------------------------------------------
+app = Flask(__name__)
+CORS(app)
+
+comentarios = Comentarios(host='localhost',user='root',password='root',database='saboresdb')
+
+@app.route("/comentarios/<id>",methods = ["GET"])
+def listar_por_provincia(id):
+    comentarios = comentarios.listar_por_provincia(id)
+    return jsonify(comentarios)
+
+if __name__ == '__main__':
+    app.run(debug=True)
