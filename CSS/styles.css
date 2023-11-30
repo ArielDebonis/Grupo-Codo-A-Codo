@@ -6,17 +6,23 @@ section {
     justify-content: center;
 }
 
-h1{
+h1 {
     font-family: 'Lora';
 }
 
-h4{
+h2,
+h4 {
+    text-align: center;
+}
+
+h4 {
     font-family: 'Crimson Text';
 }
 
-h5{
+h5 {
     font-family: 'Libre Baskerville';
 }
+
 /*--------------------------BARRA DE NAVEGACION---------------------------------*/
 
 .navbar {
@@ -124,19 +130,25 @@ h1 {
 }
 
 .opiniones {
-    width: 100%; /* Asegura que la sección de comentarios ocupe todo el ancho disponible */
-    max-width: 600px; /* Ajusta este valor según tus preferencias */
-    margin: auto; /* Centra la sección horizontalmente */
+    width: 100%;
+    /* Asegura que la sección de comentarios ocupe todo el ancho disponible */
+    max-width: 600px;
+    /* Ajusta este valor según tus preferencias */
+    margin: auto;
+    /* Centra la sección horizontalmente */
 }
 
 h4 {
     font-family: 'Crimson Text';
-    text-align: center; /* Centra el texto dentro del contenedor */
-    margin-bottom: 20px; /* Añade espacio inferior para separar el título de la lista de comentarios */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    margin-bottom: 20px;
+    /* Añade espacio inferior para separar el título de la lista de comentarios */
 }
 
 .opiniones ul {
-    list-style-type: none; /* Quita las viñetas de la lista */
+    list-style-type: none;
+    /* Quita las viñetas de la lista */
 }
 
 .opiniones li {
@@ -190,8 +202,8 @@ h4 {
 }
 
 .iconos-redes-sociales a {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,7 +217,7 @@ h4 {
 
 .iconos-redes-sociales i {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: all 0.2s ease-in;
 
 }
@@ -219,34 +231,238 @@ h4 {
     color: #0a0a23;
 }
 
+/*--------------------------MISIONES / BUENOS AIRES---------------------------------*/
+
+/* Sección Principal */
+section h2 {
+    font-family: 'Crimson Text';
+    color: #0a0a23;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pag-provincias {
+    font-family: 'Libre Baskerville';
+    color: #9D8585;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    
+}
+
+.restdisplay {
+    margin-left: 20px;
+    /* Ajusta el margen izquierdo según sea necesario */
+}
+
+.restdisplay h3 {
+    text-align: center;
+}
+
+.restdisplay img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+a.ubicacion {
+    color: #0a0a23;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.restdisplay h3 {
+    text-align: center;
+    color: #0a0a23;
+}
+
+.restdisplay p {
+    font-family: 'Lora';
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+/* Barra lateral */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 18rem;
+    margin-bottom: 1.5rem;
+}
+
 
 /*--------------------------RESPONSIVE---------------------------------*/
+
+/*-----------------PANTALLAS PEQUEÑAS-----------------*/
 @media screen and (max-width: 767px) {
-    .navbar-brand {
-        display: none;
+
+    /* Barra de navegación */
+    .navbar {
+        padding: 0.5rem;
     }
 
+    .navbar-brand {
+        display: block;
+        text-align: center;
+    }
+
+    /* Sección Principal */
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /* Provincias */
+
+    .provincias {
+        padding: 1.5rem;
+    }
+
+    .provincias .columna {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+    /* Contenido Index */
+    .contenidoindex {
+        padding: 1rem;
+        flex-direction: column;
+    }
 
     .parrafo-principal {
-        text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 1rem 0;
     }
+
+    /* Video de YouTube */
 
     .video-container iframe {
-        width: 640px;
-        height: 480px;
-        align-items: center;
+        width: 100%;
+        height: 100%;
     }
 
+    /* Comentarios */
     .opiniones {
-        width: 80%;
+        max-width: 100%;
     }
 
-    #comentarios-list {
-        display: flex;
-        font-size: 1rem;
+    .opiniones li {
+        width: 100%;
     }
 }
+
+/* Galería */
+.galeria {
+    padding: 1rem;
+}
+
+.galeria .carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+.seccion-oscura {
+    padding: 1rem;
+}
+
+.footer-logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+}
+
+.footer-texto {
+    font-size: 1.2rem;
+}
+
+.iconos-redes-sociales a {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 5px;
+}
+
+.iconos-redes-sociales i {
+    font-size: 1.2rem;
+}
+
+
+/* MISIONES / BUENOS AIRES*/
+h2 {
+    font-size: 2em;
+}
+
+.pag-provincias {
+    font-size: 1.5em;
+}
+
+.contenido {
+    padding: 1rem;
+}
+
+.restdisplay img {
+    width: 100%;
+}
+
+a.ubicacion {
+    font-size: 0.8rem;
+}
+
+.restdisplay h3 {
+    font-size: 1.2em;
+}
+
+.restdisplay p {
+    font-size: 0.9rem;
+}
+
+.sidebar .card {
+    width: 100%;
+}
+
+/*-----------------PANTALLAS MEDIANAS-----------------*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .provincias-titulo {
+        font-size: 1.8rem;
+    }
+
+    .parrafo-principal,
+    .comentarios,
+    .galeria,
+    .footer-texto {
+
+
+        font-size: 1.2rem;
+    }
+
+    .galeria .carousel-inner img {
+        width: 80%;
+
+        margin: 0 auto;
+    }
+}
+
+
+
+/*-----------------PANTALLAS GRANDES-----------------*/
 
 @media (min-width: 1024px) {
     h1 {
@@ -280,7 +496,28 @@ h4 {
 
 
     .iconos-redes-sociales a {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .iconos-redes-sociales i {
+        font-size: 1.5rem;
+    }
+
+    /* MISIONES / BUENOS AIRES*/
+    h2 {
+        font-size: 3em;
+    }
+
+    .pag-provincias {
+        font-size: 2em;
+    }
+
+    .restdisplay h3 {
+        font-size: 1.5em;
+    }
+
+    .restdisplay p {
+        font-size: 1.1rem;
     }
 }
