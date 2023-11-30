@@ -109,8 +109,8 @@ def agregar_comentario():
 
 @app.route("/comentarios/<int:provincia>",methods = ["GET"])
 def listar_por_provincia(provincia):
-    comentarios = comentarios.listar_por_provincia(provincia)
-    return jsonify(comentarios)
+    coments = comentarios.listar_por_provincia(provincia)
+    return jsonify(coments)
 
 @app.route("/comentarios/<int:id>",methods=["PUT"])
 def modificar_comentario(id):
