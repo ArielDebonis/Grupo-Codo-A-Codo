@@ -58,6 +58,11 @@ class Comentarios():
         comentarios = self.cursor.fetchall()
         return comentarios
 
+    def consultar_comentario(self,id):
+        sql = 'SELECT * FROM comentarios WHERE id = %s'
+        valor = id
+        self.cursor.execute(sql,valor)
+        return self.cursor.fetchone()
 
     # UPDATE
 
@@ -75,7 +80,7 @@ class Comentarios():
     
     # DELETE
 
-    def eliminar_producto(self,id):
+    def eliminar_comentario(self,id):
         # Eliminamos un producto de la tabla a partir de su código
         sql = "DELETE FROM comentarios WHERE id = %s "
         valor = id
@@ -89,10 +94,45 @@ CORS(app)
 
 comentarios = Comentarios(host='localhost',user='root',password='root',database='saboresdb')
 
-@app.route("/comentarios/<id>",methods = ["GET"])
-def listar_por_provincia(id):
-    comentarios = comentarios.listar_por_provincia(id)
+@app.route("/comentarios",methods=["POST"])
+def agregar_comentario():
+    #Rocojo los datos del form
+    provincia = request.form['provincia']
+    nombre = request.form['nombre']
+    comentario = request.form['comentario']
+    if comentarios.agregar_comentario(provincia,nombre,comentario):
+        return jsonify({"mensaje": "Comentario agregado"}), 201
+    else:
+        return jsonify({"mensaje": "Hubo un error al agregar el comentario"}), 500
+
+
+
+@app.route("/comentarios/<int:provincia>",methods = ["GET"])
+def listar_por_provincia(provincia):
+    comentarios = comentarios.listar_por_provincia(provincia)
     return jsonify(comentarios)
+
+@app.route("/comentarios/<int:id>",methods=["PUT"])
+def modificar_comentario(id):
+    #Recojo datos del form
+    nueva_provincia = request.form('provincia')
+    nuevo_nombre = request.form('nombre')
+    nuevo_comentario = request.form('comentario')
+    if comentarios.modificar_comentario(id,nueva_provincia,nuevo_nombre,nuevo_comentario):
+        return jsonify({"mensaje": "Comentario modificado"}), 200
+    else:
+        return jsonify({"mensaje": "Comentario no encontrado"}), 404
+    
+@app.route("/comentarios/<int:id>",methods=["DELETE"])
+def eliminar_comentario(id):
+    comentario = comentarios.consultar_comentario(id)
+    if comentario:
+        if comentarios.eliminar_comentario(id):
+            return jsonify({"mensaje": "Comentario eliminado"}), 200
+        else:
+            return jsonify({"mensaje": "Error al eliminar el producto"}), 500
+    else:
+        return jsonify({"mensaje": "Comentario no encontrado"}), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
