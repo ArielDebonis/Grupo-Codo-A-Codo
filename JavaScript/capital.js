@@ -38,61 +38,27 @@ let header = `
 
 document.getElementById("idheader").innerHTML = header;
 
-
-// COMENTARIOS////////////////////////////////
-
-document.addEventListener("DOMContentLoaded", function () {
-    const comentariosList = document.getElementById("comentarios-list");
-
-    // Hacer una solicitud a la API de JSONPlaceholder para obtener comentarios
-    fetch("https://jsonplaceholder.typicode.com/comments")
-        .then((response) => response.json())
-        .then((comentarios) => {
-            // Tomar solo los primeros dos comentarios
-            const comentariosLimitados = comentarios.slice(0, 2);
-
-            // Recorrer los comentarios limitados y agregarlos a la lista en la página
-            comentariosLimitados.forEach((comentario) => {
-                // Hacer una solicitud adicional para obtener el nombre de usuario del comentario
-                fetch(`https://jsonplaceholder.typicode.com/users/${comentario.id}`)
-                    .then((response) => response.json())
-                    .then((usuario) => {
-                        const listItem = document.createElement("li");
-
-                        // Agregar una clase CSS al elemento <li>
-                        listItem.classList.add("opiniones"); // Reemplaza "mi-clase-css" con el nombre de tu clase CSS
-
-                        listItem.innerHTML = `<strong>${usuario.name}</strong>: ${comentario.body}`;
-                        comentariosList.appendChild(listItem);
-                    });
-            });
-        })
-        .catch((error) => {
-            console.error("Error al cargar los comentarios: " + error);
-        });
-});
-
 let map;
 
 async function initMap() {
-    const position = { lat: -25.5985964088189, lng: -54.57055400131922 };
+    const position = { lat: -34.55588303771516, lng: -58.451959030551556 };
 
     try {
         const { Map } = await google.maps.importLibrary("maps");
         const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
-        // The map, centered at Holy
+        // The map, centered at Mian Rest
         map = new Map(document.getElementById("map"), {
             zoom: 17,
             center: position,
             mapId: "map",
         });
 
-        // The marker, positioned at Holy
+        // The marker, positioned at Mian Rest
         const marker = new AdvancedMarkerView({
             map: map,
             position: position,
-            title: "Holy",
+            title: "Mian Rest",
         });
     } catch (error) {
         console.error("Error initializing Google Map:", error);
@@ -100,8 +66,6 @@ async function initMap() {
 }
 
 initMap();
-
-
 
 
 let footer = `

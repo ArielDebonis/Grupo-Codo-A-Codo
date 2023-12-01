@@ -434,6 +434,12 @@ a.ubicacion {
     width: 100%;
 }
 
+#map {
+    background-color: #9B948C;
+    height: 9.375rem;
+}
+
+
 /*-----------------PANTALLAS MEDIANAS-----------------*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     h1 {
