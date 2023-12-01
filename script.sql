@@ -1,0 +1,1 @@
+insert into comentarios (provincia,nombre,comentario) values ('1','Ariel','Hola mundo')
