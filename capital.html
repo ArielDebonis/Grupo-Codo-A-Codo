@@ -7,7 +7,7 @@
     <title>Sabores que conquistan</title>
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
     <!-- <CSS> -->
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <!-- <BOOTSTRAP> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -60,6 +60,27 @@
                         deliciosos.
                     </p>
                 </div>
+                <section class="comentarios seccion-oscura">
+                    <div class="container">
+                        <h4>Comentarios</h4>
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
+            
+                        <div>
+                            <label for="comentario">Comentario:</label>
+                            <textarea id="comentario" placeholder="Ingrese su comentario"></textarea>
+                        </div>
+            
+                        <button id="btnComentar">Comentar</button>
+            
+                        <div class="opiniones">
+                            <ul id="comentarios-list"></ul>
+                        </div>
+                    </div>
+                </section>
+                
             </div>
         </section>
 
