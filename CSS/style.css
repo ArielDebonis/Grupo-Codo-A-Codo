@@ -124,6 +124,7 @@ h1 {
 .comentarios {
     padding: 2.5rem 5rem 2.5rem 2.5rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -136,6 +137,12 @@ h1 {
     /* Ajusta este valor según tus preferencias */
     margin: auto;
     /* Centra la sección horizontalmente */
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    display: inline-block;
+    text-align: center;
 }
 
 h4 {
@@ -148,11 +155,12 @@ h4 {
 
 .opiniones ul {
     list-style-type: none;
+    flex-direction: row;
     /* Quita las viñetas de la lista */
 }
 
 .opiniones li {
-    flex-direction: column;
+    flex-direction: row;
     justify-self: center;
     justify-content: space-between;
     gap: 1rem;
