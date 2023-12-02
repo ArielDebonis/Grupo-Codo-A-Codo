@@ -4,9 +4,9 @@ document.getElementById('formulario').addEventListener('submit', function
     (event) {
     event.preventDefault(); // Evitamos que se envie el form
     var formData = new FormData();
+    formData.append('provincia','Capital');
     formData.append('nombre', document.getElementById('nombre').value);
-    formData.append('comentario',
-        document.getElementById('comentario').value);
+    formData.append('comentario',document.getElementById('comentario').value);
 
     // Realizamos la solicitud POST al servidor
     fetch(URL + 'comentarios', {
