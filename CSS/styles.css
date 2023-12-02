@@ -299,8 +299,8 @@ a.ubicacion {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 20px 15px 5px;
-    background-color: #dfae98;
-    color: rgb(239, 232, 232);
+    background-color: #FBEDE8;
+    color: rgb(73, 72, 72);
     border: 1px solid white;
     border-radius: 0.3em;
 }

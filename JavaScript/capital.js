@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((comentarios) => {
             // Tomar solo los primeros dos comentarios
-            const comentariosLimitados = comentarios.slice(0, 2);
+            const comentariosLimitados = comentarios.slice(0, 3);
 
             // Recorrer los comentarios limitados y agregarlos a la lista en la página
             comentariosLimitados.forEach((comentario) => {
