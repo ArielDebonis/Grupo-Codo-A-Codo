@@ -1,4 +1,9 @@
 /*--------------------------ESTILOS GENERALES---------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -120,51 +125,6 @@ h1 {
 }
 
 
-/*--------------------------COMENTARIOS---------------------------------*/
-.comentarios {
-    padding: 2.5rem 5rem 2.5rem 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.opiniones {
-    width: 100%;
-    /* Asegura que la sección de comentarios ocupe todo el ancho disponible */
-    max-width: 600px;
-    /* Ajusta este valor según tus preferencias */
-    margin: auto;
-    /* Centra la sección horizontalmente */
-}
-
-h4 {
-    font-family: 'Crimson Text';
-    text-align: center;
-    /* Centra el texto dentro del contenedor */
-    margin-bottom: 20px;
-    /* Añade espacio inferior para separar el título de la lista de comentarios */
-}
-
-.opiniones ul {
-    list-style-type: none;
-    /* Quita las viñetas de la lista */
-}
-
-.opiniones li {
-    flex-direction: column;
-    justify-self: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 10px 20px 15px 5px;
-    background-color: #dfae98;
-    color: rgb(239, 232, 232);
-    padding: 10px 20px;
-    color: rgb(239, 232, 232);
-    border: 1px solid white;
-    border-radius: 0.3em;
-}
-
 
 /*--------------------------GALERIA---------------------------------*/
 
@@ -184,6 +144,8 @@ h4 {
 /*--------------------------FOOTER---------------------------------*/
 .footer {
     min-height: 31.25rem;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 .seccion-oscura {
@@ -253,7 +215,6 @@ section h2 {
     flex-direction: column;
     align-items: flex-start;
     margin: 0 auto;
-    
 }
 
 .restdisplay {
@@ -271,9 +232,16 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+.calificacion{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
 a.ubicacion {
     color: #0a0a23;
     text-decoration: none;
+    text-align: center;
     font-weight: bold;
     display: block;
     margin-bottom: 1rem;
@@ -302,6 +270,76 @@ a.ubicacion {
     margin-bottom: 1.5rem;
 }
 
+
+
+/*  COMENTARIOS */
+
+.comentarios{
+    width: 70%;
+    height: auto;
+}
+
+.opiniones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+    border-radius:  10px;
+}
+.opiniones ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no hay espacio suficiente */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+.opiniones li {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px 15px 5px;
+    background-color: #dfae98;
+    color: rgb(239, 232, 232);
+    border: 1px solid white;
+    border-radius: 0.3em;
+}
+
+/*--------------------------CONTACTO---------------------------------*/
+.contenedorContacto {
+    margin: auto;
+    padding: 0px;
+}
+
+.titulo-form {
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.leyenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 80vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/inicio.jpg') no-repeat center center fixed;
+    /* Nueva configuración */
+    background-size: cover;
+    width: 100%;
+}
+
+.boton {
+    padding-top: 6px;
+    margin-top: 20px;
+}
 
 /*--------------------------RESPONSIVE---------------------------------*/
 
@@ -357,7 +395,7 @@ a.ubicacion {
 
     /* Comentarios */
     .opiniones {
-        max-width: 100%;
+        width: 100%;
     }
 
     .opiniones li {

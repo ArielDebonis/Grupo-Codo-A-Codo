@@ -1,6 +1,4 @@
 //////////////////////// HEADER  /////////////////////
-
-
 let header = `
 
 <nav class="navbar" style="background-color: #FBEDE8 ">
@@ -41,71 +39,70 @@ let header = `
 
 document.getElementById("idheader").innerHTML = header;
 
+////////////////////////FORMULARIO DE CONTACTO /////////////////////
 
-//////////////////////// MAPA  /////////////////////
-let map;
+function validador (){
+    const validadorMail = new RegExp (/^([a-z0-9\.!#$%&'*+-/=?^_`{|}~]+)@([a-z0-9-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/)
+    let ElementoMail = document.querySelector("#mail")
+    let mail = ElementoMail.value
+    let formulario = document.querySelector("form")
 
-async function initMap() {
-    const position = { lat: -34.55588303771516, lng: -58.451959030551556 };
+    let nombre = document.querySelector("#nombre")
+    let valorNombre = nombre.value
 
-    try {
-        const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+    let apellido = document.querySelector("#apellido")
+    let valorApellido = apellido.value
 
-        // The map, centered at Mian Rest
-        map = new Map(document.getElementById("map"), {
-            zoom: 17,
-            center: position,
-            mapId: "map",
-        });
+    let asunto = document.querySelector("#asunto")
+    let valorAsunto = asunto.value
 
-        // The marker, positioned at Mian Rest
-        const marker = new AdvancedMarkerView({
-            map: map,
-            position: position,
-            title: "Mian Rest",
-        });
-    } catch (error) {
-        console.error("Error initializing Google Map:", error);
+    let mensaje = document.querySelector("#msg")
+    let valorMensaje = mensaje.value
+
+    if (validadorMail.test(mail) && valorNombre !== "" && valorApellido !== "" && valorAsunto !== "" && valorMensaje !== ""){
+        formulario.setAttribute("action","https://formsubmit.co/amelioarnon@gmail.com")
+    } else if (validadorMail.test(mail) == false){
+        alert ("Ingrese un mail valido")
+    } else if (valorNombre == ""){
+        alert ("Ingrese su nombre")
+    } else if (valorApellido == ""){
+        alert ("Ingrese su apellido")
+    } else if (valorAsunto == ""){
+        alert ("Ingrese un asunto")
+    } else if (valorMensaje == ""){
+        alert ("No ha escrito aun ningun comentario. Por favor escribanos un comentario")
     }
 }
 
-initMap();
 
-// COMENTARIOS////////////////////////////////
+function valores () {
+    let otrosCampos = document.querySelector("#nombre")
+    let valorCampo = otrosCampos.value
+    return console.log(valorCampo !== "")
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    const comentariosList = document.getElementById("comentarios-list");
+let form = document.querySelector("form")
+let formatributo = form.getAttribute("action")
 
-    // Hacer una solicitud a la API de JSONPlaceholder para obtener comentarios
-    fetch("https://jsonplaceholder.typicode.com/comments")
-        .then((response) => response.json())
-        .then((comentarios) => {
-            // Tomar solo los primeros dos comentarios
-            const comentariosLimitados = comentarios.slice(0, 2);
+function tiene (){
+    let form = document.querySelector("form")
+    let formatributo = form.getAttribute("action")
+    if (formatributo == ""){
+        validador()
+        event.preventDefault()
+    } else {
+        validador()
+    }
+}
 
-            // Recorrer los comentarios limitados y agregarlos a la lista en la página
-            comentariosLimitados.forEach((comentario) => {
-                // Hacer una solicitud adicional para obtener el nombre de usuario del comentario
-                fetch(`https://jsonplaceholder.typicode.com/users/${comentario.id}`)
-                    .then((response) => response.json())
-                    .then((usuario) => {
-                        const listItem = document.createElement("li");
+form.addEventListener("submit",tiene)
 
-                        // Agregar una clase CSS al elemento <li>
-                        listItem.classList.add("opiniones"); // Reemplaza "mi-clase-css" con el nombre de tu clase CSS
 
-                        listItem.innerHTML = `<strong>${usuario.name}</strong>: ${comentario.body}`;
-                        comentariosList.appendChild(listItem);
-                    });
-            });
-        })
-        .catch((error) => {
-            console.error("Error al cargar los comentarios: " + error);
-        });
-});
+// let boton = document.querySelector(".boton")
+// boton.addEventListener("click", validador)
 
-//////////////////////// FOOTER  /////////////////////
+//////////////////////// FOOTER /////////////////////
+
 let footer = `
 <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
         <img class="footer-logo" src="img/icons8-restaurante-48.png" alt="Logo">
@@ -119,3 +116,6 @@ let footer = `
 `;
 
 document.getElementById("idfooter").innerHTML = footer;
+
+// let boton = document.querySelector(".boton")
+// boton.addEventListener("click", validador)
