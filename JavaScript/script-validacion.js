@@ -59,9 +59,8 @@ function validador (){
     let mensaje = document.querySelector("#msg")
     let valorMensaje = mensaje.value
 
-    if (validadorMail.test(mail) && valorNombre !== "" && valorApellido !== "" && valorAsunto !== "" && valorMensaje !== ""){
-        formulario.setAttribute("action","https://formsubmit.co/amelioarnon@gmail.com")
-    } else if (validadorMail.test(mail) == false){
+
+    if (validadorMail.test(mail) == false){
         alert ("Ingrese un mail valido")
     } else if (valorNombre == ""){
         alert ("Ingrese su nombre")
