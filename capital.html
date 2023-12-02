@@ -100,23 +100,27 @@
         <section class="comentarios col-md-12">
             <div class="container">
                 <h4>Comentarios</h4>
-                <div>
+                <form id="formulario" enctype="multipart/form-data">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" placeholder="Ingrese su nombre">
-                </div>
-    
-                <div>
+
+                    <br>
+
                     <label for="comentario">Comentario:</label>
                     <textarea id="comentario" placeholder="Ingrese su comentario"></textarea>
-                </div>
-    
-                <button id="btnComentar">Comentar</button>
+
+                    <button id="submit">Comentar</button>
                 <br>
+
+                </form>
+                <script src="altas.js"></script> 
+    
+            
             </div>
         </section>
 
         <div class="opiniones">
-            <ul id="listacomentarios"></ul>
+            <tbody id="tablacomentarios"> </tbody>
         </div>
            
     </div>

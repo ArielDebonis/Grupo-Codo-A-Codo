@@ -68,7 +68,7 @@ class Comentarios():
 
     def modificar_comentario(self, id, nueva_provincia,nuevo_nombre, nuevo_comentario):
     # Modificamos los datos de un producto a partir de su código
-        sql = "UPDATE productos SET \
+        sql = "UPDATE comentarios SET \
             provincia = %s , \
             nombre = %s , \
             comentario = %s , \
