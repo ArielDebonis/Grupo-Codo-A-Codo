@@ -52,9 +52,8 @@ class Comentarios():
     
     def listar_por_provincia(self,provincia):
         # Mostramos en pantalla un listado de todos los productos en la tabla
-        sql = "SELECT * FROM comentarios WHERE provincia = %s "
-        valores = provincia
-        self.cursor.execute(sql,valores)
+        sql = f"SELECT * FROM comentarios WHERE provincia = '{provincia}' "
+        self.cursor.execute(sql)
         comentarios = self.cursor.fetchall()
         return comentarios
 
@@ -68,7 +67,7 @@ class Comentarios():
 
     def modificar_comentario(self, id, nueva_provincia,nuevo_nombre, nuevo_comentario):
     # Modificamos los datos de un producto a partir de su código
-        sql = "UPDATE comentarios SET \
+        sql = "UPDATE productos SET \
             provincia = %s , \
             nombre = %s , \
             comentario = %s , \
@@ -107,12 +106,15 @@ def agregar_comentario():
 
 
 
-@app.route("/comentarios/<int:provincia>",methods = ["GET"])
+@app.route("/comentarios/<string:provincia>",methods = ["GET"])
 def listar_por_provincia(provincia):
     coments = comentarios.listar_por_provincia(provincia)
-    return jsonify(coments)
+    if comentarios.listar_por_provincia(provincia):
+        return jsonify(coments), 200
+    else:
+        return jsonify({"mensaje": "Lista de comentarios no encontrada"}), 404
 
-@app.route("/comentarios/<int:id>",methods=["PUT"])
+@app.route("/comentarios/modificar/<int:id>",methods=["PUT"])
 def modificar_comentario(id):
     #Recojo datos del form
     nueva_provincia = request.form('provincia')
@@ -123,7 +125,7 @@ def modificar_comentario(id):
     else:
         return jsonify({"mensaje": "Comentario no encontrado"}), 404
     
-@app.route("/comentarios/<int:id>",methods=["DELETE"])
+@app.route("/comentarios/eliminar/<int:id>",methods=["DELETE"])
 def eliminar_comentario(id):
     comentario = comentarios.consultar_comentario(id)
     if comentario:
