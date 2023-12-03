@@ -8,6 +8,11 @@
     <link rel="STYLESHEET" href="CSS/style.css">
     <link rel="shortcut icon" href="img/pizza.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/b31041bc75.js" crossorigin="anonymous"></script>
+    
+    <!---------------- COMIENZO COMENTARIOS ---------------->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="misiones.js"></script>
+    <!---------------- FIN COMENTARIOS ---------------->
 </head>
 
 <body>
@@ -124,8 +129,41 @@
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14154.23067844997!2d-55.8127752!3d-27.5141287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be37b569ecaf%3A0xffa0b55176f69b9d!2sPoytava%2C%20cocina%20misionera!5e0!3m2!1ses!2sar!4v1694451224377!5m2!1ses!2sar"
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+    <!---------------- COMIENZO COMENTARIOS ---------------->
+    <section class="comentarios col-md-12" id="seccionComentarios">
+        <div class="container">
+            <h4>Comentarios</h4>
+            <form id="formulario" enctype="multipart/form-data">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre" v-model="nombre">
 
+                <br>
 
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" placeholder="Ingrese su comentario" v-model="comentario"></textarea>
+                <button @click="modificarComentario()">Modificar</button>
+                <button @click="agregarComentario()">Comentar</button>
+                <div id="opiniones" v-for="comentario in comentarios" :key="comentario.id">
+                    
+                    <input type="radio" :value="comentario.id" name="id" v-model="id">
+                    <label for="id">Seleccionar para modificar</label>
+                    <div class="nombre">{{comentario.nombre}}</div>
+                    <div class="comentario">{{comentario.comentario}}</div>
+                    <button @click="eliminarComentario(comentario.id)">Eliminar comentario</button>
+            
+                </div>
+            <br>
+
+            </form>
+            
+
+        
+        </div>
+    </section>
+
+    
+    <script src="todounido.js"></script>
+    <!---------------- FIN COMENTARIOS ---------------->
     <footer>
         <p>Grupo 5</p>
     </footer>

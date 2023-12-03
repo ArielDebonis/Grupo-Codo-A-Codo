@@ -1,9 +1,9 @@
 const URL = "http://127.0.0.1:5000/"
-const prov = 'Capital'
 const app = Vue.createApp({
     data(){
         return {
             id: null,
+            provincia: prov,
             nombre: '',
             comentario: '',
             comentarios: []
@@ -71,7 +71,7 @@ const app = Vue.createApp({
         },
         modificarComentario() {
             const formData = new FormData();
-            formData.append('provincia',prov);
+            formData.append('provincia',this.provincia);
             formData.append('nombre',this.nombre);
             formData.append('comentario',this.comentario);
             fetch(URL + 'comentarios/modificar/' + this.id, {method: 'PUT', body: formData})

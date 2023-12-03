@@ -27,7 +27,12 @@
                 key: "AIzaSyDQMnszMe0WCphbHHD7HN3osj3OM7kXB6I",
             });
         </script>
+
+    <!---------------- COMIENZO COMENTARIOS ---------------->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="capital.js"></script>
+    <!---------------- FIN COMENTARIOS ---------------->
+
 </head>
 
 
@@ -98,6 +103,8 @@
             </div>
 
         </aside>
+
+        <!---------------- COMIENZO COMENTARIOS ---------------->
         <section class="comentarios col-md-12" id="seccionComentarios">
             <div class="container">
                 <h4>Comentarios</h4>
@@ -111,8 +118,10 @@
                     <textarea id="comentario" placeholder="Ingrese su comentario" v-model="comentario"></textarea>
                     <button @click="modificarComentario()">Modificar</button>
                     <button @click="agregarComentario()">Comentar</button>
-                    <div id="opiniones" v-for="comentario in comentarios">
-                        <input type="radio" value="{{comentario.id}}" name="id" v-model="id">
+                    <div id="opiniones" v-for="comentario in comentarios" :key="comentario.id">
+                        
+                        <input type="radio" :value="comentario.id" name="id" v-model="id">
+                        <label for="id">Seleccionar para modificar</label>
                         <div class="nombre">{{comentario.nombre}}</div>
                         <div class="comentario">{{comentario.comentario}}</div>
                         <button @click="eliminarComentario(comentario.id)">Eliminar comentario</button>
@@ -126,10 +135,8 @@
             
             </div>
         </section>
-
-        
-        <!-- <script src="altas.js"></script> -->
         <script src="todounido.js"></script>
+        <!---------------- FIN COMENTARIOS ---------------->
     </div>
     </div>
     <!---------------- FOOTER ---------------->
