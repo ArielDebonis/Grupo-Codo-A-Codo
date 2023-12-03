@@ -107,12 +107,9 @@ def agregar_comentario():
 
 
 @app.route("/comentarios/<string:provincia>",methods = ["GET"])
-def listar_por_provincia(provincia):
+def listar_por_provincias(provincia):
     coments = comentarios.listar_por_provincia(provincia)
-    if comentarios.listar_por_provincia(provincia):
-        return jsonify(coments), 200
-    else:
-        return jsonify({"mensaje": "Lista de comentarios no encontrada"}), 404
+    return jsonify(coments), 200
 
 @app.route("/comentarios/modificar/<int:id>",methods=["PUT"])
 def modificar_comentario(id):

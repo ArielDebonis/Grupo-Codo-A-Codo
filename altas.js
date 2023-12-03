@@ -41,33 +41,3 @@ document.getElementById('formulario').addEventListener('submit', function
         });
 })
 
-
-// Realizamos la solicitud GET al servidor para obtener todos los
-productos
-fetch(URL + 'comentarios')
-    .then(function (response) {
-        if (response.ok) {
-            return response.json();
-
-        } else {
-            // Si hubo un error, lanzar explícitamente una excepción
-            // para ser "catcheada" más adelante
-            throw new Error('Error al mostrar los comentarios.');
-        }
-    })
-    .then(function (data) {
-        let tablacomentarios = document.getElementById('tablacomentarios');
-        // Iteramos sobre los productos y agregamos filas a la tabla
-        for (let comentario of data) {
-            let fila = document.createElement('tr');
-            fila.innerHTML = '<td>' + comentario.nombre + '</td>' +
-                '<td>' + comentario.comentario + '</td>';
-//Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elemento tablacomentarios.
-                tablacomentarios.appendChild(fila);
-        }
-    })
-    .catch(function (error) {
-        // En caso de error
-        alert('Error al mostrar los comentarios.');
-        console.error('Error:', error);
-    })
