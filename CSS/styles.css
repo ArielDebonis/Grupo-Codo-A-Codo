@@ -142,6 +142,7 @@ h1 {
 }
 
 /*--------------------------FOOTER---------------------------------*/
+
 .footer {
     min-height: 31.25rem;
     margin-top: auto;
@@ -274,10 +275,7 @@ a.ubicacion {
 
 /*  COMENTARIOS */
 
-.comentarios{
-    width: 70%;
-    height: auto;
-}
+
 
 .opiniones {
     display: flex;
