@@ -58,9 +58,8 @@ class Comentarios():
         return comentarios
 
     def consultar_comentario(self,id):
-        sql = 'SELECT * FROM comentarios WHERE id = %s'
-        valor = id
-        self.cursor.execute(sql,valor)
+        sql = f'SELECT * FROM comentarios WHERE id = {id}'
+        self.cursor.execute(sql)
         return self.cursor.fetchone()
 
     # UPDATE
@@ -81,9 +80,8 @@ class Comentarios():
 
     def eliminar_comentario(self,id):
         # Eliminamos un producto de la tabla a partir de su código
-        sql = "DELETE FROM comentarios WHERE id = %s "
-        valor = id
-        self.cursor.execute(sql,valor)
+        sql = f"DELETE FROM comentarios WHERE id = {id} "
+        self.cursor.execute(sql)
         self.conn.commit()
         return self.cursor.rowcount > 0
 

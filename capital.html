@@ -27,6 +27,7 @@
                 key: "AIzaSyDQMnszMe0WCphbHHD7HN3osj3OM7kXB6I",
             });
         </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 
@@ -97,19 +98,26 @@
             </div>
 
         </aside>
-        <section class="comentarios col-md-12">
+        <section class="comentarios col-md-12" id="seccionComentarios">
             <div class="container">
                 <h4>Comentarios</h4>
                 <form id="formulario" enctype="multipart/form-data">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre" v-model="nombre">
 
                     <br>
 
                     <label for="comentario">Comentario:</label>
-                    <textarea id="comentario" placeholder="Ingrese su comentario"></textarea>
-
-                    <button id="submit">Comentar</button>
+                    <textarea id="comentario" placeholder="Ingrese su comentario" v-model="comentario"></textarea>
+                    <button @click="modificarComentario()">Modificar</button>
+                    <button @click="agregarComentario()">Comentar</button>
+                    <div id="opiniones" v-for="comentario in comentarios">
+                        <input type="radio" value="{{comentario.id}}" name="id" v-model="id">
+                        <div class="nombre">{{comentario.nombre}}</div>
+                        <div class="comentario">{{comentario.comentario}}</div>
+                        <button @click="eliminarComentario(comentario.id)">Eliminar comentario</button>
+                
+                    </div>
                 <br>
 
                 </form>
@@ -119,10 +127,9 @@
             </div>
         </section>
 
-        <div id="opiniones">
-        </div>
-        <script src="altas.js"></script>
-        <script src="listado.js"></script> 
+        
+        <!-- <script src="altas.js"></script> -->
+        <script src="todounido.js"></script>
     </div>
     </div>
     <!---------------- FOOTER ---------------->
