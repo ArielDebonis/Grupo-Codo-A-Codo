@@ -233,7 +233,7 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-.calificacion{
+.calificacion {
     text-align: center;
     padding-top: 1rem;
 }
@@ -275,32 +275,16 @@ a.ubicacion {
 
 /*  COMENTARIOS */
 
-
-
-.opiniones {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    text-align: center;
-    border-radius:  10px;
-}
-.opiniones ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no hay espacio suficiente */
-    gap: 10px; /* Espacio entre elementos */
+input[type="radio"] {
+    margin-right: 5px;
+    /* Puedes ajustar este valor según tus necesidades */
 }
 
-.opiniones li {
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 20px 15px 5px;
-    background-color: #FBEDE8;
-    color: rgb(73, 72, 72);
-    border: 1px solid white;
-    border-radius: 0.3em;
+.form-control {
+    height: 4.6785rem;
+    /* Altura automática */
+    resize: vertical;
+    /* Permitir el cambio vertical */
 }
 
 /*--------------------------CONTACTO---------------------------------*/
