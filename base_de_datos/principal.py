@@ -58,22 +58,16 @@ class Comentarios():
         return comentarios
 
     def consultar_comentario(self,id):
-        sql = 'SELECT * FROM comentarios WHERE id = %s'
-        valor = id
-        self.cursor.execute(sql,valor)
+        sql = f'SELECT * FROM comentarios WHERE id = {id}'
+        self.cursor.execute(sql)
         return self.cursor.fetchone()
 
     # UPDATE
 
     def modificar_comentario(self, id, nueva_provincia,nuevo_nombre, nuevo_comentario):
     # Modificamos los datos de un producto a partir de su código
-        sql = "UPDATE productos SET \
-            provincia = %s , \
-            nombre = %s , \
-            comentario = %s , \
-            WHERE id = %s "
-        valores = (nueva_provincia,nuevo_nombre,nuevo_comentario,id)
-        self.cursor.execute(sql,valores)
+        sql = f"UPDATE comentarios SET provincia = '{nueva_provincia}' , nombre = '{nuevo_nombre}' , comentario = '{nuevo_comentario}' WHERE id = {id} "
+        self.cursor.execute(sql)
         self.conn.commit()
         return self.cursor.rowcount > 0
     
@@ -81,9 +75,8 @@ class Comentarios():
 
     def eliminar_comentario(self,id):
         # Eliminamos un producto de la tabla a partir de su código
-        sql = "DELETE FROM comentarios WHERE id = %s "
-        valor = id
-        self.cursor.execute(sql,valor)
+        sql = f"DELETE FROM comentarios WHERE id = {id} "
+        self.cursor.execute(sql)
         self.conn.commit()
         return self.cursor.rowcount > 0
 
@@ -114,9 +107,9 @@ def listar_por_provincias(provincia):
 @app.route("/comentarios/modificar/<int:id>",methods=["PUT"])
 def modificar_comentario(id):
     #Recojo datos del form
-    nueva_provincia = request.form('provincia')
-    nuevo_nombre = request.form('nombre')
-    nuevo_comentario = request.form('comentario')
+    nueva_provincia = request.form['provincia']
+    nuevo_nombre = request.form['nombre']
+    nuevo_comentario = request.form['comentario']
     if comentarios.modificar_comentario(id,nueva_provincia,nuevo_nombre,nuevo_comentario):
         return jsonify({"mensaje": "Comentario modificado"}), 200
     else:

@@ -1,6 +1,5 @@
 //////////////////////// HEADER  /////////////////////
 
-
 let header = `
 
 <nav class="navbar" style="background-color: #FBEDE8 ">
@@ -42,6 +41,7 @@ let header = `
 document.getElementById("idheader").innerHTML = header;
 
 
+
 //////////////////////// MAPA  /////////////////////
 let map;
 
@@ -74,6 +74,7 @@ initMap();
 
 
 //////////////////////// FOOTER  /////////////////////
+
 let footer = `
 <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
         <img class="footer-logo" src="img/icons8-restaurante-48.png" alt="Logo">
