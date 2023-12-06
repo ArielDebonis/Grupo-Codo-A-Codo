@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:5000/"
+const URL = "https://arieldebonis.pythonanywhere.com/"
 const app = Vue.createApp({
     data(){
         return {
@@ -65,6 +65,8 @@ const app = Vue.createApp({
                         }
                     })
                     .catch(error => {
+                        console.log(error.message)
+                        console.log(response)
                         alert(error.message);
                     });
             }
